@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once "include/session_check.php";
+
 require "include/coreDataconnect.php";
 
 if (!isset($_SESSION['team_id'])) {
@@ -7,11 +8,11 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = intval($_GET['event_id'] ?? 0);
+$event_id = $_SESSION['event_id'];
 if ($event_id <= 0) die("Invalid Event");
 
 $pageTitle = "Add Modules to Event";
-$pageCSS   = "/css_event/add_modules.css";
+$pageCSS   = "css_event/add_modules.css";
 require "layout/tb_header.php";
 
 $step = 2;
@@ -84,7 +85,13 @@ $iconMap = [
     </div>
 
     <div class="library-panel">
-        <h3>Available Modules</h3>
+       <div class="library-header"><h3>Available Modules</h3>
+
+        <div class="module-search-box">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" id="moduleSearchInput" placeholder="Search modules..." onkeyup="filterModules()">
+        </div></div>
+    
         <div id="exerciseList" class="grid-view"></div>
     </div>
 
@@ -97,8 +104,14 @@ $iconMap = [
         <div id="sequenceList"></div>
 
         <div class="actions">
-            <a href="create_event.php?event_id=<?= $event_id ?>" class="btn secondary">← Previous</a>
-            <a href="review_modules.php?event_id=<?= $event_id ?>" class="btn primary">Next →</a>
+            <form action="create_event.php" method="POST">
+                <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                <button type="submit" class="btn secondary">  ← Previous </button>
+            </form>
+            <form action="review_modules.php" method="POST">
+                <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                <button type="submit" class="btn primary"> Next → </button>
+            </form>
         </div>
     </div>
 </div>
@@ -121,6 +134,44 @@ $iconMap = [
         document.querySelectorAll(".side-tab").forEach(t => t.classList.remove("active"));
         btn.classList.add("active");
     }
+  function filterModules() {
+        const search = document.getElementById("moduleSearchInput").value.toLowerCase().trim();
+        const cards = document.querySelectorAll("#exerciseList .exercise-card");
+        const exerciseList = document.getElementById("exerciseList");
+
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cardText = card.innerText.toLowerCase();
+
+            if (cardText.includes(search)) {
+                card.style.display = "";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        // Create "No modules found" message if not already present
+        let noResults = document.getElementById("noModulesMessage");
+
+        if (!noResults) {
+            noResults = document.createElement("div");
+            noResults.id = "noModulesMessage";
+            noResults.style.textAlign = "center";
+            noResults.style.color = "#888";
+            noResults.style.fontSize = "16px";
+            noResults.innerText = "No modules found";
+            exerciseList.parentNode.appendChild(noResults);
+        }
+
+        // Show / hide message
+        if (visibleCount === 0) {
+            noResults.style.display = "block";
+        } else {
+            noResults.style.display = "none";
+        }
+    }
 
     function loadGames(btn) {
         setActiveTab(btn);
@@ -132,6 +183,7 @@ $iconMap = [
             .then(html => {
                 document.getElementById("exerciseList").innerHTML = html;
                 syncAddedState();
+                filterModules();
             });
     }
 

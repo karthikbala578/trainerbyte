@@ -17,7 +17,8 @@ if (!isset($_SESSION['team_id'])) {
 
 /* Fetch existing event if editing */
 
-$event_id = intval($_GET['event_id'] ?? 0);
+$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id'] : 0;
+$_SESSION['event_id'] = $event_id;
 
 $event = null;
 
@@ -126,13 +127,14 @@ unset($_SESSION['event_errors']);
 
                 <!-- IMAGE -->
                 <div class="upload-box" id="dropZone">
-                    <input type="file" name="event_coverimage" id="fileInput" accept="image/*">
+                   
 
                     <div class="upload-content" id="dropText">
+                        <input type="file" name="event_coverimage" id="fileInput" accept="image/*" style="height: 200px;">
                         <span class="material-symbols-outlined upload-icon">upload</span>
-                        <p>Event Banner Image</p>
+                        <p>Upload Event Image</p>
                     </div>
-                    <img width="100" height="100" src="upload-images/events/<?= htmlspecialchars($event['event_coverimage'] ?: 'default_event.jpg') ?>">
+                    <img width="100" height="100" src="upload-images/events/<?= htmlspecialchars($event['event_coverimage'] ?: 'default_event.jpeg') ?>">
 
                 </div>
 
@@ -200,66 +202,39 @@ unset($_SESSION['event_errors']);
 </div>
 
 
-
+<style>
+    #fileInput {
+    display: none;
+}
+</style>
 <script>
     const dropZone = document.getElementById("dropZone");
-
     const fileInput = document.getElementById("fileInput");
-
     const dropText = document.getElementById("dropText");
-
-
-
+    dropZone.addEventListener("click", () => {
+        fileInput.click();
+    });
     fileInput.addEventListener("change", () => {
-
         if (fileInput.files.length > 0) {
-
             dropText.innerHTML =
-
                 `Selected file:<br><strong>${fileInput.files[0].name}</strong>`;
-
         }
-
     });
-
-
-
     dropZone.addEventListener("dragover", e => {
-
         e.preventDefault();
-
         dropZone.classList.add("dragover");
-
     });
-
-
-
     dropZone.addEventListener("dragleave", () => {
-
         dropZone.classList.remove("dragover");
-
     });
-
-
-
     dropZone.addEventListener("drop", e => {
-
         e.preventDefault();
-
         dropZone.classList.remove("dragover");
-
-
-
         if (e.dataTransfer.files.length) {
-
             fileInput.files = e.dataTransfer.files;
-
             dropText.innerHTML =
-
                 `Selected file:<br><strong>${e.dataTransfer.files[0].name}</strong>`;
-
         }
-
     });
 </script>
 

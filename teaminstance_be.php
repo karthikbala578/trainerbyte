@@ -3,24 +3,20 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
-$code = $_GET['code'] ?? '';
-$userid = $_GET['user_id'] ?? '';
+$code = $_SESSION['code'] ?? '';
+$userid = $_SESSION['user_id'] ?? '';
+// echo "Code: " . $code . " | UserID: " . $userid; // Debugging line
 $_SESSION['event_code'] = $code;
 $_SESSION['user_id'] = $userid;
-// block if not logged in
-//echo $_SESSION['pin'];
-// Check if user is logged in
-if (!isset($_SESSION['pin']) || empty($_SESSION['pin'])) {
-    // Redirect to event page instead of login.php
-    header("Location: https://trainerbyte.com/" .$_SESSION['event_code']);
-    exit;
-}
+
 
 if (empty($code)) {
     die("Invalid access code");
 }
 
 require "include/coreDataconnect.php";
+
+require "include/pin_sessioncheck.php";
 
 require "include_site/roundfunction_be.php";
 
@@ -101,15 +97,17 @@ $ins = $conn->prepare("INSERT INTO tb_event_user_score (user_id, event_id, mod_g
 
 // 3. Loop through each module found
 while ($row = $modules->fetch_assoc()) {
+  //  print_r($row);
     $game_id = $row['mod_game_id'];
     $game_type = $row['mod_type'];
-
+    // echo $_SESSION['user_id'];
     // Check if THIS specific game_id exists for THIS user
     $check->bind_param("iiii", $_SESSION['user_id'], $event_id, $game_id, $mod_game_status);
     $check->execute();
     $count_res = $check->get_result()->fetch_assoc();
 
     if ($count_res['total'] == 0) {
+        // echo $_SESSION['user_id'];
         // If it doesn't exist, insert it
         $ins->bind_param("iiiii", $_SESSION['user_id'], $event_id, $game_id, $game_type, $mod_game_status);
         $ins->execute();
@@ -128,12 +126,12 @@ $stmt->close();
 
 $moduleSources = [
 
-   // 1 => ['table' => 'card_group', 'id' => 'cg_id', 'name' => 'cg_name'], //
+    // 1 => ['table' => 'mdm_learning_group', 'id' => 'lg_id', 'name' => 'lg_name'], //DigiHunt
 
     2 => ['table' => 'card_group', 'id' => 'cg_id', 'name' => 'cg_name'], // ByteGuess
 
  //   3 => ['table' => 'survival_group', 'id' => 'sg_id', 'name' => 'sg_name'], // PixelQuest
-
+// 4 => ['table' => 'mg5_digisim', 'id' => 'di_id', 'name' => 'di_name'], // Bit Bargin
     5 => ['table' => 'mg5_digisim', 'id' => 'di_id', 'name' => 'di_name'], // DigiSIm
 
     6 => ['table' => 'mg6_riskhop_matrix', 'id' => 'id', 'name' => 'game_name'], // RiskHop
@@ -387,7 +385,20 @@ a{
 .modules::-webkit-scrollbar-thumb:hover {
     background: #a0aec0;
 }
-
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    /* border-top: 1px solid #eee; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
 
 </style>
 
@@ -410,9 +421,6 @@ a{
 
             <img src="<?php echo htmlspecialchars($eventImage); ?>" alt="Event Image">
 
-
-
-            <span class="badge">PROFESSIONAL GAMING SERIES</span>
 
             <h1><?php echo htmlspecialchars($event['event_name']); ?></h1>
 
@@ -489,34 +497,48 @@ a{
                     $startUrl = '#';
 
                         switch ((int)$statusRes['mod_game_type']) {
+                            // 🟣 DigiHunt
+                            // case 1:
+
+                            //     $_SESSION['mod_game_id'] = (int)$m['mod_game_id'];
+                            //     $startUrl = "digihunt/digihunt_casestudy.php";
+                            //     $resultUrl = "digihunt/digihunt_final_results.php";
+                            //     break;
                             // 🟣 ByteGuess
                             case 2:
-                                $startUrl = "ByteGuess/byteguess_companyintro.php?id=1&game_id=" . (int)$m['mod_game_id'];
-                                $resultUrl = "ByteGuess/byteguess-final_results.php?game_id=" . (int)$m['mod_game_id']."&code=".$code;
+
+                                $_SESSION['mod_game_id'] = (int)$m['mod_game_id'];
+                                $startUrl = "byteguess/byteguess_companyintro.php";
+                                $resultUrl = "byteguess/byteguess-final_results.php";
                                 break;
                             // 🔵 PixelQuest
                             case 3:
-                                $startUrl = "PixelQuest/pixelquest_casestudy.php?game_id=" . (int)$m['mod_game_id'];
-                                $resultUrl = "PixelQuest/pixelquest_final_results.php?game_id=" . (int)$m['mod_game_id']."&code=".$code;
+                                $_SESSION['mod_game_id'] = $m['mod_game_id'];
+                                $startUrl = "PixelQuest/pixelquest_casestudy.php";
+                                $resultUrl = "PixelQuest/pixelquest_final_results.php";
                                 break;
                             // 🔵 DigiSim
                             case 5:
                             case 9:
-                                $startUrl = "digisim/digisim_casestudy.php?game_id=" . (int)$m['mod_game_id'];
-                                $resultUrl = "digisim/digisim_finalResult.php?game_id=" . (int)$m['mod_game_id']."&code=".$code;
+                                $_SESSION['mod_game_id'] = $m['mod_game_id'];
+                                $startUrl = "digisim/digisim_casestudy.php";
+                                $resultUrl = "digisim/digisim_finalResult.php";
                                 break;
                             // 🔵 RiskHop
                             case 6:
-                                $startUrl = "riskhop/game/new_instruction.php?game_id=" . (int)$m['mod_game_id'];
+                                $_SESSION['mod_game_id'] = $m['mod_game_id'];
+                                $startUrl = "riskhop/game/new_instruction.php";
                                 break;
 
                             // 🟢 TrustTrap
                             case 7:
-                                $startUrl = "TrustTrap/user/game_intro.php?game_id=" . (int)$m['mod_game_id'];
+                                $_SESSION['mod_game_id'] = $m['mod_game_id'];
+                                $startUrl = "TrustTrap/user/game_intro.php";
                                 break;
                              // 🟢 BountyBid    
                             case 8:
-                                $startUrl = "BountyBid/user/mg8_game_intro.php?game_id=" . (int)$m['mod_game_id'];
+                                $_SESSION['mod_game_id'] = $m['mod_game_id'];
+                                $startUrl = "BountyBid/user/mg8_game_intro.php";
                                 break;
                         }
 
@@ -546,10 +568,26 @@ a{
                     <div class="actions">
                         <?php if ($state == 'completed'): ?>
                             <span class="label completed" style="color: #48bb78;">ANALYSIS</span>
-                            <a href="<?php echo $resultUrl; ?>" class="btn-review">Review</a>
+                            <!-- <a href="<?php echo $resultUrl; ?>" class="btn-review">Review</a> -->
+                            <form action="<?php echo $resultUrl; ?>" method="POST" style="display:inline;">
+                                <input type="hidden" name="post_game_id" value="<?php echo $current_mod_game_id; ?>">
+                                <button type="submit" class="btn-review" style="border: none; cursor: pointer;">
+                                    Review
+                                </button>
+                            </form>
+                        <!-- <?php //elseif ($state == 'active'): ?>
+                            <span class="label next" style="color: #3182ce;">NEXT UP</span>
+                            <a href="<?php echo $startUrl; ?>" class="btn-start" onclick="sessionStorage.clear();">START</a> -->
                         <?php elseif ($state == 'active'): ?>
                             <span class="label next" style="color: #3182ce;">NEXT UP</span>
-                            <a href="<?php echo $startUrl; ?>" class="btn-start" onclick="sessionStorage.clear();">START</a>
+                            
+                            <form action="<?php echo $startUrl; ?>" method="POST" style="display:inline;">
+                                <input type="hidden" name="post_game_id" value="<?php echo $current_mod_game_id; ?>">
+                                <button type="submit" class="btn-start" style="border: none; cursor: pointer;" onclick="sessionStorage.clear();">
+                                    START
+                                </button>
+                            </form>
+    
                         <?php else: ?>
                             <span class="label locked" style="color: #a0aec0;"></span>
                             <button class="btn-locked" disabled>LOCKED</button>
@@ -568,18 +606,21 @@ a{
 
 
 
-
+<!-- FOOTER -->
+<div class="footer-wrapper">
+    
     <div class="ai-chat-widget">
-        <div class="bot-button" id="botIcon">
-            <div class="online-status"></div>
-            <img src="https://img.icons8.com/ios-filled/100/ffffff/bot.png" alt="AI Bot">
-        </div>
-
         <div id="aiBubble" class="chat-bubble">
+            <span class="msgclo" onClick="closemsg();" >Hide</span>
             <h4 id="aiHeader">We're Online!</h4>
             <p id="aiMsg">How may I help you today?</p>
         </div>
+        <div class="bot-button" id="botIcon">
+            <div class="online-status"></div>
+            <img src="byteguess/images/bot.png" alt="AI Bot">
+        </div>
     </div>
+</div>
 
 
 <div id="exitPopup" class="overlay" style="display:none;">
@@ -637,9 +678,33 @@ function closeExitPopup() {
 function handleLogout() {
     // Redirect to your logout script
     // window.location.href = 'http://localhost/trainergenie/<?php //echo $code; ?>'; 
-    window.location.href = 'https://gceteam.simbcm.com/trainergenie/<?php echo $code; ?>'; 
+    window.location.href = 'http://localhost/trainerbyte/<?php echo $code; ?>'; 
 }
 
+function showAIMessage(title, message) {
+    const bubble = document.getElementById('aiBubble');
+    const header = document.getElementById('aiHeader');
+    const msg = document.getElementById('aiMsg');
+
+    // Set the content
+    header.innerText = title;
+    msg.innerText = message;
+
+    // Show the bubble
+    bubble.classList.add('show');
+
+}
+//const company = <?php //echo json_encode(trim($event['event_description'])); ?>;
+const company = <?php echo json_encode(!empty(trim($event['event_description'] ?? '')) ? trim($event['event_description'])
+        : trim($event['event_name'] ?? '')
+); ?>;
+showAIMessage("", company);
+
+function closemsg(){
+    const bubble = document.getElementById('aiBubble');	
+    // $(bubble).fadeOut();
+    bubble.classList.remove('show');
+}
 </script>
 
 </body>

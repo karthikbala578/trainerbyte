@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "include/session_check.php";
 require "include/coreDataconnect.php";
 
 if (!isset($_SESSION['team_id'])) {
@@ -7,7 +7,8 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = intval($_GET['event_id'] ?? 0);
+$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id'] : 0;
+$_SESSION['event_id'] = $event_id;
 if ($event_id <= 0) die("Invalid Event");
 
 $stmt = $conn->prepare("
@@ -29,6 +30,7 @@ $statusCls   = $statusClass[$ps] ?? '';
 $pageTitle = htmlspecialchars($event['event_name']);
 $pageCSS   = "css_event/view_event.css";
 require "layout/header.php";
+require "layout/tb_header.php";
 ?>
 
 <!-- Google Material Symbols -->
@@ -39,9 +41,6 @@ require "layout/header.php";
     <!-- ══════ PAGE HEADER (SaaS style) ══════ -->
     <div class="ve-header">
         <div class="ve-header-left">
-            <a href="myevent.php" class="ve-back">
-                <span class="material-symbols-rounded">arrow_back</span>
-            </a>
             <div class="ve-header-info">
                 <div class="ve-header-title-row">
                     <h1><?= htmlspecialchars($event['event_name']) ?></h1>
@@ -64,8 +63,10 @@ require "layout/header.php";
             <!-- <a href="add_modules.php?event_id=<?= $event_id ?>" class="ve-btn primary">
                 <span class="material-symbols-rounded">add_circle</span> Manage Modules
             </a> -->
-            <a href="create_event.php?event_id=<?= $event_id ?>" class="ve-btn secondary">
-                <span class="material-symbols-rounded">edit</span> Edit Event</a>
+            <form action="create_event.php" method="POST">
+                <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                <button type="submit" class="ve-btn secondary"> <span class="material-symbols-rounded">edit</span> Edit Event </button>
+            </form>
             <button class="ve-btn ghost" id="exportBtn" onclick="doExport()">
                 <span class="material-symbols-rounded">download</span> Export CSV
             </button>
@@ -420,7 +421,7 @@ function renderPager(container, pg, fn) {
 /* ── COPY LINK ───────────────────────────────────────────── */
 function copyEventLink(code) {
     if (!code) return alert("No link available for this event.");
-    const link = window.location.origin + '/' + code;
+    const link = window.location.origin + '/trainerbyte/' + code;
     navigator.clipboard.writeText(link).then(() => {
         // Optional: Show a "Copied!" toast or change icon briefly
         const btn = document.querySelector('.ve-copy-btn-small');
@@ -473,4 +474,4 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<?php // require "../layout/footer.php"; ?>
+<?php// require "../layout/footer.php"; ?>

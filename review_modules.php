@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "include/session_check.php";
 require "include/coreDataconnect.php";
 
 if (!isset($_SESSION['team_id'])) {
@@ -7,7 +7,10 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = intval($_GET['event_id'] ?? 0);
+$event_id = isset($_POST['event_id'])
+    ? (int)$_POST['event_id']
+    : (isset($_SESSION['event_id']) ? (int)$_SESSION['event_id'] : 0);
+$_SESSION['event_id'] = $event_id;
 if (!$event_id) die("Invalid event");
 
 /* FETCH EVENT */
@@ -53,7 +56,59 @@ require "layout/tb_header.php";
 /* STEP */
 $step = 3;
 ?>
+<style>
+  :root {
+    --primary-color: #4285f4;
+    --success-color: #34a853;
+    --bg-color: #f8f9fa;
+    --border-color: #dadce0;
+  }
+  .input-group {
+    display: flex;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
 
+  .input-group:focus-within {
+    border-color: var(--primary-color);
+  }
+
+  #urlInput {
+    flex: 1;
+    border: none;
+    padding: 8px 5px;
+    font-size: 14px;
+    color: #3c4043;
+    outline: none;
+    background: transparent;
+  }
+
+  #copyBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 75px;
+  }
+
+  #copyBtn:hover {
+    background-color: #1a73e8;
+  }
+
+  #copyBtn:active {
+    transform: scale(0.96);
+  }
+
+  /* Success State Class */
+  #copyBtn.copied {
+    background-color: var(--success-color);
+  }
+</style>
 <div class="stepper-div">
     <?php include "components/wizard_steps.php"; ?>
 </div>
@@ -158,38 +213,23 @@ $step = 3;
 
             <!-- ACTION -->
             <div class="card action-card">
-
-                <h3>Ready to go?</h3>
-
-                <ul class="feature-list">
-
-                    <li>
-                        <span class="material-symbols-outlined icon green">link</span>
-                        Participants can access the event using a secure link
-                    </li>
-
-                    <li>
-                        <span class="material-symbols-outlined icon blue">analytics</span>
-                        Live analytics will be available as soon as attendees join
-                    </li>
-
-                </ul>
-
                 <form method="post" action="process_create_event.php">
                     <input type="hidden" name="event_id" value="<?= $event_id ?>">
                     <input type="hidden" name="launch_event" value="1">
 
                     <button class="btn primary">
                         <span class="material-symbols-outlined">rocket_launch</span>
-                        Confirm & Launch
+                       Confirm & Create Event URL
                     </button>
                 </form>
-
-                <a href="add_modules.php?event_id=<?= $event_id ?>" class="btn secondary">
-                    <span class="material-symbols-outlined">arrow_back</span>
+                
+                 <form method="POST" action="add_modules.php">
+                    <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                    <button class="btn secondary">
+                        <span class="material-symbols-outlined">arrow_back</span>
                     Back to Edit
-                </a>
-
+                    </button>
+                </form>
             </div>
 
         </div>
@@ -207,12 +247,15 @@ $step = 3;
 
         <h2>Event Created Successfully</h2>
         <p>Your event is now ready to use.</p>
-
-        <a href="view_event.php?event_id=<?= $event_id ?>" class=" launch-btn">
-            Go to Manage Event to Get Link
-        </a>
-
-    </div>
+            <div class="input-group">
+                <input type="text" value="http://localhost/trainerbyte/<?= htmlspecialchars($event['event_url_code']); ?>" id="urlInput" readonly>
+                <button onclick="copyUrl()" id="copyBtn">Copy</button>
+            </div>
+            <form method="POST" action="view_event.php">
+                    <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                    <button class="launch-btn"> OK
+                    </button>
+     </div>
 </div>
 
 <script>
@@ -221,6 +264,22 @@ $step = 3;
     if (params.get("success") == "1") {
         document.getElementById("successModal").classList.add("show");
     }
+
+  function copyUrl() {
+    const copyText = document.getElementById("urlInput");
+    const button = document.getElementById("copyBtn");
+
+    navigator.clipboard.writeText(copyText.value).then(() => {
+      // Add the success class and change text
+      button.innerText = "Copied!";
+      button.classList.add("copied");
+      
+      setTimeout(() => {
+        button.innerText = "Copy";
+        button.classList.remove("copied");
+      }, 2000);
+    });
+  }
 </script>
 
 <?php //require "layout/footer.php"; ?>

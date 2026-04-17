@@ -1,5 +1,5 @@
 <?php
-require_once "include/session_check.php";
+//require_once "include/session_check.php";
 require "include/coreDataconnect.php";
 $url = $_SERVER['REQUEST_URI'];
 $code= basename($url);
@@ -47,19 +47,17 @@ $res = $stmt->get_result();
 <div class="container">
 
     <!-- LEFT -->
-<div class="left" style="background: linear-gradient(rgb(247 237 237 / 60%), rgb(233 233 233 / 60%)), url('<?php echo $eventImage; ?>') center / cover no-repeat;">
+<div class="left" style="background: url('<?php echo $eventImage; ?>') center / cover no-repeat;">
   <div class="brand">
-    <img src="assets/images/ERM sandbox.png"  
-         alt="SARAS Simulations" 
-         height="65" 
-         title="SARAS Simulations" 
-         border="0" />
+    
   </div>
-  <div class="badge">PROFESSIONAL GAMING SERIES</div>
-  <h1><span><?php echo $row['event_name']; ?></span></h1>
-  <p>
-    <?php echo $row['event_description']; ?>
-  </p>
+  <!-- <div class="badge">PROFESSIONAL GAMING SERIES</div> -->
+    <div class="event-card">
+        <h1><span><?php echo $row['event_name']; ?></span></h1>
+        <p>
+            <?php echo $row['event_description']; ?>
+        </p>
+    </div>
 
 </div>
 
@@ -69,7 +67,7 @@ $res = $stmt->get_result();
    
         <form class="login-box" id="pin-form"> 
             <h2>Welcome</h2>
-            <div class="sub">Enter a 6-digit PIN + name for the first time, just the PIN when you return.</div>
+            <div class="sub">Set a 6-digit PIN + name for the first time, just the PIN when you return.</div>
 
             <div class="code-header">
                 <div class="left-title-container">
@@ -111,7 +109,7 @@ $res = $stmt->get_result();
             <div id="username-section" style="display: none;">
                 <div class="code-header">
                     <span class="left-title">ENTER YOUR NAME / TEAM NAME</span>
-                    <span class="right-title">AUTH_STEP_20</span>
+                    <span class="right-title"></span>
                 </div>
                 <div>
                     <input type="text" name="uname" id="uname" class="input" placeholder="E.g. Logistics Squad A" required>
