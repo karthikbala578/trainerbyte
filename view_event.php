@@ -474,4 +474,4 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<?php// require "../layout/footer.php"; ?>
+<?php // require "../layout/footer.php"; ?>

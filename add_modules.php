@@ -8,7 +8,13 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = $_SESSION['event_id'];
+$event_id = $_GET['event_id'] ?? $_SESSION['event_id'] ?? 0;
+$_SESSION['event_id'] = $event_id; // keep session updated
+
+if ($event_id <= 0) {
+    header("Location: create_event.php");
+    exit;
+}
 if ($event_id <= 0) die("Invalid Event");
 
 $pageTitle = "Add Modules to Event";
