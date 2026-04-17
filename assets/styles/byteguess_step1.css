@@ -1,0 +1,139 @@
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logout-wrap {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn-logout {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #dc3545;
+    background: #ffffff;
+    border: 1px solid #f1b0b7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-logout:hover {
+    background: #dc3545;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(220, 53, 69, 0.25);
+}
+
+.btn-logout:active {
+    transform: translateY(1px);
+}
+
+
+.box {
+    background: #ffffff;
+    width: 420px;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #222;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.divider {
+    text-align: center;
+    margin: 18px 0;
+    font-size: 13px;
+    color: #777;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    width: 40%;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.primary-btn {
+    width: 100%;
+    padding: 11px;
+    background: #c7c7c7;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background:  #000000;
+    color: white;
+}
+
+.preview-wrap {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.btn-preview {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background: linear-gradient(135deg, #5fa8ff, #3b82f6);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(59,130,246,0.25);
+}
+
+.btn-preview:hover {
+    background: linear-gradient(135deg, #4f9cff, #2563eb);
+}
+
+@media (max-width: 500px) {
+    .box {
+        width: 92%;
+        padding: 22px;
+    }
+}

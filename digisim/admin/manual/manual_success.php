@@ -1,0 +1,26 @@
+<?php
+
+$pageTitle = "Simulation Completed";
+$pageCSS   = "/manual/css/manual_success.css";
+
+$digisimId = intval($_GET['digisim_id'] ?? 0);
+
+?>
+
+<div class="page-container">
+    <?php include 'stepper.php'; ?>
+<div class="success-container">
+
+<h1>Simulation Finished</h1>
+
+<p>Your simulation has been successfully created.</p>
+
+<a class="btn-primary"
+href="../../../dashboard.php">
+
+Return to Dashboard
+
+</a>
+
+</div>
+</div>

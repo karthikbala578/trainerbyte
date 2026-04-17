@@ -1,0 +1,120 @@
+.dashboard-wrapper{
+    padding: 50px;
+}
+
+.back-div{
+    padding-bottom: 40px;
+ }
+
+ /* BACK BUTTON */
+.back-btn {
+    padding: 8px 16px;
+    background: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    border: 1px solid #b8babe;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #0284c7;
+
+}
+
+.dashboard-header{
+    margin-bottom:30px;
+}
+
+.dashboard-header .tab{
+    font-size:13px;
+    color:#888;
+    margin-bottom:6px;
+}
+
+.dashboard-header h1{
+    font-size:26px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.dashboard-header p{
+    font-size:14px;
+    color:#666;
+}
+
+.table-container{
+    width:100%;
+    margin-top:20px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.cms-table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:Inter, sans-serif;
+}
+
+.cms-table thead{
+    background:#f7f8fb;
+}
+
+.cms-table th{
+    text-align:left;
+    padding:16px 20px;
+    font-size:14px;
+    font-weight:600;
+    color:#444;
+}
+
+.cms-table td{
+    padding:16px 20px;
+    font-size:14px;
+    border-top:1px solid #eee;
+    color:#555;
+}
+
+.cms-table tbody tr{
+    transition:0.2s;
+}
+
+.cms-table tbody tr:hover{
+    background:#fafafa;
+}
+
+.edit-btn{
+    display:inline-block;
+    padding:7px 16px;
+    background:#0284c7;
+    color:#fff;
+    text-decoration:none;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:500;
+    transition:0.2s;
+}
+
+.edit-btn:hover{
+    background:#4338ca;
+}
+
+@media(max-width:768px){
+
+.cms-table th,
+.cms-table td{
+    padding:12px 14px;
+    font-size:13px;
+}
+
+.dashboard-header h1{
+    font-size:22px;
+}
+
+}

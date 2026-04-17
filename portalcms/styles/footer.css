@@ -1,0 +1,34 @@
+
+
+.cms-footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 20px 40px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.footer-left {
+    font-weight: 500;
+}
+
+.footer-right {
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* Optional subtle hover effect */
+.footer-right:hover {
+    color: #2b8cee;
+    transition: 0.3s ease;
+    cursor: pointer;
+}

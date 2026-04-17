@@ -1,0 +1,596 @@
+/* ============================================================================
+   RISKHOP - INTERACTIVE INSTRUCTION PAGE STYLES
+   File: assets/css/instruction.css
+   ============================================================================ */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Body & Background */
+body.instruction-page-body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated Background Circles */
+body.instruction-page-body::before,
+body.instruction-page-body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+body.instruction-page-body::before {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -200px;
+    animation: float 20s ease-in-out infinite;
+}
+
+body.instruction-page-body::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    animation: float 15s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-50px) translateX(50px);
+    }
+}
+
+/* Main Container */
+.instruction-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Section */
+.instruction-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.instruction-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -1px;
+}
+
+.instruction-header h1 i {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.instruction-header p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Content Container */
+.instruction-content {
+    background: #fff;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease 0.2s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Instruction Sections */
+.instruction-section {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #f1f3f5;
+    position: relative;
+    animation: fadeInSection 0.6s ease;
+}
+
+.instruction-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.instruction-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    position: relative;
+}
+
+.instruction-section h2::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 3px;
+}
+
+.instruction-section h2 i {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.instruction-section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.instruction-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.instruction-section ul li {
+    padding: 15px 0 15px 50px;
+    position: relative;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+}
+
+.instruction-section ul li:hover {
+    transform: translateX(5px);
+}
+
+.instruction-section ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.instruction-section ul li strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Legend Items Grid */
+.legend-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.legend-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.legend-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.legend-item:hover::before {
+    opacity: 1;
+}
+
+.legend-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.legend-item:hover .legend-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.legend-icon.snake {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+.legend-icon.ladder {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: #fff;
+}
+
+.legend-icon.wildcard {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: #fff;
+}
+
+.legend-icon.bonus {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #fff;
+}
+
+.legend-icon.audit {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+}
+
+.legend-text {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.legend-text h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.legend-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.instruction-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 3px solid #f1f3f5;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+.instruction-footer p {
+    font-size: 1.05rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    background: rgba(236, 240, 241, 0.5);
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.instruction-footer p i {
+    color: #3498db;
+    margin-right: 8px;
+}
+
+/* Start Game Button */
+.btn-start-game {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: #fff;
+    padding: 22px 60px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-start-game::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-start-game:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.btn-start-game:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(39, 174, 96, 0.5);
+}
+
+.btn-start-game:active {
+    transform: translateY(0) scale(1);
+}
+
+.btn-start-game:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-start-game i {
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+/* Print Button (Desktop Only) */
+.btn-print {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #fff;
+    color: #667eea;
+    padding: 15px 30px;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-print:hover {
+    background: #667eea;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.btn-print i {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instruction-page {
+        padding: 40px 20px;
+    }
+    
+    .instruction-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .instruction-header p {
+        font-size: 1.2rem;
+    }
+    
+    .instruction-content {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+    
+    .instruction-section {
+        margin-bottom: 35px;
+        padding-bottom: 30px;
+    }
+    
+    .instruction-section h2 {
+        font-size: 1.6rem;
+        gap: 10px;
+    }
+    
+    .instruction-section h2::before {
+        display: none;
+    }
+    
+    .instruction-section p {
+        font-size: 1rem;
+    }
+    
+    .instruction-section ul li {
+        font-size: 0.95rem;
+        padding-left: 45px;
+    }
+    
+    .instruction-section ul li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .legend-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .legend-item {
+        padding: 20px;
+    }
+    
+    .legend-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .legend-text h4 {
+        font-size: 1.1rem;
+    }
+    
+    .legend-text p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-start-game {
+        padding: 18px 40px;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .btn-print {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instruction-header h1 {
+        font-size: 2rem;
+    }
+    
+    .instruction-header p {
+        font-size: 1.1rem;
+    }
+    
+    .instruction-content {
+        padding: 25px 20px;
+    }
+    
+    .instruction-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .btn-start-game {
+        font-size: 1.1rem;
+        padding: 16px 30px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body.instruction-page-body::before,
+    body.instruction-page-body::after {
+        display: none;
+    }
+    
+    .btn-start-game,
+    .btn-print {
+        display: none;
+    }
+    
+    .instruction-page {
+        padding: 20px;
+    }
+    
+    .instruction-content {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

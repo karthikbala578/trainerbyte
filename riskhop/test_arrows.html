@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Test</title>
+    <style>
+        body {
+            padding: 40px;
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .board-arrows-svg {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: calc(100% - 80px);
+            height: calc(100% - 80px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .board-arrows-svg path.arrow-path {
+            fill: none;
+            stroke-width: 4;
+            opacity: 0.7;
+        }
+        
+        .board-arrows-svg path.arrow-path.snake {
+            stroke: #e74c3c;
+        }
+        
+        .board-arrows-svg path.arrow-path.ladder {
+            stroke: #27ae60;
+        }
+        
+        .test-board {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .test-cell {
+            aspect-ratio: 1;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #adb5bd;
+        }
+        
+        .test-cell.snake {
+            background: #fee;
+            border-color: #e74c3c;
+        }
+        
+        .test-cell.ladder {
+            background: #efe;
+            border-color: #27ae60;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Arrow Test Page</h1>
+    
+    <div class="info">
+        <strong>Test Setup:</strong><br>
+        - Snake: Cell 36 → Cell 23 (Red arrow)<br>
+        - Ladder: Cell 12 → Cell 31 (Green arrow)<br>
+        <br>
+        <strong>Open browser console (F12) to see debug logs</strong>
+    </div>
+    
+    <div class="test-container">
+        <!-- SVG Overlay -->
+        <svg class="board-arrows-svg" id="testArrowsSvg">
+            <defs>
+                <marker id="arrowhead-snake" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                    <path d="M2,2 L2,10 L10,6 z" fill="#e74c3c" />
+                </marker>
+                <marker id="arrowhead-ladder" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                    <path d="M2,2 L2,10 L10,6 z" fill="#27ae60" />
+                </marker>
+            </defs>
+        </svg>
+        
+        <!-- Test Board -->
+        <div class="test-board" id="testBoard">
+            <!-- Row 6 -->
+            <div class="test-cell" data-cell="36">36</div>
+            <div class="test-cell" data-cell="35">35</div>
+            <div class="test-cell" data-cell="34">34</div>
+            <div class="test-cell" data-cell="33">33</div>
+            <div class="test-cell" data-cell="32">32</div>
+            <div class="test-cell ladder" data-cell="31">31</div>
+            
+            <!-- Row 5 -->
+            <div class="test-cell" data-cell="25">25</div>
+            <div class="test-cell" data-cell="26">26</div>
+            <div class="test-cell" data-cell="27">27</div>
+            <div class="test-cell" data-cell="28">28</div>
+            <div class="test-cell" data-cell="29">29</div>
+            <div class="test-cell" data-cell="30">30</div>
+            
+            <!-- Row 4 -->
+            <div class="test-cell" data-cell="24">24</div>
+            <div class="test-cell snake" data-cell="23">23</div>
+            <div class="test-cell" data-cell="22">22</div>
+            <div class="test-cell" data-cell="21">21</div>
+            <div class="test-cell" data-cell="20">20</div>
+            <div class="test-cell" data-cell="19">19</div>
+            
+            <!-- Row 3 -->
+            <div class="test-cell" data-cell="13">13</div>
+            <div class="test-cell" data-cell="14">14</div>
+            <div class="test-cell" data-cell="15">15</div>
+            <div class="test-cell" data-cell="16">16</div>
+            <div class="test-cell" data-cell="17">17</div>
+            <div class="test-cell" data-cell="18">18</div>
+            
+            <!-- Row 2 -->
+            <div class="test-cell ladder" data-cell="12">12</div>
+            <div class="test-cell" data-cell="11">11</div>
+            <div class="test-cell" data-cell="10">10</div>
+            <div class="test-cell" data-cell="9">9</div>
+            <div class="test-cell" data-cell="8">8</div>
+            <div class="test-cell" data-cell="7">7</div>
+            
+            <!-- Row 1 -->
+            <div class="test-cell" data-cell="1">1</div>
+            <div class="test-cell" data-cell="2">2</div>
+            <div class="test-cell" data-cell="3">3</div>
+            <div class="test-cell" data-cell="4">4</div>
+            <div class="test-cell" data-cell="5">5</div>
+            <div class="test-cell" data-cell="6">6</div>
+        </div>
+    </div>
+    
+    <script>
+        console.log('🎯 Test page loaded');
+        
+        function drawTestArrows() {
+            console.log('Drawing test arrows...');
+            
+            const svg = document.getElementById('testArrowsSvg');
+            const board = document.getElementById('testBoard');
+            
+            if (!svg || !board) {
+                console.error('Elements not found!');
+                return;
+            }
+            
+            const svgRect = svg.getBoundingClientRect();
+            
+            function getCellCenter(cellNumber) {
+                const cell = board.querySelector(`[data-cell="${cellNumber}"]`);
+                if (!cell) {
+                    console.warn(`Cell ${cellNumber} not found`);
+                    return null;
+                }
+                
+                const cellRect = cell.getBoundingClientRect();
+                return {
+                    x: cellRect.left + cellRect.width / 2 - svgRect.left,
+                    y: cellRect.top + cellRect.height / 2 - svgRect.top
+                };
+            }
+            
+            function createArrow(from, to, isSnake) {
+                console.log(`Creating ${isSnake ? 'snake' : 'ladder'} arrow: ${from} → ${to}`);
+                
+                const start = getCellCenter(from);
+                const end = getCellCenter(to);
+                
+                if (!start || !end) {
+                    console.error('Could not get cell positions');
+                    return;
+                }
+                
+                console.log('Start:', start, 'End:', end);
+                
+                const dx = end.x - start.x;
+                const dy = end.y - start.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                const midX = (start.x + end.x) / 2;
+                const midY = (start.y + end.y) / 2;
+                
+                const offsetAmount = distance * 0.25;
+                const perpX = -dy / distance * offsetAmount;
+                const perpY = dx / distance * offsetAmount;
+                
+                const controlX = midX + perpX;
+                const controlY = midY + perpY;
+                
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const pathData = `M ${start.x} ${start.y} Q ${controlX} ${controlY} ${end.x} ${end.y}`;
+                
+                path.setAttribute('d', pathData);
+                path.setAttribute('class', `arrow-path ${isSnake ? 'snake' : 'ladder'}`);
+                path.setAttribute('marker-end', `url(#arrowhead-${isSnake ? 'snake' : 'ladder'})`);
+                
+                svg.appendChild(path);
+                console.log('✅ Arrow created');
+            }
+            
+            // Draw snake: 36 → 23
+            createArrow(36, 23, true);
+            
+            // Draw ladder: 12 → 31
+            createArrow(12, 31, false);
+            
+            console.log('All arrows drawn');
+        }
+        
+        // Draw on load
+        window.addEventListener('load', function() {
+            setTimeout(drawTestArrows, 100);
+        });
+    </script>
+</body>
+</html>

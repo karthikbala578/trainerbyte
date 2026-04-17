@@ -1,0 +1,10 @@
+[26-Mar-2026 00:38:10 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php(12): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'trainer_byte_cm...')
+#1 /home1/ipskfimy/public_html/trainerbyte/portalcms/pages/highlights/highlights.php(3): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php on line 12
+[26-Mar-2026 01:15:27 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:15:27 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:38 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:38 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6

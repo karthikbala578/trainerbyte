@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html,body{
+    height:100%;
+    margin:0;
+    font-family:'Public Sans',sans-serif;
+    background:#f8fafc;
+}
+
+
+/* MAIN WRAPPER */
+
+.inject-wrapper{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* MAIN CONTENT AREA */
+
+.inject-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+
+    max-width:1400px;
+    width:100%;
+
+    margin:auto;
+    margin-top: 58px;
+}
+
+
+/* PAGE CONTENT */
+
+.inject-main{
+    flex:1;
+    padding:32px 28px 20px 28px;
+}
+
+
+/* HEADER */
+
+.inject-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.inject-header h2{
+    font-size:20px;
+    font-weight:700;
+    color:#0f172a;
+    margin:0;
+}
+
+.inject-header p{
+    margin-top:6px;
+    font-size:13px;
+    color:#64748b;
+}
+
+
+/* TOTAL CARD */
+
+.total-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+
+    padding:14px 22px;
+
+    text-align:center;
+    min-width:130px;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.03),
+        0 8px 24px rgba(0,0,0,0.04);
+}
+
+.total-card span{
+    display:block;
+    font-size:11px;
+    color:#94a3b8;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.total-card strong{
+    font-size:24px;
+    color:#3b82f6;
+    font-weight:700;
+}
+
+
+/* GRID */
+
+.channels-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+
+/* CARD */
+
+.channel-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+
+    padding:18px 20px;
+
+    transition:.18s;
+}
+
+.channel-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 26px rgba(0,0,0,0.06);
+}
+
+
+/* LEFT SIDE */
+
+.channel-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+
+    background:#dbeafe;
+    color:#2563eb;
+
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+}
+
+
+/* TEXT */
+
+.channel-text h4{
+    margin:0;
+    font-size:14px;
+    font-weight:600;
+    color:#1e293b;
+}
+
+.channel-text p{
+    margin:4px 0 0;
+    font-size:12px;
+    color:#64748b;
+}
+
+
+/* COUNTER */
+
+.counter{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    background:#f1f5f9;
+    border-radius:10px;
+
+    padding:4px;
+}
+
+.counter button{
+    width:28px;
+    height:28px;
+
+    border:none;
+    background:#ffffff;
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:background .15s;
+}
+
+.counter button:hover{
+    background:#e2e8f0;
+}
+
+.counter input{
+    width:42px;
+    height:28px;
+
+    text-align:center;
+
+    border:none;
+    background:transparent;
+
+    font-size:14px;
+}
+
+
+/* ERROR */
+
+.error{
+    margin-top:16px;
+    color:#ef4444;
+    font-size:13px;
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+}
+
+.page-footer-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-back,
+.btn-next {
+    padding: 10px 26px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.btn-back {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #374151;
+}
+
+.btn-back:hover {
+    background: #e2e8f0;
+}
+
+.btn-next {
+    background: #2563eb;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.btn-next:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-next:active {
+    transform: scale(0.98);
+}

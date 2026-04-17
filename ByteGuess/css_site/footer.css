@@ -1,0 +1,356 @@
+/* ===== Footer Button ===== */
+
+.footer-action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 0;
+    /* border-top: 1px solid #e2e8f0; */
+    z-index: 999;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+
+/* ===== Footer Navigation ===== */
+
+.nav-controls {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center;
+    gap: 20px;
+}
+
+
+.arrow-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+
+.arrow-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.left-btn { 
+    /* background: #ccd9e9;  */
+    color: #4a5568; }
+.right-btn { 
+    /* background: #ccd9e9;  */
+    color: #4a5568; }
+
+
+
+.finish-btn{
+
+    background:#1e6bff;
+
+    color:#fff;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+}
+
+/* Container on the LEFT */
+
+    .ai-chat-widget {
+
+        position: fixed;
+
+        bottom: 10px;
+
+        left: 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        font-family: 'Segoe UI', Arial, sans-serif;
+
+        z-index: 1000;
+
+    }
+
+
+
+    /* The Speech Bubble */
+
+    .chat-bubble {
+
+        visibility: hidden; /* Using visibility for smoother transitions */
+
+        opacity: 0;
+
+        background: white;
+
+        padding: 12px 18px;
+
+        border-radius: 12px;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+        margin-left: 15px;
+
+        position: relative;
+
+        min-width: 200px;
+
+        order: 2;
+
+        transition: all 0.3s ease-in-out;
+
+        transform: translateX(-10px);
+
+    }
+
+
+
+    .chat-bubble.show {
+
+        visibility: visible;
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+
+
+    /* Arrow pointing LEFT */
+
+    .chat-bubble::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+
+        left: -8px;
+
+        transform: translateY(-50%);
+
+        border-width: 8px 8px 8px 0;
+
+        border-style: solid;
+
+        border-color: transparent white transparent transparent;
+
+    }
+
+
+
+    .chat-bubble h4 { margin: 0 0 4px 0; color: #333; font-size: 15px; }
+
+    .chat-bubble p { margin: 0; color: #666; font-size: 13px; line-height: 1.4; }
+
+
+
+    /* Blue Bot Icon (Squircle) */
+
+    .bot-button {
+
+        width: 60px;
+
+        height: 60px;
+
+        background-color: #1a73e8; /* Blue from your image */
+
+        border-radius: 16px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        position: relative;
+
+        order: 1;
+
+        box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+
+    }
+
+
+
+    .bot-button img { width: 35px; height: auto; }
+
+
+
+    /* Online Status Dot */
+
+    .online-status {
+
+        width: 12px;
+
+        height: 12px;
+
+        background: #00c853;
+
+        border: 2px solid white;
+
+        border-radius: 50%;
+
+        position: absolute;
+
+        top: -3px;
+
+        right: -3px;
+
+    }
+
+@media(max-width:900px){
+
+        .ai-chat-widget {
+
+            bottom: 10px; /* above mobile nav bars */
+
+        }
+
+    }
+
+@media(max-width:500px){
+
+    
+
+    .finish-btn{
+
+        width:100%;
+
+    }
+
+
+
+    .footer-action {
+
+        text-align: center; /* Center the buttons on mobile */
+
+        padding-bottom: 1px;
+
+    }
+
+
+
+    .nav-controls {
+
+        justify-content: center; /* Center the flex items */
+
+        gap: 2px;
+
+        flex-direction: column;
+
+        margin-right: 0px;
+
+    }
+
+
+
+    .arrow-btn {
+
+        width: 45px;  /* Slightly larger buttons for easier finger tapping */
+
+        height: 45px;
+
+        font-size: 13px;
+
+    }
+
+
+
+    .button-nav {
+
+        margin-right: 10%;
+
+        justify-content: center;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        gap: 12px !important;
+
+        align-items: center;
+
+    }
+
+
+
+    .arrow-nav{
+
+        justify-content:center;
+
+    }
+
+
+
+    .ai-chat-widget {
+
+        bottom: 35px;
+        left: 20px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .nav-controls {
+        flex-direction: column-reverse; /* Finish button on top of arrows */
+        justify-content: center;
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .footer-container { padding: 0; }
+
+    .arrow-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .arrow-btn, .finish-btn {
+        flex: 1;
+        text-align: center;
+        padding: 14px;
+    }
+
+    .finish-btn { width: 100%; }
+
+    /* Move Bot up so it doesn't block the PREVIOUS button */
+    .ai-chat-widget {
+        bottom: 90px; 
+        left: 20px;
+        transform: scale(0.9);
+    }
+    
+    /* Move bubble to top of bot on mobile */
+    .chat-bubble::after {
+        top: auto;
+        bottom: -8px;
+        left: 20px;
+        border-width: 8px 8px 0 8px;
+        border-color: white transparent transparent transparent;
+    }
+}

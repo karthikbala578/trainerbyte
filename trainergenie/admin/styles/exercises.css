@@ -1,0 +1,241 @@
+.exercise-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 28px;
+    color: #4f46e5;
+    text-decoration: none;
+    background: rgba(106,90,249,0.12);
+    padding: 8px 16px;
+    border: solid 1px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #6a5af9, #7c6cfb);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+/* HERO */
+.exercise-hero {
+    background: linear-gradient(135deg, rgba(106,90,249,.15), rgba(124,108,251,.1));
+    border-radius: 24px;
+    padding: 48px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+
+.hero-pill {
+    background: rgba(106,90,249,.15);
+    color: #4f46e5;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.exercise-hero h1 {
+    font-size: 36px;
+    margin: 14px 0 10px;
+}
+
+.exercise-hero p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* FLASH */
+.flash-message {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 36px;
+}
+
+/* CARD */
+.exercise-card {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.exercise-img {
+    position: relative;
+    height: 170px;
+}
+
+.exercise-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-placeholder {
+    background: #eef2ff;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+}
+
+/* TAG */
+.tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0,0,0,.75);
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* BODY */
+.exercise-body {
+    padding: 20px;
+}
+
+.exercise-body h3 {
+    margin-bottom: 6px;
+}
+
+.exercise-body p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+/* ACTIONS */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg,#6a5af9,#7c6cfb);
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background: #150adc;
+
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    background: #fff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn-secondary {
+    background: #f3f4f6;          
+    color: #374151;               
+    border: 1px solid #e5e7eb;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+.btn-secondary:active {
+    transform: translateY(1px);
+}

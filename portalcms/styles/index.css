@@ -1,0 +1,245 @@
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f6f7f8;
+    margin: 0;
+}
+
+.dashboard-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.tab-name {
+    color: #2b8cee;
+}
+
+
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+
+.dashboard-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #f1f1f1;
+    transition: 0.3s ease;
+}
+
+@media (hover: hover) {
+    .dashboard-card:hover {
+        border-color: #2b8cee;
+        transform: translateY(-3px);
+    }
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-top: 15px;
+}
+
+.card-count {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.card-subtext {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(43,140,238,0.1);
+    color: #2b8cee;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.card-btn svg {
+    fill: #2b8cee;
+    transition: 0.3s ease;
+    width: 16px;
+    height: 16px;
+}
+
+.card-btn:hover {
+    background: #2b8cee;
+    color: #ffffff;
+}
+
+.card-btn:hover svg {
+    fill: #ffffff;
+}
+
+
+
+
+.recent-section {
+    margin-top: 50px;
+}
+
+.recent-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.recent-item {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-item:last-child {
+    border-bottom: none;
+}
+
+.recent-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recent-date {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+
+
+@media (max-width: 992px) {
+
+    .dashboard-wrapper {
+        padding: 25px 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .card-count {
+        font-size: 28px;
+    }
+
+    .card-grid {
+        gap: 25px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .dashboard-wrapper {
+        padding: 20px 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+    }
+
+    .card-title {
+        font-size: 11px;
+    }
+
+    .card-count {
+        font-size: 24px;
+    }
+
+    .card-subtext {
+        font-size: 12px;
+    }
+
+    .card-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .card-icon img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .dashboard-header h1 {
+        font-size: 18px;
+    }
+
+    .card-count {
+        font-size: 22px;
+    }
+
+    .card-btn {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,290 @@
+/* ======================================================
+   RESET & BASE
+====================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* ======================================================
+   LAYOUT
+====================================================== */
+.exercise-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.wizard {
+    width: 100%;
+    max-width: 760px;
+}
+
+/* ===============================
+   FORM INPUTS (MISSING PIECE)
+================================ */
+
+/* Style labels */
+.form-group label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+/* Style Inputs and Textareas */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Make them fill the grid column */
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+/* Add focus state for better UX */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Fix textarea height */
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ======================================================
+   STEP INDICATOR
+====================================================== */
+.wizard-steps {
+    margin-bottom: 24px;
+}
+
+.step-dot { display: none; }
+
+.step-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.step-label { display: none; }
+
+#step-dot-1.active ~ .step-text [data-step="1"],
+#step-dot-2.active ~ .step-text [data-step="2"],
+#step-dot-3.active ~ .step-text [data-step="3"],
+#step-dot-4.active ~ .step-text [data-step="4"],
+#step-dot-5.active ~ .step-text [data-step="5"] {
+    display: inline;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 999px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    border-radius: 999px;
+    transition: width .3s ease;
+}
+
+#step-dot-1.active ~ .progress-bar .progress-fill { width: 20%; }
+#step-dot-2.active ~ .progress-bar .progress-fill { width: 40%; }
+#step-dot-3.active ~ .progress-bar .progress-fill { width: 60%; }
+#step-dot-4.active ~ .progress-bar .progress-fill { width: 80%; }
+#step-dot-5.active ~ .progress-bar .progress-fill { width: 100%; }
+
+/* ======================================================
+   MAIN CARD
+====================================================== */
+#wizard-box {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow:
+        0 20px 40px rgba(15,23,42,.08),
+        0 2px 4px rgba(15,23,42,.04);
+}
+
+#wizard-box h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* ======================================================
+   OPTION CARDS — FINAL LOCKED VERSION
+====================================================== */
+
+.option-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 16px;
+}
+
+/* LEFT GROUP */
+.option-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ICON */
+.option-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ICON COLORS */
+.option-card.correct .option-icon {
+    background: #dcfce7;
+    color: #15803d;
+}
+.option-card.partial .option-icon {
+    background: #fef3c7;
+    color: #92400e;
+}
+.option-card.wrong .option-icon {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* TEXT */
+.option-info label {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+.option-info span {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ======================================================
+   COUNTER — FIXED PILL
+====================================================== */
+
+.stepper-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f8fafc;
+    border-radius: 999px;
+    padding: 6px 8px;
+    border: 1px solid #e5e7eb;
+    min-width: 140px;
+}
+
+/* isolate from global buttons */
+.stepper-wrap button {
+    all: unset;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.stepper-wrap input {
+    all: unset;
+    width: 28px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* ======================================================
+   FOOTER BUTTONS
+====================================================== */
+
+.button-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+button {
+    padding: 14px 28px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:not(.btn-secondary) {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+/* ======================================================
+   LOADER
+====================================================== */
+#loader {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+/* ===============================
+   FORM GRID (FIXES STEP 1 & 2)
+================================ */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grid-full {
+    grid-column: 1 / -1;
+}

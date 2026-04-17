@@ -1,0 +1,865 @@
+[10-Feb-2026 06:27:59 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 17:41:25 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 17:41:29 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 17:41:32 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:47:47 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:47:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:04 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:33 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:50 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:48:56 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:49:00 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:49:19 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:50:02 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:50:07 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php:30
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/login_action.php on line 30
+[10-Feb-2026 22:50:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php on line 22
+[10-Feb-2026 22:51:12 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php on line 22
+[10-Feb-2026 22:51:36 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php on line 22
+[10-Feb-2026 22:51:41 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/signup_action.php on line 22
+[11-Feb-2026 23:41:23 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/profile.php:75
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/profile.php on line 75
+[13-Feb-2026 21:49:03 America/Boise] PHP Warning:  Undefined variable $url_code in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 87
+[13-Feb-2026 22:41:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 2
+[13-Feb-2026 22:41:33 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:9) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 7
+[13-Feb-2026 22:41:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 2
+[13-Feb-2026 22:41:47 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:9) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 7
+[13-Feb-2026 22:42:10 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 2
+[13-Feb-2026 22:42:10 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:9) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 7
+[16-Feb-2026 01:45:38 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 01:57:36 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:00:59 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:03:21 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:04:03 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:04:45 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:11:01 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:11:11 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:11:42 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:12:10 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:12:40 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:13:45 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:18:15 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 02:19:16 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 03:08:16 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 03:23:18 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 05:56:09 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 40
+[16-Feb-2026 06:02:22 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 06:05:48 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 06:05:55 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 06:06:07 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 06:06:38 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 07:04:57 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 07:22:03 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 07:22:08 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 07:23:12 America/Boise] PHP Warning:  Undefined variable $website in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 29
+[16-Feb-2026 22:27:02 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Feb-2026 22:27:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Feb-2026 22:27:02 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Feb-2026 22:27:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Feb-2026 22:27:52 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Feb-2026 22:27:52 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Feb-2026 22:27:52 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Feb-2026 22:27:52 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:23:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:23:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:23:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:23:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:23:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:23:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:23:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:23:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:30:17 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:30:17 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Feb-2026 00:30:17 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Feb-2026 00:30:17 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[19-Feb-2026 22:50:24 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[19-Feb-2026 22:50:24 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[19-Feb-2026 22:50:24 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[19-Feb-2026 22:50:24 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:20:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:20:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:20:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:20:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:21:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:21:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:21:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:21:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:21:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:21:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[20-Feb-2026 09:21:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Feb-2026 09:21:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[23-Feb-2026 01:25:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[23-Feb-2026 01:25:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[23-Feb-2026 01:25:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[23-Feb-2026 01:25:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[23-Feb-2026 05:09:04 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php:9
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 9
+[23-Feb-2026 05:17:58 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php:8
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php(8): mysqli_stmt->bind_param('is', '3', '123456')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 8
+[23-Feb-2026 05:29:54 America/Boise] PHP Warning:  Undefined array key "pass" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 5
+[23-Feb-2026 05:30:52 America/Boise] PHP Warning:  Undefined array key "pass" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 5
+[23-Feb-2026 05:47:27 America/Boise] PHP Warning:  Undefined array key "pass" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/confirmUrl.php on line 5
+[23-Feb-2026 20:43:25 America/Boise] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:14
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php(14): mysqli_stmt->bind_param('s', NULL, 'MB5NYS')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 14
+[23-Feb-2026 21:23:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 17
+[23-Feb-2026 21:23:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 18
+[23-Feb-2026 21:23:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 19
+[23-Feb-2026 21:48:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 17
+[23-Feb-2026 21:48:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 18
+[23-Feb-2026 21:48:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 19
+[23-Feb-2026 21:49:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 17
+[23-Feb-2026 21:49:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 18
+[23-Feb-2026 21:49:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 19
+[02-Mar-2026 22:44:53 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php on line 31
+[02-Mar-2026 22:56:12 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php on line 31
+[02-Mar-2026 22:56:15 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php on line 31
+[02-Mar-2026 22:56:28 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:56:28 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:56:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:56:44 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:57:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:57:05 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:57:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:57:18 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:57:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:57:20 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:58:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:58:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:58:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:58:14 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:58:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:58:18 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:58:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:58:21 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:59:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:59:08 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:59:30 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:59:30 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 22:59:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 22:59:42 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:00:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:00:16 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:00:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:00:22 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:00:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:00:26 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:00:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:00:31 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:00:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:00:35 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:01:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:01:11 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:02:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:02:08 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:02:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:02:18 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:04:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:04:09 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:04:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:04:23 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:08:02 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:08:02 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:10:38 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:10:38 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:13:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:13:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:17:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:17:17 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:17:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:17:31 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:17:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:17:35 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:17:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:17:36 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:18:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:18:05 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:19:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:19:43 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:19:53 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:19:53 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:20:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:20:33 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:21:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:21:44 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:22:42 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[02-Mar-2026 23:22:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[02-Mar-2026 23:22:42 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[02-Mar-2026 23:22:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[02-Mar-2026 23:24:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:24:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:25:02 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:25:02 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:25:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:25:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:26:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:26:22 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:26:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:26:25 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:26:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:26:44 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:27:07 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:27:07 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:27:15 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:27:15 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:27:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:27:16 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:27:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:27:41 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:27:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:27:46 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:28:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:28:26 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:28:34 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:28:34 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:28:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:28:45 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:28:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:28:49 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:28:51 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:28:51 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:29:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:29:17 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 13
+[02-Mar-2026 23:31:33 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:31:40 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:31:47 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:32:01 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:32:12 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:32:16 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:32:21 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:32:49 America/Boise] PHP Parse error:  syntax error, unexpected identifier "define" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 3
+[02-Mar-2026 23:37:10 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:37:10 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:37:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:37:14 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:37:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:37:20 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/dataconnect.php:42) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:47:04 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:47:04 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:47:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:47:05 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:47:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:47:11 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:47:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:47:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:47:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:47:20 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[02-Mar-2026 23:48:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[02-Mar-2026 23:48:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:07:55 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:07:55 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:13:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:13:41 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:28:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:28:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:31:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:31:36 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:35:58 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:35:58 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:36:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:36:22 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:36:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:36:31 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:36:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:36:31 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:36:53 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:36:53 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:44:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:44:37 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:44:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:44:45 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:44:52 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:44:52 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:44:52 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:44:52 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:45:01 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:45:01 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:46:31 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[03-Mar-2026 00:46:31 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[03-Mar-2026 00:46:31 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[03-Mar-2026 00:46:31 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[03-Mar-2026 00:50:34 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[03-Mar-2026 00:50:34 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 211
+[03-Mar-2026 00:50:34 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[03-Mar-2026 00:50:34 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 215
+[03-Mar-2026 00:51:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:51:23 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:52:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:52:00 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:52:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:52:06 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:52:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:52:11 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:57:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:57:36 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[03-Mar-2026 00:57:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 4
+[03-Mar-2026 00:57:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php:619) in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/include/session_check.php on line 11
+[04-Mar-2026 00:07:51 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 00:07:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 00:07:51 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 00:07:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 01:02:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 01:02:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 01:02:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 01:02:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:10 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:10 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:10 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:10 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:32 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:32 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:32 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:32 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:45 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:45 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[04-Mar-2026 23:59:45 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[04-Mar-2026 23:59:45 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[05-Mar-2026 04:13:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[05-Mar-2026 04:13:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[05-Mar-2026 04:13:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[05-Mar-2026 04:13:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[05-Mar-2026 04:30:30 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[05-Mar-2026 04:33:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[05-Mar-2026 04:33:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[05-Mar-2026 04:34:55 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[05-Mar-2026 04:34:55 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[05-Mar-2026 04:34:55 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[05-Mar-2026 04:34:55 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 03:54:16 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 03:54:16 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 03:54:16 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 03:54:16 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 10:00:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 10:00:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 10:00:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 10:00:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 10:00:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 10:00:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[07-Mar-2026 10:00:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 10:00:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[07-Mar-2026 10:03:43 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[07-Mar-2026 10:07:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[07-Mar-2026 10:10:22 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[07-Mar-2026 10:12:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[08-Mar-2026 11:11:15 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 11:11:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 11:11:15 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 11:11:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 12:51:12 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 12:51:12 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 12:51:12 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 12:51:12 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 22:00:10 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[08-Mar-2026 22:48:51 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 22:48:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 22:48:51 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 22:48:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 23:14:40 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 23:14:40 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[08-Mar-2026 23:14:40 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 23:14:40 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[08-Mar-2026 23:24:56 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[08-Mar-2026 23:25:49 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[08-Mar-2026 23:27:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[08-Mar-2026 23:27:55 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[09-Mar-2026 00:04:03 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[09-Mar-2026 00:04:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[09-Mar-2026 00:04:03 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[09-Mar-2026 00:04:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[09-Mar-2026 23:13:26 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[09-Mar-2026 23:16:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[09-Mar-2026 23:17:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[09-Mar-2026 23:24:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 520
+[09-Mar-2026 23:29:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[09-Mar-2026 23:29:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[09-Mar-2026 23:29:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[09-Mar-2026 23:29:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[11-Mar-2026 00:28:19 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 00:28:19 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php:10
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php(10): mysqli_query(NULL, 'SHOW COLUMNS FR...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 00:28:26 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 00:28:26 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php:10
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php(10): mysqli_query(NULL, 'SHOW COLUMNS FR...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 00:28:35 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 00:28:35 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php:10
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php(10): mysqli_query(NULL, 'SHOW COLUMNS FR...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/byteguess_exercise.php on line 10
+[11-Mar-2026 03:18:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 03:18:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 03:18:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 03:18:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 03:19:03 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:18:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:18:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:20:21 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:20:24 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:20:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:21:15 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:21:18 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:114
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 114
+[11-Mar-2026 04:22:02 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:22:05 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:22:08 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:22:12 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:22:14 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 04:22:16 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:11:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:11:53 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:11:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:12:08 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:13:16 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:13:19 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:13:54 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:13:58 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:13:59 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:15:39 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:15:43 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:105
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 105
+[11-Mar-2026 05:43:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:43:36 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:43:50 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:43:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:44:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:45:48 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:47:32 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 05:47:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php:262
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/teaminstance_be.php on line 262
+[11-Mar-2026 13:43:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[11-Mar-2026 13:43:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[11-Mar-2026 13:43:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[11-Mar-2026 13:43:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[12-Mar-2026 22:15:15 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[12-Mar-2026 22:15:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[12-Mar-2026 22:15:15 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[12-Mar-2026 22:15:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 00:57:35 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 00:57:35 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 00:57:35 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 00:57:35 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 00:57:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 00:57:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 00:57:58 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 00:57:58 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 05:24:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 05:24:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[13-Mar-2026 05:24:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[13-Mar-2026 05:24:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[14-Mar-2026 00:30:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[14-Mar-2026 00:30:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[14-Mar-2026 00:30:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[14-Mar-2026 00:30:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Mar-2026 11:23:20 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Mar-2026 11:23:20 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Mar-2026 11:23:20 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Mar-2026 11:23:20 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Mar-2026 22:04:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Mar-2026 22:04:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[16-Mar-2026 22:04:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[16-Mar-2026 22:04:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 18:06:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 18:06:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 18:06:54 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 18:06:54 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 18:09:02 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 18:09:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 18:09:02 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 18:09:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 22:45:07 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 22:45:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 22:45:07 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 22:45:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 22:58:53 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 22:58:53 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 22:58:53 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 22:58:53 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:14:14 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:14:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:14:14 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:14:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:15:11 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:15:11 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:15:11 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:15:11 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:23:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:23:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:23:27 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:23:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:25:49 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:25:49 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:25:49 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:25:49 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:28:14 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:28:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[17-Mar-2026 23:28:14 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[17-Mar-2026 23:28:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:08:19 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:08:19 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:08:19 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:08:19 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:08:38 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:08:38 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:08:38 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:08:38 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:25 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:25 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:25 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:25 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:26 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:26 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:26 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:26 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:11:28 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:11:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:12:07 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:12:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:12:07 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:12:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:22 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:22 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:22 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:22 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:23 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:24 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:24 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:24 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:24 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:24:59 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:24:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:28:57 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:28:57 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 57
+[18-Mar-2026 08:28:57 America/Boise] PHP Warning:  Undefined variable $row in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[18-Mar-2026 08:28:57 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/index.php on line 59
+[20-Mar-2026 00:56:58 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ipskfimy_tg_core'@'localhost' (using password: YES) in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php(12): mysqli->__construct('localhost', 'ipskfimy_tg_cor...', Object(SensitiveParameterValue), 'ipskfimy_tb_cor...')
+#1 /home1/ipskfimy/public_html/trainerGenie/index.php(2): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php on line 12
+[20-Mar-2026 00:57:57 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ipskfimy_tg_core'@'localhost' (using password: YES) in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php(12): mysqli->__construct('localhost', 'ipskfimy_tg_cor...', Object(SensitiveParameterValue), 'ipskfimy_tb_cor...')
+#1 /home1/ipskfimy/public_html/trainerGenie/index.php(2): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php on line 12
+[20-Mar-2026 01:02:17 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ipskfimy_tg_core'@'localhost' (using password: YES) in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php(12): mysqli->__construct('localhost', 'ipskfimy_tg_cor...', Object(SensitiveParameterValue), 'ipskfimy_tb_cor...')
+#1 /home1/ipskfimy/public_html/trainerGenie/index.php(4): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerGenie/include/dataconnect.php on line 12
+[20-Mar-2026 01:52:19 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerGenie/index.php on line 59
+[20-Mar-2026 01:52:19 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerGenie/index.php on line 59
+[20-Mar-2026 01:52:19 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerGenie/index.php on line 61
+[20-Mar-2026 01:52:19 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerGenie/index.php on line 61
+[20-Mar-2026 01:53:35 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerGenie/index.php on line 59
+[20-Mar-2026 01:53:35 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerGenie/index.php on line 59
+[20-Mar-2026 01:53:35 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerGenie/index.php on line 61
+[20-Mar-2026 01:53:35 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerGenie/index.php on line 61
+[20-Mar-2026 02:09:26 America/Boise] PHP Warning:  include(../components/navbar.php): Failed to open stream: No such file or directory in /home1/ipskfimy/public_html/trainerGenie/layout/header.php on line 71
+[20-Mar-2026 02:09:26 America/Boise] PHP Warning:  include(): Failed opening '../components/navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home1/ipskfimy/public_html/trainerGenie/layout/header.php on line 71
+[20-Mar-2026 02:18:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\r\n    SELECT l...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 02:22:30 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\r\n    SELECT l...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:06:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\r\n    SELECT l...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:20:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\r\n    SELECT l...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:21:01 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\r\n    SELECT l...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:21:59 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:25:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:25:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:26:53 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:27:40 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:29:37 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 03:30:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 05:58:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 05:59:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 06:02:12 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 06:03:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 06:12:42 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainergenie/library.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/library.php(29): mysqli->prepare('\r\n\r\n    SELECT ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/library.php on line 29
+[20-Mar-2026 07:07:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.survival_group' doesn't exist in /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php:192
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php(192): mysqli->prepare('\n\n    SELECT\n\n ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php on line 192
+[20-Mar-2026 07:12:36 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.survival_group' doesn't exist in /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php:188
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php(188): mysqli->prepare('\n\n    SELECT\n\n ...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/teaminstance_be.php on line 188
+[20-Mar-2026 19:40:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.team' doesn't exist in /home1/ipskfimy/public_html/trainergenie/profile.php:143
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainergenie/profile.php(143): mysqli->prepare('SELECT team_nam...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainergenie/profile.php on line 143
+[21-Mar-2026 21:21:31 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/tb_cms/index.php on line 57
+[21-Mar-2026 21:21:31 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/tb_cms/index.php on line 57
+[21-Mar-2026 21:21:31 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/tb_cms/index.php on line 59
+[21-Mar-2026 21:21:31 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/tb_cms/index.php on line 59
+[25-Mar-2026 02:01:54 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_category' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/trainergenie/signup_action.php:113
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/trainergenie/signup_action.php(113): mysqli->prepare('\r\r\n        INSE...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/trainergenie/signup_action.php on line 113
+[25-Mar-2026 22:00:47 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerbyte/trainergenie/index.php on line 57
+[25-Mar-2026 22:00:47 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerbyte/trainergenie/index.php on line 57
+[25-Mar-2026 22:00:47 America/Boise] PHP Warning:  Undefined variable $row in /home1/ipskfimy/public_html/trainerbyte/trainergenie/index.php on line 59
+[25-Mar-2026 22:00:47 America/Boise] PHP Warning:  Trying to access array offset on null in /home1/ipskfimy/public_html/trainerbyte/trainergenie/index.php on line 59

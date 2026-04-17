@@ -1,0 +1,200 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
+
+$pageCSS = "/pages/page-styles/page_container.css";
+require_once __DIR__ . '/../include/dataconnect.php';
+
+// GET PARAMETERS
+$step  = isset($_GET['step']) ? (int)$_GET['step'] : 1;
+$simId = isset($_GET['sim_id']) ? (int)$_GET['sim_id'] : 0;
+$isNew = isset($_GET['new']) ? (int)$_GET['new'] : 0;
+
+// STEP PAGE MAPPING
+$steps = [
+    // 1 => 'simulation_setup.php',
+    // 2 => 'inject_distribution.php',
+    // 3 => 'score_scale.php',
+    // 4 => 'processing_configuration.php',
+    // 5 => 'review_simulation.php',
+    // 6 => 'digisim_success.php'
+
+    1 => 'start.php',
+
+    2 => 'context.php',
+
+    3 => 'inject.php',
+
+    4 => 'response.php',
+
+    5 => 'finish.php'
+];
+
+// INVALID STEP PROTECTION
+if (!array_key_exists($step, $steps)) {
+    $step = 1;
+}
+
+// CHECK FOR EXISTING DRAFT
+$draftSimId = 0;
+$draftStep  = 1;
+
+$draftStmt = $conn->prepare("
+SELECT ui_id, ui_cur_step
+FROM mg5_digisim_userinput
+WHERE ui_team_pkid = ?
+AND ui_cur_step BETWEEN 1 AND 4
+ORDER BY ui_id DESC
+LIMIT 1
+");
+
+// $draftStmt = $conn->prepare("
+// SELECT ui_id, ui_cur_step
+// FROM mg5_digisim_userinput
+// WHERE ui_team_pkid = ?
+// AND ui_cur_step BETWEEN 1 AND 5
+// ORDER BY ui_id DESC
+// LIMIT 1
+// ");
+
+$draftStmt->bind_param('i', $_SESSION['team_id']);
+$draftStmt->execute();
+$draftResult = $draftStmt->get_result();
+
+if ($draftResult->num_rows > 0) {
+    $draftRow = $draftResult->fetch_assoc();
+    $draftSimId = $draftRow['ui_id'];
+    $draftStep  = $draftRow['ui_cur_step'];
+}
+
+$draftStmt->close();
+
+
+// STEP VALIDATION
+if ($simId > 0) {
+
+    $checkStmt = $conn->prepare("
+    SELECT ui_cur_step
+    FROM mg5_digisim_userinput
+    WHERE ui_id = ? AND ui_team_pkid = ?
+    ");
+
+    $checkStmt->bind_param('ii', $simId, $_SESSION['team_id']);
+    $checkStmt->execute();
+
+    $result = $checkStmt->get_result();
+
+    if ($result->num_rows > 0) {
+
+        $row = $result->fetch_assoc();
+        $currentStepInDB = (int)$row['ui_cur_step'];
+
+        if ($step > $currentStepInDB + 1) {
+            $step = $currentStepInDB;
+        }
+    }
+
+    $checkStmt->close();
+}
+
+
+// LOAD STEP PAGE
+$pageFile = __DIR__ . '/' . $steps[$step];
+
+ob_start();
+require $pageFile;
+$pageContent = ob_get_clean();
+
+
+$hideNavbar = true;
+// LOAD HEADER
+require_once __DIR__ . '/../layout/header.php';
+
+
+
+
+
+// SHOW DRAFT POPUP
+if ($draftSimId > 0 && $simId == 0 && !$isNew && $step != 6) {
+?>
+
+    <div class="draft-overlay">
+        <div class="draft-modal">
+
+            <h3>Draft Simulation Found</h3>
+            <p>You have an unfinished simulation. Would you like to continue?</p>
+
+            <div class="draft-actions">
+
+                <a href="page-container.php?step=<?= $draftStep ?>&sim_id=<?= $draftSimId ?>" class="pbtn-primary">
+                    Continue Draft
+                </a>
+
+                <a href="page-container.php?step=1&new=1" class="sbtn-secondary">
+                    Create New
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .draft-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .draft-modal {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .draft-actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .pbtn-primary {
+            background: #2563eb;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .sbtn-secondary {
+            background: #eee;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+
+<?php
+}
+
+
+// RENDER PAGE
+echo '<div class="page-container">';
+echo $pageContent;
+echo '</div>';
+
+
+// LOAD FOOTER
+require_once __DIR__ . '/../layout/footer.php';
+?>

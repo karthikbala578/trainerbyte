@@ -1,0 +1,237 @@
+/* GAME LAYOUT */
+
+.game-container{
+    display:flex;
+    height:100vh;
+    background:#f3f6fb;
+}
+
+/* LEFT SIDEBAR */
+
+.game-sidebar{
+    width:70px;
+    background:#f4a261;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:15px 0;
+    gap:20px;
+}
+
+.sidebar-logo{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#2ecc71;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#fff;
+}
+
+.sidebar-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.sidebar-btn:hover{
+    transform:scale(1.05);
+}
+
+/* MAIN AREA */
+
+.game-main{
+    flex:1;
+    display:grid;
+    grid-template-columns: 1fr 280px;
+    gap:25px;
+    padding:30px;
+}
+
+/* BOARD */
+
+.game-board-container{
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.game-board{
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    gap:6px;
+}
+
+/* BOARD CELL */
+
+.board-cell{
+    background:#f7f9fc;
+    border-radius:8px;
+    height:70px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
+}
+
+.board-cell:hover{
+    background:#e8f0fe;
+}
+.board-cell:hover{
+    transform:scale(1.05);
+    z-index:2;
+}
+.cell-number{
+    position:absolute;
+    top:4px;
+    left:6px;
+    font-size:11px;
+    color:#888;
+}
+
+/* PLAYER TOKEN */
+
+.player-token{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#3498db;
+    color:white;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+}
+
+/* RIGHT PANEL */
+
+.game-stats-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* STATUS CARD */
+
+.stats-card{
+    background:white;
+    border-radius:14px;
+    padding:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+}
+
+.stats-card h3{
+    margin-bottom:15px;
+}
+
+.stat-item{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+/* ACTION AREA */
+
+.dice-section{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+}
+
+.dice-display{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.btn-roll-dice{
+    width:100%;
+    background:#4c6ef5;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn-roll-dice:hover{
+    background:#3b5bdb;
+}
+
+.btn-invest{
+    width:100%;
+    margin-top:10px;
+    background:#f1f3f5;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* AVATAR */
+
+.avatar-card{
+    background:white;
+    padding:15px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.avatar-card img{
+    width:80px;
+    border-radius:50%;
+}
+.arrow-path{
+    stroke-width:4;
+    fill:none;
+    opacity:.5;
+}
+
+.arrow-path.snake{
+    stroke:#e63946;
+}
+
+.arrow-path.ladder{
+    stroke:#2a9d8f;
+}
+
+.arrow-path.active{
+    opacity:1;
+    stroke-width:6;
+}
+
+.arrow-path.hover{
+    opacity:1;
+}
+.game-actions{
+margin-top:20px;
+display:flex;
+gap:15px;
+justify-content:center;
+}
+@media(max-width:1100px){
+
+.game-main{
+grid-template-columns:1fr;
+}
+
+.game-stats-sidebar{
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+}

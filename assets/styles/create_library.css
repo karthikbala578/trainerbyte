@@ -1,0 +1,80 @@
+/* create_library.css */
+
+.cl-page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 24px;
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cl-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #111827;
+}
+
+.cl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* If there are 8 elements, the 7th and 8th will wrap to the 3rd row nicely */
+
+.cl-btn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 40px; /* Pill shape */
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    outline: none;
+}
+
+.cl-btn:hover {
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+}
+
+.cl-btn.active {
+    background: #4f46e5; /* The specific vibrant blue in the mockup */
+    color: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+}
+
+.cl-actions {
+    text-align: left;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}

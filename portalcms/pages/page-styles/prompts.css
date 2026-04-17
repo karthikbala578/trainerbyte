@@ -1,0 +1,106 @@
+.prompts-wrapper {
+    padding: 30px;
+}
+
+
+.back-div{
+    padding-bottom: 40px;
+    
+ }
+
+ /* BACK BUTTON */
+.back-btn {
+    padding: 8px 16px;
+    background: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    border: 1px solid #b8babe;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #0284c7;
+
+}
+
+
+.page-header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.gt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gt-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gt-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gt-card-header h3 {
+    font-size: 18px;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status-badge.active {
+    background: #e6f7ed;
+    color: #1f9d55;
+}
+
+.status-badge.inactive {
+    background: #fde8e8;
+    color: #d93025;
+}
+
+.gt-card-body {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.gt-card-footer {
+    margin-top: auto;
+}
+
+.manage-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #2b8cee;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.manage-btn:hover {
+    opacity: 0.9;
+}

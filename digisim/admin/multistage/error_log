@@ -1,0 +1,16 @@
+[02-Apr-2026 23:33:57 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:34:01 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:34:02 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:34:02 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:34:02 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:35:02 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:35:56 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:36:35 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:36:42 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:36:46 America/Boise] PHP Fatal error:  Uncaught Exception: Digisim category not found. in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/multistage/ms_digisim_functions.php:45
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/digisim/admin/multistage/ms_generate.php(76): getDigisimCategory(Object(mysqli), 101)
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/multistage/ms_digisim_functions.php on line 45
+[02-Apr-2026 23:39:39 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2
+[02-Apr-2026 23:39:41 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/digisim/admin/components/navbar.php on line 2

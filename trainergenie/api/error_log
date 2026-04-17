@@ -1,0 +1,25 @@
+[23-Mar-2026 05:15:47 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_prompts' doesn't exist in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php:87
+Stack trace:
+#0 /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php(87): mysqli->prepare('SELECT * FROM b...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php on line 87
+[23-Mar-2026 05:25:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_prompts' doesn't exist in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php:86
+Stack trace:
+#0 /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php(86): mysqli->prepare('SELECT * FROM b...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php on line 86
+[23-Mar-2026 05:26:03 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_prompts' doesn't exist in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php:86
+Stack trace:
+#0 /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php(86): mysqli->prepare('SELECT * FROM b...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php on line 86
+[23-Mar-2026 05:27:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_prompts' doesn't exist in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php:86
+Stack trace:
+#0 /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php(86): mysqli->prepare('SELECT * FROM b...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php on line 86
+[23-Mar-2026 05:39:36 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tb_core.byteguess_prompts' doesn't exist in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php:86
+Stack trace:
+#0 /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php(86): mysqli->prepare('SELECT * FROM b...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/website_60f34819/trainergenie/api/byteguess_generate_game.php on line 86

@@ -1,0 +1,188 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background:#f5f6f8;
+    margin:0;
+}
+
+.container {
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 16px;
+}
+
+h1 {
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.back-btn {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:#007bff;
+    font-size: 20px;
+    text-decoration:none;
+    margin-bottom:15px;
+}
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:70px;
+}
+
+.card {
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+
+.card-title {
+    font-size:18px;
+    font-weight:600;
+}
+
+.card-desc {
+    font-size:14px;
+    color:#555;
+    margin-top:8px;
+}
+
+
+.flash-success {
+    background:#e6f4ea;
+    color:#1e7e34;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+.empty {
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+}
+
+input, textarea {
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    margin-bottom:14px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button {
+    padding:10px 16px;
+    background:#007bff;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.card-actions a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #007bff;
+}
+.card-actions a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+@media (max-width:600px) {
+    h1 { font-size:20px; }
+}
+
+
+
+/* view page styles */
+
+.view-box {
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    margin-bottom:20px;
+}
+
+.muted {
+    color:#555;
+    font-size:14px;
+}
+
+.meta {
+    margin-top:10px;
+    font-size:14px;
+}
+
+.options {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:16px;
+    margin-bottom:20px;
+}
+
+.option-card {
+    background:#fff;
+    padding:16px;
+    border-radius:10px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+.option-title {
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.option-desc {
+    font-size:14px;
+    color:#444;
+}
+
+.result-box {
+    background:#f8f9fa;
+    padding:18px;
+    border-radius:10px;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.edit-btn {
+    display:inline-block;
+    padding:10px 16px;
+    background:#007bff;
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+@media (max-width:600px) {
+    h1 { font-size:20px; }
+    .options { grid-template-columns:1fr; }
+}

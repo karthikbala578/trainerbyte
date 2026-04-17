@@ -1,0 +1,240 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Body */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* font-family: 'Public Sans', sans-serif; */
+    background: #f8fafc;
+}
+
+/* Page Layout */
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 58px;
+}
+
+/* Scrollable Content */
+
+.page-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 0;
+}
+
+/* Center Container */
+
+.content-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+/* Two Column Layout */
+
+.sim-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 24px;
+}
+
+/* Panels */
+
+.left-panel,
+.right-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.03),
+        0 8px 24px rgba(0,0,0,0.04);
+}
+
+/* Form Groups */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 13px;
+    background: #fff;
+    outline: none;
+    transition: border 0.15s, box-shadow 0.15s;
+}
+
+/* Focus State */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+/* Textareas */
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Select */
+
+select {
+    cursor: pointer;
+}
+
+/* Tooltip Icon */
+
+.info-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #64748b;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tooltip */
+
+.info-icon:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+
+/* ===== CONSISTENT FOOTER STYLES ===== */
+.page-footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+}
+
+.page-footer-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end; /* ✅ Always align buttons to the right */
+    align-items: center;
+    gap: 12px; /* ✅ Consistent spacing between buttons */
+}
+
+/* Button group wrapper (optional but recommended) */
+.footer-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Button base styles */
+.btn-next,
+.btn-back {
+    padding: 10px 26px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.btn-next {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(59,130,246,0.25);
+}
+
+.btn-next:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(59,130,246,0.35);
+}
+
+.btn-back {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #374151;
+}
+
+.btn-back:hover {
+    background: #e2e8f0;
+}
+
+/* Scrollbars */
+
+.page-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}

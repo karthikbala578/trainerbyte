@@ -1,0 +1,93 @@
+.footer-edit-page{
+    max-width:900px;
+    margin:0 auto;
+    padding:30px 10px;
+}
+
+.footer-edit-page .back-div{
+    padding-bottom:40px;
+}
+
+.footer-edit-page .back-btn{
+    padding:8px 16px;
+    background:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    color:#475569;
+    border:1px solid #b8babe;
+    transition:0.2s ease;
+}
+
+.footer-edit-page .back-btn:hover{
+    background:#e0f2fe;
+    color:#0284c7;
+    border:1px solid #0284c7;
+}
+
+.footer-edit-page h1{
+    font-size:26px;
+    font-weight:600;
+    margin-bottom:25px;
+    color:#222;
+}
+
+.footer-edit-page form{
+    background:#fff;
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+.footer-edit-page #editor{
+    background:#fff;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
+}
+
+.footer-edit-page .ql-toolbar.ql-snow{
+    border-radius:10px 10px 0 0;
+    border:1px solid #e5e7eb;
+}
+
+.footer-edit-page .ql-container.ql-snow{
+    border:1px solid #e5e7eb;
+    border-top:none;
+    border-radius:0 0 10px 10px;
+    font-family:Inter,sans-serif;
+    font-size:14px;
+}
+
+.footer-edit-page .card-btn{
+    margin-top:20px;
+    padding:10px 24px;
+    background:#0284c7;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.footer-edit-page .card-btn:hover{
+    background:#0369a1;
+}
+
+@media(max-width:768px){
+
+.footer-edit-page{
+    padding:20px 12px;
+}
+
+.footer-edit-page h1{
+    font-size:22px;
+}
+
+.footer-edit-page form{
+    padding:20px;
+}
+
+}

@@ -1,0 +1,82 @@
+.view-wrap {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.back-link {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.view-header {
+    margin-bottom: 30px;
+}
+
+.header-main h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.header-main p {
+    color: #555;
+    max-width: 700px;
+}
+
+/* SECTION */
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* GRID */
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.component-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.component-card h3 {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.component-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 14px;
+}
+
+.component-card .link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* ICONS */
+.icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.icon.blue { background: #e0edff; color: #2563eb; }
+.icon.purple { background: #efe7ff; color: #7c3aed; }
+.icon.green { background: #e6f7ef; color: #059669; }
+.icon.orange { background: #fff4e5; color: #ea580c; }

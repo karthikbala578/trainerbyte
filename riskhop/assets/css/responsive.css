@@ -1,0 +1,547 @@
+/* ============================================================================
+   RISKHOP - COMPLETE RESPONSIVE STYLES FOR ALL ADMIN PAGES
+   File: assets/css/responsive.css
+   ============================================================================ */
+
+/* ============================================================================
+   TABLET VIEW (768px - 1023px)
+   ============================================================================ */
+@media (max-width: 1023px) {
+    /* Reduce content padding */
+    .admin-content {
+        padding: 25px;
+    }
+    
+    /* Games grid - 2 columns */
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Summary grid - 2 columns */
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Board preview */
+    .board-preview-container {
+        padding: 20px;
+    }
+    
+    .board-grid {
+        max-width: 600px;
+    }
+}
+
+/* ============================================================================
+   MOBILE VIEW (320px - 767px)
+   ============================================================================ */
+@media (max-width: 767px) {
+    
+    /* ========== HEADER ========== */
+    .admin-header {
+        height: 60px;
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+    
+    .admin-header h2 {
+        font-size: 18px;
+    }
+    
+    .header-right {
+        gap: 10px;
+    }
+    
+    .admin-name {
+        display: none; /* Hide on mobile to save space */
+    }
+    
+    /* ========== SIDEBAR ========== */
+    .admin-sidebar {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        width: 280px;
+        height: calc(100vh - 60px);
+        background: white;
+        z-index: 999;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .admin-sidebar.open {
+        left: 0;
+    }
+    
+    .sidebar-menu a {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    /* ========== MAIN CONTENT ========== */
+    .admin-content {
+        margin-left: 0;
+        padding: 20px 15px;
+        width: 100%;
+    }
+    
+    .admin-wrapper {
+        min-height: calc(100vh - 60px);
+    }
+    
+    /* ========== CONTENT HEADER ========== */
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .content-header h1 {
+        font-size: 24px;
+    }
+    
+    /* ========== GAMES GRID ========== */
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .game-card {
+        padding: 20px;
+    }
+    
+    .game-card-header h3 {
+        font-size: 18px;
+    }
+    
+    .game-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .game-card-footer {
+        flex-wrap: wrap;
+    }
+    
+    .game-card-footer .btn {
+        flex: 1;
+        min-width: 100px;
+    }
+    
+    /* ========== STEP PROGRESS ========== */
+    .step-progress {
+        padding: 20px 15px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .step {
+        min-width: 80px;
+        flex: 0 0 auto;
+    }
+    
+    .step:not(:last-child)::after {
+        display: none; /* Hide connecting lines on mobile */
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .step.active .step-number {
+        transform: scale(1.1);
+    }
+    
+    .step-label {
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    /* ========== STEP CONTENT ========== */
+    .step-content {
+        padding: 25px 20px;
+    }
+    
+    .step-container .page-title {
+        font-size: 22px;
+    }
+    
+    .step-container .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    
+    /* ========== FORMS ========== */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* ========== CONFIG SECTIONS ========== */
+    .config-section {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .section-header-modern {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .section-title-group {
+        gap: 10px;
+    }
+    
+    .section-icon {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .section-title-group h3 {
+        font-size: 18px;
+    }
+    
+    /* ========== TABLES ========== */
+    .modern-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .modern-table {
+        min-width: 600px; /* Allow horizontal scroll */
+        font-size: 13px;
+    }
+    
+    .modern-table th {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+    
+    .modern-table td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+    
+    .modern-table .item-name {
+        font-size: 14px;
+    }
+    
+    .modern-table .description-cell {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .modern-table .action-cell {
+        gap: 5px;
+    }
+    
+    .btn-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+    
+    /* ========== CELL BADGES ========== */
+    .cell-badge {
+        padding: 4px 10px;
+        font-size: 13px;
+        min-width: 40px;
+    }
+    
+    .arrow {
+        font-size: 14px;
+    }
+    
+    /* ========== EMPTY STATE ========== */
+    .empty-state-modern {
+        padding: 40px 15px;
+    }
+    
+    .empty-icon {
+        font-size: 48px;
+    }
+    
+    .empty-state-modern p {
+        font-size: 15px;
+    }
+    
+    /* ========== BOARD PREVIEW ========== */
+    .board-preview-section {
+        padding: 20px 15px;
+        margin: 25px 0;
+    }
+    
+    .board-preview-container {
+        padding: 15px;
+        min-height: 400px;
+    }
+    
+    .board-grid {
+        max-width: 100%;
+        gap: 3px;
+    }
+    
+    .board-cell {
+        border-width: 1px;
+        border-radius: 4px;
+        padding: 4px;
+        font-size: 11px;
+    }
+    
+    .board-cell .cell-icon {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    
+    .board-cell .cell-number {
+        font-size: 11px;
+    }
+    
+    .board-cell:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Adjust grid sizes for mobile */
+    .board-grid.grid-10x10,
+    .board-grid.grid-12x12 {
+        gap: 2px;
+    }
+    
+    /* ========== SUMMARY GRID ========== */
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .summary-card {
+        padding: 20px;
+    }
+    
+    .summary-card .value {
+        font-size: 32px;
+    }
+    
+    .summary-card .label {
+        font-size: 14px;
+    }
+    
+    /* ========== MODALS ========== */
+    .modal-content {
+        width: 95%;
+        max-width: none;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 15px;
+    }
+    
+    .modal-header h3 {
+        font-size: 16px;
+    }
+    
+    .modal-close {
+        font-size: 24px;
+    }
+    
+    .modal-body {
+        padding: 15px;
+    }
+    
+    /* ========== BUTTONS ========== */
+    .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .btn-sm {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    /* ========== LOGIN PAGE ========== */
+    .login-box {
+        padding: 35px 25px;
+    }
+    
+    .login-header h1 {
+        font-size: 28px;
+    }
+    
+    .login-header p {
+        font-size: 14px;
+    }
+    
+    /* ========== BADGES ========== */
+    .badge {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+    
+    /* ========== EFFECT BADGES ========== */
+    .effect-badge {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+}
+
+/* ============================================================================
+   EXTRA SMALL MOBILE (320px - 480px)
+   ============================================================================ */
+@media (max-width: 480px) {
+    
+    /* Even smaller content padding */
+    .admin-content {
+        padding: 15px 10px;
+    }
+    
+    /* Smaller header */
+    .admin-header h2 {
+        font-size: 16px;
+    }
+    
+    /* Smaller titles */
+    .content-header h1 {
+        font-size: 20px;
+    }
+    
+    /* Step progress - smaller */
+    .step {
+        min-width: 70px;
+    }
+    
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .step-label {
+        font-size: 11px;
+    }
+    
+    /* Config sections */
+    .config-section {
+        padding: 15px 12px;
+    }
+    
+    /* Tables - force mobile view */
+    .modern-table {
+        min-width: 500px;
+    }
+    
+    /* Board grid - smaller cells */
+    .board-grid {
+        gap: 2px;
+    }
+    
+    .board-cell {
+        font-size: 10px;
+    }
+    
+    .board-cell .cell-icon {
+        font-size: 14px;
+    }
+    
+    .board-cell .cell-number {
+        font-size: 10px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 98%;
+    }
+    
+    /* Summary cards */
+    .summary-card .value {
+        font-size: 28px;
+    }
+}
+
+/* ============================================================================
+   UTILITY CLASSES FOR MOBILE
+   ============================================================================ */
+
+/* Hide on mobile */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Show only on mobile */
+.show-mobile {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+/* ============================================================================
+   MOBILE MENU TOGGLE STYLES
+   ============================================================================ */
+
+/* Hamburger menu button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--dark-color);
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Overlay when menu is open */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+@media (max-width: 767px) {
+    .sidebar-overlay.active {
+        display: block;
+    }
+}

@@ -1,0 +1,353 @@
+/* ================= LAYOUT ================= */
+
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#eef3f7;overflow:hidden}
+
+.app{display:flex;height:100vh;width:100vw}
+
+
+
+/* ================= SIDENAV ================= */
+
+.sidenav{
+
+    width:200px;
+
+    background:#ffffff;
+
+    border-right:1px solid #e6e6e6;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:transform .3s ease;
+
+}
+
+
+
+.nav-overlay{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.3);
+
+    z-index:90;
+
+    display:none;
+
+}
+
+
+
+/* when sidenav open */
+
+.sidenav.open ~ .nav-overlay{
+
+    display:block;
+
+}
+
+
+
+.sidenav-header{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.brand{
+
+    font-weight:700;
+
+    color:#00d7e8;
+
+    font-size:14px;
+
+}
+
+.brand small{display:block;color:#777;font-weight:400}
+
+
+
+.nav{
+
+    flex:1;
+
+    padding:10px 0;
+
+}
+
+.nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 20px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:14px;
+
+}
+
+.nav a.active{
+
+    background:#f0f9fb;
+
+    border-left:4px solid #12d7e8;
+
+}
+
+
+
+.score-box{
+
+    margin:15px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    background:#eaffff;
+
+    font-size:12px;
+
+}
+
+
+
+.support{
+
+    margin:15px;
+
+    background:#12d7e8;
+
+    color:#000;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+}
+
+
+
+/* ================= MAIN ================= */
+
+.main{
+
+    flex:1;
+
+    background:#f5f8fb;
+
+    overflow-y:auto;
+
+    padding:20px;
+
+}
+
+
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    margin-left: 50px;
+
+}
+
+
+
+.toggle-btn{
+
+    display:none;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+
+.header-title h2{margin:0}
+
+.header-title p{margin:4px 0 0;font-size:13px;color:#777}
+
+
+
+.stats{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.stat{
+
+    background:#fff;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    text-align:center;
+
+    border:1px solid #e6e6e6;
+
+}
+
+
+
+/* ================= GRID ================= */
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-left: 50px;}
+
+.total-score-banner {
+    margin-left: 50px;
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    /* border:1px solid #e6e6e6; */
+
+    overflow:hidden;
+
+}
+
+
+
+.completed{
+
+    border:1px solid #12d7e8;
+
+    box-shadow:0 6px 16px rgba(0,0,0,0.06);
+
+}
+
+
+
+.active-card{
+
+    border:1px solid #1e1e1e;
+
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+
+}
+
+
+
+.card-header{
+
+    background:#12d7e8;
+
+    padding:10px 12px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+
+.card-body{padding:15px}
+
+.small{font-size:11px;color:#777}
+
+.score{font-size:28px;font-weight:700;margin:6px 0}
+
+
+
+.btn{display:block;text-align:center;padding:9px;border-radius:7px;margin-top:8px;text-decoration:none;font-size:13px}
+
+.btn-black{background:#000;color:#fff}
+
+.btn-light{background:#eaffff;color:#000}
+
+.btn-play{background:#12d7e8;color:#000;font-weight:700}
+
+
+
+.active .card-header{background:#1e1e1e;color:#fff}
+
+.active-tag{background:#12d7e8;color:#000;font-size:10px;padding:2px 6px;border-radius:4px}
+
+
+
+/* ========== LOCKED ========== */
+
+.locked-card{background:#f7f7f7;border:1px solid #ededed}
+
+.locked-header{background:#e6e6e6;padding:10px 12px;font-size:12px;font-weight:700;color:#999;display:flex;justify-content:space-between}
+
+.locked-body{text-align:center;padding:40px 10px;color:#aaa;font-size:12px}
+
+.big-lock{font-size:26px;margin-bottom:10px;opacity:.7}
+
+.simple-lock{padding:45px 10px;color:#b5b5b5}
+
+
+
+.footer-btn{max-width:320px;margin:30px auto}
+
+.footer-btn a{display:block;background:#000;color:#fff;text-align:center;padding:12px;border-radius:8px;text-decoration:none}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+
+
+@media(max-width:768px){
+
+    .grid{grid-template-columns:repeat(2,1fr)}
+
+    .toggle-btn{display:block}
+
+    .sidenav{position:fixed;height:100vh;z-index:100;transform:translateX(-100%)}
+
+    .sidenav.open{transform:translateX(0)}
+
+}

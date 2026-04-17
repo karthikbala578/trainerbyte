@@ -1,0 +1,415 @@
+[13-Mar-2026 00:31:46 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:46 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:46 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:49 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:49 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:49 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:55 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:55 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:31:55 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:31:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:36 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:36 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:36 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:36 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:46 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:46 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:46 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:49 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:49 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:49 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:54 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:54 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:54 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:54 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:56 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:56 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:35:56 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:35:56 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:36:01 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:36:01 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:36:01 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:36:01 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:08 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:08 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:08 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:08 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:13 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:13 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:13 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:13 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:20 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:20 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:20 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:20 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:24 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:24 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:24 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:24 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:25 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:25 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:25 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:25 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:38 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:38 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:37:38 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:37:38 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:41 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:41 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:41 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:41 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:45 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:45 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:45 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:45 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:49 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:49 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:49 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:51 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:51 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:51 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:53 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:53 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:38:53 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:38:53 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:40:45 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:40:45 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:40:45 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:40:45 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:41:11 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:41:11 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:41:11 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:41:11 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:41:40 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:41:40 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:41:40 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:41:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:42:03 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:42:03 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:42:03 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:42:03 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:42:12 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:42:12 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 00:42:12 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 00:42:12 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:41:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:41:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:41:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:41:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:25 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:25 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:25 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:25 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:28 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:28 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:28 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:28 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:51 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:51 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:51 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:51 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:53 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:53 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:49:53 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:49:53 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:50:43 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:50:43 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:50:43 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:50:43 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:22
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 22
+[13-Mar-2026 01:51:20 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:51:20 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:51:20 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 01:51:20 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 01:53:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:53:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:53:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 17
+[13-Mar-2026 01:53:52 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 17
+[13-Mar-2026 01:56:36 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:56:36 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:56:36 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 17
+[13-Mar-2026 01:56:36 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 17
+[13-Mar-2026 01:57:40 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:57:40 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 01:57:40 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 10
+[13-Mar-2026 01:57:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:10
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 10
+[13-Mar-2026 02:00:19 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:19 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:19 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:19 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:34 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:34 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:34 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:35 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:35 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:35 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:35 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:37 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:37 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:00:37 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:00:37 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:01:55 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:01:55 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 3
+[13-Mar-2026 02:01:55 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 02:01:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/load_messages.php on line 21
+[13-Mar-2026 03:12:30 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:12:30 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:12:30 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:12:30 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:14:52 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:14:52 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:14:52 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:14:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:18:24 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:18:24 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:18:24 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:18:24 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:18:59 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:18:59 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:18:59 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:18:59 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:19:07 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:19:07 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:19:07 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:19:07 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:20:53 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:20:53 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:20:53 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:20:53 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:21:09 America/Boise] PHP Warning:  include(../include/dataconnect.php): Failed to open stream: No such file or directory in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:21:09 America/Boise] PHP Warning:  include(): Failed opening '../include/dataconnect.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 2
+[13-Mar-2026 03:21:09 America/Boise] PHP Warning:  Undefined variable $conn in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 03:21:09 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php:13
+Stack trace:
+#0 /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php(13): mysqli_query(NULL, 'SELECT ch_level...')
+#1 {main}
+  thrown in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 13
+[13-Mar-2026 07:59:37 America/Boise] PHP Warning:  Undefined array key "dm_read_status" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 66
+[13-Mar-2026 07:59:37 America/Boise] PHP Warning:  Undefined array key "dm_id" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 70
+[13-Mar-2026 07:59:40 America/Boise] PHP Warning:  Undefined array key "dm_read_status" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 66
+[13-Mar-2026 07:59:40 America/Boise] PHP Warning:  Undefined array key "dm_id" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 70
+[13-Mar-2026 08:12:27 America/Boise] PHP Warning:  Undefined array key "dm_read_status" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 66
+[13-Mar-2026 08:12:27 America/Boise] PHP Warning:  Undefined array key "dm_id" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 70
+[13-Mar-2026 08:12:29 America/Boise] PHP Warning:  Undefined array key "dm_read_status" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 66
+[13-Mar-2026 08:12:29 America/Boise] PHP Warning:  Undefined array key "dm_id" in /home3/sarascon/public_html/subdomain/gceteam.simbcm.com/trainergenie/DigiSIM/include_site/digisim_messagedata.php on line 70
+[31-Mar-2026 22:41:05 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.mg5_digisim_response' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php(29): mysqli->prepare('\r\n    SELECT dr...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php on line 29
+[31-Mar-2026 22:41:05 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php:15
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php(15): mysqli->prepare('\r\n    UPDATE tb...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php on line 15
+[31-Mar-2026 22:41:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.mg5_digisim_response' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php(29): mysqli->prepare('\r\n    SELECT dr...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php on line 29
+[31-Mar-2026 22:41:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php:15
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php(15): mysqli->prepare('\r\n    UPDATE tb...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php on line 15
+[31-Mar-2026 22:41:09 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php:28
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php(28): mysqli->prepare('UPDATE tb_event...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php on line 28
+[31-Mar-2026 23:04:09 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php:15
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php(15): mysqli->prepare('\r\n    UPDATE tb...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php on line 15
+[31-Mar-2026 23:04:09 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.mg5_digisim_response' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php(29): mysqli->prepare('\r\n    SELECT dr...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php on line 29
+[31-Mar-2026 23:04:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.mg5_digisim_response' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php:29
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php(29): mysqli->prepare('\r\n    SELECT dr...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/digisim_trigger.php on line 29
+[31-Mar-2026 23:04:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php:15
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php(15): mysqli->prepare('\r\n    UPDATE tb...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_temp_state.php on line 15
+[31-Mar-2026 23:05:57 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.tb_event_user_score' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php:28
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php(28): mysqli->prepare('UPDATE tb_event...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/DigiSIM/include_site/save_priority.php on line 28

@@ -1,0 +1,130 @@
+/* ================= ROOT THEME ================= */
+:root {
+    --primary: #2563eb;
+    --accent: #6366f1;
+    --primary-glow: rgba(37,99,235,.35);
+    --bg: radial-gradient(circle at top, #eef2ff, #f8fafc 60%);
+    --card-bg: rgba(255,255,255,0.88);
+    --border: rgba(255,255,255,0.6);
+    --text: #0f172a;
+    --muted: #64748b;
+}
+
+/* ================= PAGE ================= */
+body {
+    background: var(--bg);
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--text);
+}
+
+/* ================= WRAPPER ================= */
+.logic-wrap {
+    max-width: 920px;
+    margin: auto;
+    padding: 20px 24px 40px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.editor-header {
+    margin-bottom: 24px;
+}
+
+.editor-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.back-link {
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ================= LOGIC CARD ================= */
+.logic-card {
+    flex: 1;
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 26px 28px;
+    border: 1px solid var(--border);
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= LABEL ================= */
+.logic-card label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+/* ================= TEXTAREA ================= */
+.logic-card textarea {
+    flex: 1;
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: linear-gradient(160deg,#ffffff,#f1f5ff);
+    font-size: 15px;
+    line-height: 1.7;
+    resize: none;
+    transition: all .3s ease;
+}
+
+/* Focus glow */
+.logic-card textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18),
+        0 20px 40px rgba(37,99,235,.2);
+}
+
+/* Placeholder */
+.logic-card textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* ================= ACTIONS ================= */
+.editor-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+/* ================= BUTTON ================= */
+.btn.primary {
+    padding: 14px 38px;
+    font-size: 14px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,var(--primary),var(--accent));
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 16px 40px var(--primary-glow);
+    transition: all .25s ease;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px var(--primary-glow);
+}
+
+.btn.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 12px 30px var(--primary-glow);
+}

@@ -1,0 +1,301 @@
+body{
+
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    background:#f5f7fb;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.container{
+
+    /* max-width:1200px; */
+
+    margin:20px auto;
+
+    padding:0 10px;
+
+}
+
+.header{
+
+    padding: 10px 10px;
+
+}
+
+.header h1{
+
+    margin:0;
+
+}
+
+.header p{color:#777}
+
+
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap:20px;
+
+    height: 75vh;
+
+}
+
+
+
+.card{
+
+    /* background:#fff;
+
+    border-radius:12px;
+
+    padding:20px 20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.05); */
+    flex: 1.2; /* Text side is slightly wider */
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0px 20px;
+
+        flex: 1.2;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow: hidden; /* Prevents the whole area from scrolling */
+    
+
+}
+
+.brief-data {
+
+        letter-spacing: 1px;
+
+        line-height: 1.8;
+
+        color: #4a5568;
+
+        flex: 1; /* Grows to take up all space between title and footer */
+
+        overflow-y: auto; /* Enables the scrollbar */
+
+        /* padding: 20px 40px; */
+
+        
+
+        /* Firefox scrollbar styling */
+
+        scrollbar-width: thin;
+
+        scrollbar-color: #717172 #f7fafc;
+}
+
+h2{
+
+    margin-top:2px;
+
+}
+
+
+
+.score-box{
+
+    background:linear-gradient(135deg,#18e0e0,#0bc0ff);
+
+    color:#000;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.score{
+
+    font-size:48px;
+
+    font-weight:bold;
+
+}
+
+.rank{font-size:14px;}
+
+
+
+.summary div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:10px 0;
+
+    font-size:14px;
+
+}
+
+
+
+.badge h3{margin:10px 0 0 0;}
+
+
+
+.badge{
+
+    background:#eaffff;
+
+    border-radius:12px;
+
+    padding:18px 12px;
+
+    text-align:center;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+
+    margin-top:15px;
+
+}
+
+
+
+.badge-icon{
+
+    width:42px;
+
+    height:42px;
+
+    background:#d9fbff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 8px;
+
+}
+
+
+
+.badge-label{
+
+    font-size:11px;
+
+    color:#00bcd4;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+
+    margin-bottom:4px;
+
+}
+
+
+
+.badge-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#000;
+
+}
+
+
+
+
+
+.section-title{
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+
+
+ul{
+
+    padding-left:20px;
+
+}
+
+
+
+.core-list li{
+
+    margin-bottom:6px;
+
+    line-height:1.4;
+
+}
+
+
+
+.btn{
+
+    display:block;
+
+    margin-top:15px;
+
+    background:#000;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* Admin rich text editor */
+
+.admin{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+.admin textarea{
+
+    width:100%;
+
+    height:120px;
+
+    margin-bottom:10px;
+
+}
+

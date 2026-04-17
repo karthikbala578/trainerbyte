@@ -1,0 +1,20 @@
+[31-Mar-2026 02:23:10 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.card_group' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php:37
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/library/view_game.php(37): mysqli->prepare('\r\r\n    SELECT c...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php on line 37
+[31-Mar-2026 02:23:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.card_group' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php:37
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/library/view_game.php(37): mysqli->prepare('\r\r\n    SELECT c...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php on line 37
+[31-Mar-2026 22:53:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.card_group' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php:37
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/library/view_game.php(37): mysqli->prepare('\r\r\n    SELECT c...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php on line 37
+[31-Mar-2026 23:55:28 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'ipskfimy_tbadmin.card_group' doesn't exist in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php:37
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/library/view_game.php(37): mysqli->prepare('\r\r\n    SELECT c...')
+#1 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/library/view_game.php on line 37

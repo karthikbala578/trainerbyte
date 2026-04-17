@@ -1,0 +1,18 @@
+[25-Mar-2026 22:01:10 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/config.php:11
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/config.php(11): mysqli_connect('localhost', 'root', Object(SensitiveParameterValue), 'RiskHOP')
+#1 /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php(7): require_once('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/config.php on line 11
+[25-Mar-2026 22:02:25 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "ASSETS_URL" in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php on line 47
+[25-Mar-2026 22:02:29 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "ASSETS_URL" in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php on line 47
+[25-Mar-2026 22:06:22 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "ASSETS_URL" in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/trainergenie/RiskHOP/index.php on line 47

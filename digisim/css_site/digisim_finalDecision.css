@@ -1,0 +1,1424 @@
+/* ====== GLOBAL ====== */
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        sans-serif;
+    background: #f3f4f6;
+}
+
+/* TOP BAR */
+.topbar {
+    min-height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 55px;
+    margin-top: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: 6%;
+}
+
+.actions .btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+.actions .primary {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+}
+
+/* PRIORITY ZONE HEADER */
+.pz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 5px 15px;
+}
+
+.pz-left h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.pz-left p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #64748b;
+    max-width: 500px;
+}
+
+/* ====== MAIN LAYOUT ====== */
+.main-layout {
+    display: flex;
+    gap: 20px;
+    padding: 5px 20px;
+    height: 85vh;
+}
+
+/* ====== LEFT PANEL ====== */
+.left-panel {
+    flex: 1;
+    width: 250px;
+    background: #fff;
+}
+
+.priority-dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.priority-box {
+    flex: 1;
+    background: #fdfdfd;
+    border: 2px dashed #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* .priority-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+} */
+
+/* Colors matching your image */
+.high .dot {
+    background: #f87171;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.high .label {
+    color: #dc2626;
+    font-weight: 800;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.high .count-badge {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.medium .dot {
+    background: #fbbf24;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.medium .label {
+    color: #d97706;
+    font-weight: 800;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.medium .count-badge {
+    background: #fef3c7;
+    color: #d97706;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.low .dot {
+    background: #34d399;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.low .label {
+    color: #059669;
+    font-weight: 800;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.low .count-badge {
+    background: #d1fae5;
+    color: #059669;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* Ensure the drop-zone is the reference point for stacking */
+.drop-zone {
+    flex: 1;
+    position: relative; /* Essential for stacking */
+    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden; /* Keeps cards from spilling out */
+}
+
+/* When a card is inside a drop-zone, stack it */
+.drop-zone .card {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 40px);
+    height: auto;
+    min-height: 80px;
+    margin: 0;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+/* Subtle "deck" effect: Offset cards slightly if you want to see edges,
+or keep them perfectly aligned to hide them under the top one. */
+.drop-zone .card:nth-child(n + 2) {
+    transform: translateY(4px) scale(0.98); /* Slight offset for depth */
+    z-index: 2;
+}
+
+.drop-zone .card:last-child {
+    z-index: 10; /* Ensure the latest dropped card is always on top */
+}
+
+/* High Priority - Red */
+.drop-zone.drag-over-high {
+    border: 3px dashed #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* Medium Priority - Yellow/Orange */
+.drop-zone.drag-over-medium {
+    border: 3px dashed #f59e0b !important;
+    background-color: rgba(245, 158, 11, 0.05);
+}
+
+/* Low Priority - Green */
+.drop-zone.drag-over-low {
+    border: 3px dashed #10b981 !important;
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+/* Optional: Make the transition smooth */
+.drop-zone {
+    transition:
+        border 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* Visual feedback for the card being dragged from the expanded list */
+.dragging-visual {
+    opacity: 0.5;
+    transform: scale(0.95);
+    border: 2px dashed #64748b;
+}
+
+/* Ensure cards in expanded view look like the ones in the dock */
+.in-expanded-view {
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.in-expanded-view:active {
+    cursor: grabbing;
+}
+
+.active-priority-detail {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    height: 30%;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Ensure cards in detail view aren't stacked */
+.detail-grid .card {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80% !important;
+    height: auto !important;
+    min-height: 105px;
+    transform: none !important;
+    z-index: 1 !important;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 140px;
+    cursor: grab;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    height: 150px;
+}
+
+.badge {
+    font-size: 10px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 6px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card-content {
+    font-size: 12px;
+    color: #000;
+    margin-top: 6px;
+}
+/* Header Layout */
+.dock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    /* margin-bottom: 10px; */
+}
+
+.dock-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* Round Arrow Styling */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between arrows and counter */
+}
+
+.counter-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    min-width: 50px;
+}
+
+#availableCount {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.counter-badge small {
+    font-size: 9px;
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Hide arrows by default */
+.arrow-round {
+    display: none; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Class to show them via JavaScript */
+.arrow-round.visible {
+    display: flex;
+}
+
+.arrow-round:hover {
+    background-color: #f8fafc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.arrow-round:active {
+    transform: translateY(0);
+}
+
+/* Adjusting the Dock to fit the new look */
+.dock {
+    background: transparent; /* Or #f8fafc to match image background */
+    padding: 0;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: visible; /* Allows shadows to show */
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+}
+
+/* Hide scrollbar but keep functionality */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+/* Update your existing .dock style or add this */
+#availableItems {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+    width: 100%;        /* ✅ FIXED WIDTH */
+    /* min-width: 1000px;    
+    max-width: 1000px;     */
+    margin: 0 auto;
+}
+
+
+.empty-msg {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-style: italic;
+} 
+
+/* Add a class for hiding */
+.hidden-dock {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hide-section {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+h3 {
+    margin-bottom: 2px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+    flex-shrink: 0;  /* ✅ stop shrinking */
+}
+
+.carousel-wrapper.large-margin {
+    margin-top: 50px !important;
+}
+
+.carousel-wrapper.normal-margin {
+    margin-top: 10px !important;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+    flex: 1;
+    padding: 10px 5px;
+    -webkit-overflow-scrolling: touch;
+    min-height: 140px;  /* prevents shrinking */
+    justify-content: start; 
+    width: 0%;
+    flex-shrink: 0;  /*  stop shrinking */
+    min-height: 140px; 
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Chrome */
+}
+
+/* CARDS IN ROW */
+.carousel .card {
+    min-width: 135px;
+    max-width: 135px;
+    flex-shrink: 0;
+    height: 120px;
+    background: #ebebeb;
+}
+
+.dock-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.dock-empty-margin {
+    margin-top: 50px !important;
+}
+
+.dock-has-items-margin {
+    margin-top: 10px !important;
+}
+
+/* DRAG STATES */
+.card.dragging {
+    opacity: 0.4;
+}
+
+.arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ====== RIGHT PANEL ====== */
+.right-panel {
+    width: 210px;
+    background:#d7d5d5;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /* height:calc(100vh - 40px); */
+    position: sticky;
+    /* top:20px; */
+    /* box-shadow:0 4px 12px rgba(0,0,0,0.08); */
+}
+
+/* SCORE PANEL */
+.score-panel {
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.priority-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* width: 100%; */
+    max-width: 260px;
+    border: 1px solid #f1f5f9; /* Subtle border for high-fidelity look */
+}
+
+.priority-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.priority-icon {
+    color: #3b82f6; 
+    font-size: 14px;
+}
+
+.priority-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3b82f6;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.priority-main {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.priority-number {
+    font-size: 52px; /* Large and bold like the image */
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1;
+    margin: 0;
+}
+
+.priority-subtext {
+    font-size: 14px;
+    /* font-weight: 700; */
+    color: #000;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+/* STAT CARD */
+.stat-card {
+    /* background:#e5e5e5; */
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE */
+.stat-title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* BIG VALUE */
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* PROGRESS */
+.stat-progress {
+    margin-top: 5px;
+}
+
+.stat-progress span {
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bar {
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    background: #2a65e3;
+    transition: 0.4s ease;
+}
+
+
+.bucket-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bucket-subtext {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.active-view-btn {
+    background: #fffdf5;
+    border: 1px solid #fef3c7;
+    color: #d97706;
+    text-align: center;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* CHAT */
+/* === CHAT WIDGET CONTAINER === */
+.ai-chat-widget {
+    position: relative; /* Container for absolute positioning of bubble */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; /* Pushes it to the bottom of the right panel */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* CHAT BUBBLE */
+.chat-bubble {
+    position: absolute;
+    bottom: 80px; /* Sits above the bot icon */
+    right: 10px;
+    left: 10px;
+    background: #00aabb;
+    /* color: #fff; */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.msgclo {
+    font-size: 13px;
+    /* font-weight: bold; */
+    color: lightgrey;
+    top: -4px;
+    position: relative;
+    left: 140px;
+    cursor: pointer;
+}
+
+.chat-bubble.show {
+    display: block;
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Big message state */
+.chat-bubble.large-msg {
+    min-height: 120px; /* Increased height for long text */
+}
+
+.chat-bubble h4 {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    color: #fff;
+}
+
+.chat-bubble p {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Small arrow below bubble */
+.chat-bubble::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -18px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.chat-bubble.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* === BOT BUTTON === */
+.bot-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition: 0.3s;
+}
+
+.bot-button img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Hover effect */
+.bot-button:hover {
+    transform: scale(1.1);
+}
+
+.expanded-view {
+    margin-top: 50px;
+}
+
+.expanded-label {
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.expanded-container {
+    width: 100%;
+    flex-shrink: 0;   /* ✅ prevent shrinking */
+}
+/* Expanded Carousel specific styles */
+.expanded-container h4 {
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.empty-msg {
+    color: #94a3b8;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== RESPONSIVE UPDATES ====== */
+@media (max-width: 900px) {
+    .actions {
+        margin-left: 55px;
+    }
+
+    /* Stack the Main Layout (Left and Right panels) */
+    .main-layout {
+        flex-direction: column;
+    }
+
+    /* Make the priority boxes stack vertically */
+    .priority-dashboard {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Adjust the Left Panel width */
+    .left-panel {
+        width: 100%;
+    }
+
+    /* Adjust Right Panel (Buckets) to be full width or hidden/moved */
+    .right-panel {
+        width: 100%;
+        position: static;
+        order: -1; /* Moves the bucket summary to the top on mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Make the bucket cards display in a row on mobile for better space usage */
+    .score-panel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* .bucket-card {
+        flex: 1;
+        min-width: 120px;
+        margin-bottom: 0;
+    } */
+
+    /* Ensure priority boxes have enough height when stacked */
+    .priority-box {
+        min-height: 150px;
+    }
+
+    /* Carousel adjustments for smaller screens */
+    .carousel .card {
+        min-width: 160px; /* Slightly smaller cards on mobile */
+    }
+
+    .drop-zone .card {
+        position: relative; /* Undo the absolute stacking */
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .drop-zone {
+        overflow-y: auto;
+        max-height: 300px; /* Prevent boxes from becoming infinitely long */
+    }
+
+    .ai-chat-widget {
+        right: 91%;
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ai-chat-widget {
+        right: 78%;
+        bottom: 90px;
+    }
+
+    .right-panel {
+        margin-bottom: 2px;
+    }
+
+    .expanded-container {
+        width: 320px;
+    }
+
+    .expanded-view {
+        margin-top: 5px;
+    }
+
+    .footer-wrapper {
+        right: 120px !important;
+    }
+}
+
+/* ===== BASE STYLES ===== */
+body {
+    font-family:
+        Inter,
+        sans-serif Arial;
+    background: #f5f7fa;
+    margin: 0;
+    /* padding: 20px; */
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.order {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 6px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.card.locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== SCORE BOX ===== */
+.score-box {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.score-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #36cb85;
+}
+
+/* Container for the buckets */
+.bucket-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    /* gap: 15px; */
+    margin: 8px 0;
+}
+
+/* The Card/Box itself */
+.bucket-box {
+    max-width: 90px;
+    flex: 0 1 150px; /* Fixed width like your image */
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bucket-box:hover {
+    transform: translateY(-3px);
+}
+
+/* 1. THE ACTIVE BACKGROUND STATE */
+.bucket-box.active-bucket {
+    transform: scale(1.1) translateY(-5px);
+    z-index: 100;
+    border-style: solid !important;
+    /* Dynamic Background Highlight */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.2
+    ) !important; /* Lighter inner fill */
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.4) 0%,
+        transparent 70%
+    );
+    /* Tactical Glow Box Shadow */
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px var(--bucket-glow); /* We will set this variable in JS */
+    animation: tacticalPulse 2s infinite ease-in-out;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 2. THE PULSE ANIMATION */
+@keyframes tacticalPulse {
+    0% {
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.2),
+            0 0 5px var(--bucket-glow);
+    }
+    50% {
+        box-shadow:
+            0 15px 30px rgba(0, 0, 0, 0.3),
+            0 0 20px var(--bucket-glow);
+    }
+    100% {
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.2),
+            0 0 5px var(--bucket-glow);
+    }
+}
+
+/* 3. DIM OTHER BUCKETS */
+.bucket-container:has(.active-bucket) .bucket-box:not(.active-bucket) {
+    opacity: 0.4;
+    filter: blur(1px) grayscale(0.5);
+    transform: scale(0.92);
+}
+
+/* Priority Label (HIGH, LOW, etc.) */
+.bucket-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #64748b; /* Default gray */
+}
+
+/* Keep cards in the DOM but hide them in the tiny bucket boxes */
+.bucket-box .drop-zone .card {
+    display: none !important;
+}
+
+/* Hide cards when they are inside the tiny bucket zones */
+/* .drop-zone .card {
+    display: none !important;
+} */
+ .bucket-box .card {
+    display: none !important; /* only hide inside small boxes */
+}
+
+/* Ensure they are visible when cloned into the expanded view */
+#detailContent .card.in-expanded-view {
+    display: block !important;
+    min-width: 100px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Make the expanded view scrollable horizontally */
+#detailContent {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 15px;
+    gap: 15px;
+    width: 100%;
+    flex-shrink: 0;     /* ✅ prevent shrink */
+    min-height: 140px;  /* ✅ keep height stable */
+    justify-content: center;
+}
+.empty-msg {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* The Large Number */
+.bucket-count {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Placeholder for the invisible drop area */
+.drop-zone {
+    min-height: 20px;min-width: 180px;
+}
+
+.bucket-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.bucket-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.bucket-count {
+    /* background: #eee; */
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.bucket-box.active-bucket {
+    /* outline: 3px solid #2563eb; */
+    transform: scale(1.08);
+    z-index: 50;
+}
+.drop-zone {
+    min-height: 60px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* ===== NOTIFICATIONS ===== */
+.notification-wrapper {
+    position: relative; /* Essential for the dot positioning */
+    display: inline-block;
+	background: #e5e5e5;
+    height: 80px;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px; /* Adjust based on your bell size */
+    right: 80px; /* Adjust based on your bell size */
+    background-color: #ef4444; /* Industrial Red */
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border: 2px solid #fff; /* White border makes it "pop" against the background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-btn {
+    /* background: #1e293b; */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.notify {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: #1e293b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+#detailContent {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    gap: 15px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.in-expanded-view {
+    min-width: 200px; /* Ensure cards don't shrink */
+    max-width: 250px;
+    background: #ffffff;
+    color: #333;
+}
+
+.in-expanded-view {
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.in-expanded-view:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+/* Optional: Add a small move icon to the corner of expanded cards */
+.in-expanded-view::after {
+    content: "\f0b2"; /* FontAwesome move icon */
+    font-family:
+        Inter,
+        sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+/* Add this to your CSS */
+body:has(.dragging) #activePriorityView {
+    opacity: 0.4;
+}
+#activePriorityView {
+    width: 1000px;        /* ✅ FIXED WIDTH */
+    min-width: 1000px;
+    max-width: 1000px;
+    margin: 10px auto;   /* center it */
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.8); /* Dark Slate */
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e2e8f0;
+}
+
+.modal-header {
+    color: #ef4444; /* Alert Red */
+    margin-bottom: 15px;
+}
+
+.modal-header i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.modal-content p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #475569;
+}
+
+.btn-danger {
+    background: #ef4444;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+/* Main container pinned to bottom right */
+.footer-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20%;
+    display: flex;
+    align-items: flex-end; /* Aligns bot and buttons to the bottom */
+    gap: 20px; /* Space between chatbot and buttons */
+    z-index: 1000;
+}
+
+/* Navigation Buttons Styling */
+.arrow-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow-btn {
+    /* Fixed equal width for both buttons */
+    width: 120px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.arrow-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+}
+
+.arrow-btn:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}

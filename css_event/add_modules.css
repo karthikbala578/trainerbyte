@@ -1,0 +1,348 @@
+/* ===== GLOBAL ===== */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f6f8fc;
+}
+
+/* STEP BAR */
+.stepper-div {
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+/* ===== MAIN GRID ===== */
+.module-page {
+    display: grid;
+    grid-template-columns: 240px 1.6fr 1.2fr;
+    gap: 20px;
+    padding: 10px 24px;
+
+    height: calc(100vh - 130px);
+    overflow: hidden;
+    line-height: 2;
+
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar-panel {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar-tabs-wrapper {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 10px; 
+}
+
+.sidebar-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-tab {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+.side-tab.active {
+    background: #eef2ff;
+    color: #2563eb;
+}
+
+.tab-text {
+    flex: 1;  
+    line-height: 1.5;
+    word-break: break-word;
+    margin-top: 3px;
+}
+
+
+/* ===== PANELS ===== */
+.library-panel,
+.sequence-panel {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    overflow: hidden;
+
+}
+
+/* ===== HEADER FIX ===== */
+.library-panel h3,
+.sequence-panel h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+/* ===== ONLY THIS SCROLLS (KEY FIX) ===== */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+
+    align-content: start;
+}
+
+/* SCROLLBAR */
+.grid-view::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grid-view::-webkit-scrollbar-thumb {
+    background: #cbd5f5;
+    border-radius: 10px;
+}
+
+/* ===== CARD ===== */
+.exercise-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: relative;
+    transition: 0.2s;
+    height: fit-content;
+}
+
+.exercise-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ICON */
+.card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* COLORS */
+.blue {
+    background: #3b82f6
+}
+
+.green {
+    background: #10b981
+}
+
+.purple {
+    background: #8b5cf6
+}
+
+/* TEXT */
+.exercise-card strong {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.exercise-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #64748b;
+    margin: 0;
+}
+
+/* PILL BELOW TITLE */
+.type-pill {
+    font-size: 11px;
+    background: #eef2ff;
+    color: #382fe6;
+    padding: 4px 8px;
+    border-radius: 5px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* ADD BUTTON */
+.exercise-card button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 45px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+
+    background: #e5e7eb;
+    color: #000;
+   font-weight:600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+/* ADDED STATE */
+.exercise-card.added {
+    background: #f0fdf4;
+    border: 1px solid #22c55e;
+}
+
+/* ===== RIGHT PANEL SCROLL ===== */
+#sequenceList {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/* ===== SEQUENCE ITEM ===== */
+.sequence-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #f8fafc;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.sequence-item .title {
+    flex: 1;
+    font-size: 14px;
+}
+
+/* DRAG */
+.drag {
+    cursor: grab;
+    color: #94a3b8;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+    background: #fee2e2;
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #fecaca;
+}
+
+/* ===== FOOTER ===== */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #2563eb, #6366f1);
+    color: #fff;
+}
+
+.btn.secondary {
+    background: #e5e7eb;
+    color: #111;
+}
+
+.empty-state {
+    grid-column: span 2;
+    text-align: center;
+    padding: 40px 10px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.empty-state span {
+    font-size: 36px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+.reorder-warning {
+    margin-top: 12px;
+    padding: 10px;
+    background: #fff3cd;
+    color: #856404;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.reorder-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* GREEN (Draft) */
+.reorder-info.success {
+    background: #e6f9f0;
+    color: #1b7f5c;
+    border: 1px solid #b6f0d6;
+}
+
+/* YELLOW (Locked) */
+.reorder-info.warning {
+    background: #fff4e5;
+    color: #b26a00;
+    border: 1px solid #ffd59e;
+}
+
+.reorder-info .material-symbols-outlined {
+    font-size: 18px;
+}

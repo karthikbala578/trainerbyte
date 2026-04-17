@@ -1,0 +1,301 @@
+.nav-left .logo {
+
+    height: 36px;
+
+    width: auto;
+
+    cursor: pointer;
+
+    position: relative;
+
+    left: 30px;
+
+}
+.nav-center a {
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #444;
+
+
+
+    padding: 6px 2px;
+
+    position: relative;
+
+
+
+    transition: color 0.15s ease;
+
+}
+
+
+
+.nav-center a:hover {
+
+    color: #2563eb;
+
+}
+
+
+
+/* Active menu underline */
+
+.nav-center a.active {
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+}
+
+
+
+.nav-center a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background-color: #2563eb;
+
+    border-radius: 2px;
+
+}
+
+/* Profile image */
+
+.nav-user {
+
+    width: 36px;
+
+    height: 36px;
+
+    border: 0.5px solid;
+
+    border-radius: 50%;
+
+    padding: 0px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    position: relative;
+
+    right: 25px;
+
+}
+
+.nav-user:hover{
+
+    padding: 2px;
+
+}
+
+
+
+/* Logout button */
+
+.logout-btn {
+
+    padding: 6px 12px;
+
+
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+
+
+    color: #dc3545;
+
+    background-color: #ffffff;
+
+
+
+    border: 1px solid #f1b0b7;
+
+    border-radius: 8px;
+
+
+
+    cursor: pointer;
+
+    position: relative;
+
+    right: 12px;
+
+
+
+    transition:
+
+        background-color 0.15s ease,
+
+        color 0.15s ease,
+
+        box-shadow 0.15s ease,
+
+        transform 0.1s ease;
+
+}
+
+
+
+.logout-btn:hover {
+
+    background-color: #dc3545;
+
+    color: #ffffff;
+
+    box-shadow: 0 6px 14px rgba(220, 53, 69, 0.25);
+
+}
+
+
+
+.logout-btn:active {
+
+    transform: translateY(1px);
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .nav-center {
+
+        gap: 18px;
+
+    }
+
+
+
+    .nav-center a {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .logout-btn {
+
+        padding: 5px 10px;
+
+        font-size: 12px;
+
+    }
+
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: transparent;
+}
+
+.menu-toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 4px 0 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-left {
+    margin-bottom: 30px;
+    text-align: center;
+  padding-top: 5px;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+}
+
+.nav-center {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+        margin-top: 100px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+.nav-right {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f2a5ad;
+    border-radius: 8px;
+    background: #fff;
+    color: #dc3545;
+    cursor: pointer;
+}

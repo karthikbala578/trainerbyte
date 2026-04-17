@@ -1,0 +1,139 @@
+/* PAGE WRAPPER */
+.choices-wrap {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 24px;
+}
+
+/* HEADER */
+.editor-header {
+    margin-bottom: 28px;
+}
+
+.editor-header h1 {
+    font-size: 22px;
+    margin-top: 6px;
+}
+
+.back-link {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    gap: 20px;
+}
+
+.answer-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+}
+
+.answer-inner {
+    width: 100%;
+    max-width: 760px;         
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px 24px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    border-left: 4px solid #22c55e; 
+}
+
+/* LABELS */
+.answer-inner label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #64748b;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* INPUTS */
+.answer-inner input,
+.answer-inner textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.answer-inner textarea {
+    resize: vertical;
+}
+.meta-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.meta-field {
+    flex: 1;
+}
+.ans-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* FULL */
+.ans-tag.full {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* PARTIAL */
+.ans-tag.partial {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* WRONG */
+.ans-tag.wrong {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+.answer-score {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+
+/* ACTIONS */
+.editor-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+/* BUTTON */
+.btn.primary {
+    padding: 12px 28px;
+    font-size: 14px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary:hover {
+    background: #1d4ed8;
+}

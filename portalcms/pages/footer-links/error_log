@@ -1,0 +1,24 @@
+[26-Mar-2026 00:38:05 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php(12): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'trainer_byte_cm...')
+#1 /home1/ipskfimy/public_html/trainerbyte/portalcms/pages/footer-links/footer-links.php(4): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php on line 12
+[26-Mar-2026 01:15:31 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:15:31 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:15:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php:12
+Stack trace:
+#0 /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php(12): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'trainer_byte_cm...')
+#1 /home1/ipskfimy/public_html/trainerbyte/portalcms/pages/footer-links/edit-footer.php(3): require('/home1/ipskfimy...')
+#2 {main}
+  thrown in /home1/ipskfimy/public_html/trainerbyte/portalcms/include/dataconnect.php on line 12
+[26-Mar-2026 01:16:11 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:11 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:11 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php:10) in /home1/ipskfimy/public_html/trainerbyte/portalcms/pages/footer-links/edit-footer.php on line 13
+[26-Mar-2026 01:16:16 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:16 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:19 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:19 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 01:16:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php:10) in /home1/ipskfimy/public_html/trainerbyte/portalcms/pages/footer-links/edit-footer.php on line 13
+[26-Mar-2026 23:06:18 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6
+[26-Mar-2026 23:06:18 America/Boise] PHP Warning:  Constant BASE_PATH already defined in /home1/ipskfimy/public_html/trainerbyte/portalcms/layout/header.php on line 6

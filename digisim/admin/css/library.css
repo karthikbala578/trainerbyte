@@ -1,0 +1,173 @@
+.library-container{
+padding:40px;
+}
+
+/* Header text */
+
+.subtext{
+color:#6b7280;
+font-size:14px;
+margin-bottom:28px;
+}
+
+/* GRID */
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:22px;
+}
+
+/* CARD */
+
+.sim-card{
+background:#ffffff;
+padding:22px;
+border-radius:12px;
+border:1px solid #e5e7eb;
+text-decoration:none;
+display:block;
+transition:all 0.25s ease;
+}
+
+.sim-card:hover{
+border-color:#2563eb;
+box-shadow:0 8px 26px rgba(0,0,0,0.08);
+transform:translateY(-3px);
+}
+
+
+/* TITLE */
+
+.sim-card h3{
+font-size:17px;
+font-weight:600;
+color:#111827;
+margin-bottom:10px;
+
+/* single line truncate */
+
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+
+/* DESCRIPTION */
+
+.sim-description{
+font-size:14px;
+color:#374151;
+line-height:1.55;
+margin-bottom:18px;
+
+/* 3 line clamp */
+
+display:-webkit-box;
+-webkit-line-clamp:3;
+-webkit-box-orient:vertical;
+overflow:hidden;
+}
+
+
+/* STATS */
+
+.sim-stats{
+display:flex;
+gap:32px;
+margin-bottom:14px;
+}
+
+.stat-value{
+font-size:18px;
+font-weight:600;
+color:#111827;
+display:block;
+}
+
+.stat-label{
+font-size:12px;
+color:#9ca3af;
+letter-spacing:0.5px;
+text-transform:uppercase;
+}
+
+
+/* DATE */
+
+.sim-date{
+font-size:12px;
+color:#9ca3af;
+margin-top:4px;
+}
+
+
+/* CREATE CARD */
+
+.create-card{
+border:2px dashed #d1d5db;
+background:#fafafa;
+
+/* center content */
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+min-height:180px;
+}
+
+.create-card h3{
+font-size:17px;
+font-weight:600;
+color:#111827;
+margin-bottom:14px;
+}
+
+
+/* BUTTON AREA */
+
+.create-buttons{
+display:flex;
+gap:12px;
+justify-content:center;
+align-items:center;
+margin-top:10px;
+}
+
+/* AI BUTTON */
+
+.btn-ai{
+background:#2563eb;
+color:white;
+padding:9px 18px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+transition:0.2s;
+}
+
+.btn-ai:hover{
+background:#1d4ed8;
+}
+
+
+/* MANUAL BUTTON */
+
+.btn-manual{
+background:#f3f4f6;
+padding:9px 18px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+color:#111827;
+border:1px solid #e5e7eb;
+transition:0.2s;
+}
+
+.btn-manual:hover{
+background:#e5e7eb;
+}
