@@ -83,6 +83,43 @@ $event = $res->fetch_assoc();
 
 $event_id = (int)$event['event_id'];
 
+/* ---- ACCESS GATE: check playstatus ---- */
+$ps = (int)($event['event_playstatus'] ?? 1);
+$isClosed = ($ps === 4); // allow page but intercept START
+if ($ps < 2) {
+    // NOT YET PUBLISHED — block entirely
+    http_response_code(403);
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title>Event Not Ready</title>
+      <link rel="stylesheet" href="assets/css/gamepage.css">
+      <style>
+        body { display:flex; align-items:center; justify-content:center; min-height:100vh; background:#f3f6fb; margin:0; font-family:'Inter',sans-serif; }
+        .gate-box { text-align:center; background:#fff; padding:48px 40px; border-radius:20px; box-shadow:0 10px 32px rgba(0,0,0,.08); max-width:400px; width:90%; }
+        .gate-icon { font-size:56px; margin-bottom:16px; }
+        .gate-box h2 { font-size:22px; font-weight:700; color:#111827; margin:0 0 10px; }
+        .gate-box p  { font-size:15px; color:#6b7280; line-height:1.6; margin:0; }
+        .gate-badge  { display:inline-block; margin-top:20px; background:#fef9c3; color:#854d0e; font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; letter-spacing:.5px; }
+      </style>
+    </head>
+    <body>
+      <div class="gate-box">
+        <div class="gate-icon">⏳</div>
+        <h2>Event Not Available Yet</h2>
+        <p>This event hasn't been published yet. Please check back later or contact your trainer.</p>
+        <span class="gate-badge">NOT PUBLISHED</span>
+      </div>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+/* ---- END ACCESS GATE ---- */
+
 // 1. Get all modules for this event
 $mod_status = 1;
 $stmt = $conn->prepare("SELECT mod_type, mod_game_id FROM tb_events_module WHERE mod_event_pkid = ? AND mod_status = ?");
@@ -193,15 +230,11 @@ if (!empty($event['event_coverimage']) &&
 $stmtMod = $conn->prepare("
 
     SELECT
-
         em.mod_id,
-
         em.mod_type,
-
         em.mod_game_id,
-
         em.mod_order,
-
+        em.mod_is_unlocked,
         u.module_name
 
     FROM tb_events_module em
@@ -455,6 +488,11 @@ a{
 
                 <h3>Modules</h3>
 
+                <?php if ($isClosed): ?>
+                <div class="closed-notice">
+                    🔒 This event is <strong>Closed</strong>. You can review your completed results but cannot start new modules.
+                </div>
+                <?php endif; ?>
 
 
                 <?php if ($modules->num_rows === 0): ?>
@@ -465,33 +503,56 @@ a{
 
 
                 <?php
+                $event_progression = (int)($event['event_progression']);
+                if ($event_progression <= 0) $event_progression = 1;
+                $event_release     = (int)($event['event_release']);
+                if ($event_release <= 0) $event_release = 1;
+
                 $i = 1;
-                $foundNext = false; // This tracks if we've assigned the "Next Up" slot yet
-                // print_r($modules->fetch_assoc());
+                $foundNext = false; // Tracks if we've found the Next sequence module
+
                 while ($m = $modules->fetch_assoc()):
-                    //print_r($m);
                     $current_mod_game_id = (int)$m['mod_game_id'];
                     $mod_game_status = 1;
                     
-                    // Check individual status from the database
                     $statusStmt = $conn->prepare("SELECT * FROM tb_event_user_score WHERE event_id = ? AND user_id = ? AND mod_game_id = ? AND mod_game_status = ?");
                     $statusStmt->bind_param("iiii", $event_id, $userid, $current_mod_game_id, $mod_game_status);
                     $statusStmt->execute();
                     $statusRes = $statusStmt->get_result()->fetch_assoc();
                     $db_status = $statusRes['game_status'] ?? 'not_started';
 
-                    // Logic:
-                    // 1. If DB says 'completed', show Completed.
-                    // 2. If not completed and we haven't found the 'Next' one yet, this is the Active one.
-                    // 3. Otherwise, it's locked.
+                    $isCompleted = ($db_status == 'completed');
+                    $isUnlocked  = true; // default for auto
 
-                    if ($db_status == 'completed') {
+                    if ($event_release == 2) {
+                        // Manual Release
+                        $isUnlocked = ((int)$m['mod_is_unlocked'] == 1);
+                    }
+
+                    if ($isCompleted) {
                         $state = 'completed';
-                    } elseif (!$foundNext) {
-                        $state = 'active';
-                        $foundNext = true; // Mark that we found the playable module; others will now lock
+                        // Even if it's completed, it counts as "passed" for the sequence.
+                        // We don't set $foundNext = true until we hit the first UNCOMPLETED one.
                     } else {
-                        $state = '';
+                        if ($event_progression == 1) { // SEQUENCE
+                            if ($isUnlocked && !$foundNext) {
+                                $state = 'active';
+                                $foundNext = true; // Block subsequent modules
+                            } else {
+                                $state = 'locked';
+                                if (!$isUnlocked && !$foundNext) {
+                                    // It's this module's turn in the sequence, but it's locked by Admin!
+                                    // We STILL must block subsequent modules from becoming active.
+                                    $foundNext = true;
+                                }
+                            }
+                        } else { // RANDOM
+                            if ($isUnlocked) {
+                                $state = 'active';
+                            } else {
+                                $state = 'locked';
+                            }
+                        }
                     }
 
                     $startUrl = '#';
@@ -568,24 +629,26 @@ a{
                     <div class="actions">
                         <?php if ($state == 'completed'): ?>
                             <span class="label completed" style="color: #48bb78;">ANALYSIS</span>
-                            <!-- <a href="<?php echo $resultUrl; ?>" class="btn-review">Review</a> -->
-                            <form action="<?php echo $resultUrl; ?>" method="POST" style="display:inline;">
-                                <input type="hidden" name="post_game_id" value="<?php echo $current_mod_game_id; ?>">
-                                <button type="submit" class="btn-review" style="border: none; cursor: pointer;">
-                                    Review
-                                </button>
-                            </form>
+                            <a href="<?php echo $resultUrl; ?>?game_id=<?php echo $current_mod_game_id; ?>" class="btn-review">Review</a>
                         <!-- <?php //elseif ($state == 'active'): ?>
                             <span class="label next" style="color: #3182ce;">NEXT UP</span>
                             <a href="<?php echo $startUrl; ?>" class="btn-start" onclick="sessionStorage.clear();">START</a> -->
                         <?php elseif ($state == 'active'): ?>
                             <span class="label next" style="color: #3182ce;">NEXT UP</span>
                             
+                            <?php if ($isClosed): ?>
+                            <!-- CLOSED: intercept START with popup -->
+                            <button class="btn-start"
+                                onclick="showClosedPopup()">
+                                START
+                            </button>
+                            <?php else: ?>
                             <a href="<?php echo $startUrl; ?>?game_id=<?php echo $current_mod_game_id; ?>" 
                             class="btn-start" 
                             onclick="sessionStorage.clear();">
                                 START
                             </a>
+                            <?php endif; ?>
     
                         <?php else: ?>
                             <span class="label locked" style="color: #a0aec0;"></span>
@@ -703,6 +766,41 @@ function closemsg(){
     const bubble = document.getElementById('aiBubble');	
     // $(bubble).fadeOut();
     bubble.classList.remove('show');
+}
+</script>
+
+<!-- ── CLOSED POPUP ── -->
+<div id="closedPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99999;display:none;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#fff;border-radius:18px;padding:36px 32px;max-width:340px;width:90%;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.2);animation:popIn .2s ease;">
+        <div style="font-size:48px;margin-bottom:12px">🔒</div>
+        <h2 style="font-size:20px;font-weight:700;color:#111827;margin:0 0 10px">Event is Closed</h2>
+        <p style="font-size:14px;color:#6b7280;line-height:1.6;margin:0 0 20px">This event has been closed by the organizer. You can still review your completed results.</p>
+        <button onclick="document.getElementById('closedPopup').style.display='none'"
+            style="background:#2563eb;color:#fff;border:none;border-radius:10px;padding:10px 28px;font-size:14px;font-weight:600;cursor:pointer;">
+            OK
+        </button>
+    </div>
+</div>
+
+<style>
+@keyframes popIn { from{transform:scale(.9);opacity:0} to{transform:scale(1);opacity:1} }
+.closed-notice {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+</style>
+
+<script>
+function showClosedPopup() {
+    const popup = document.getElementById('closedPopup');
+    popup.style.display = 'flex';
 }
 </script>
 

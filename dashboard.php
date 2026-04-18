@@ -27,6 +27,52 @@ $res = $stmt->get_result();
     
             $eventImage = 'upload-images/events/'.$row['event_coverimage'];
         }
+
+        /* ---- STATUS GATE: block only unpublished events ---- */
+        $ps = (int)($row['event_playstatus'] ?? 1);
+        if ($ps < 2) {
+            $gateTitle = 'Event Not Available Yet';
+            $gateIcon  = '⏳';
+            $gateMsg   = 'This event hasn\'t been published yet. Please check back later or contact your trainer.';
+            $gateBadge = 'NOT PUBLISHED';
+            $gateBadgeClass = 'background:#fef9c3;color:#854d0e;';
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width,initial-scale=1.0">
+              <title><?= htmlspecialchars($gateTitle) ?></title>
+              <style>
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+                * { box-sizing:border-box; margin:0; padding:0; }
+                body { display:flex; align-items:center; justify-content:center; min-height:100vh; background:#f3f6fb; font-family:'Inter',sans-serif; }
+                .gate-box { text-align:center; background:#fff; padding:48px 40px; border-radius:20px; box-shadow:0 10px 32px rgba(0,0,0,.08); max-width:420px; width:90%; }
+                .gate-poster { width:100%; max-height:160px; object-fit:cover; border-radius:12px; margin-bottom:24px; }
+                .gate-icon  { font-size:52px; margin-bottom:16px; }
+                .gate-box h2 { font-size:22px; font-weight:700; color:#111827; margin-bottom:10px; }
+                .gate-box p  { font-size:15px; color:#6b7280; line-height:1.65; }
+                .gate-badge  { display:inline-block; margin-top:20px; font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; letter-spacing:.5px; <?= $gateBadgeClass ?> }
+                .event-name  { font-size:14px; font-weight:600; color:#374151; margin-bottom:6px; }
+              </style>
+            </head>
+            <body>
+              <div class="gate-box">
+                <?php if (!empty($eventImage)): ?>
+                <img src="<?= htmlspecialchars($eventImage) ?>" class="gate-poster" alt="Event">
+                <?php endif; ?>
+                <div class="event-name"><?= htmlspecialchars($row['event_name'] ?? '') ?></div>
+                <div class="gate-icon"><?= $gateIcon ?></div>
+                <h2><?= htmlspecialchars($gateTitle) ?></h2>
+                <p><?= htmlspecialchars($gateMsg) ?></p>
+                <span class="gate-badge"><?= $gateBadge ?></span>
+              </div>
+            </body>
+            </html>
+            <?php
+            exit;
+        }
+        /* ---- END STATUS GATE ---- */
     }
 
 ?>

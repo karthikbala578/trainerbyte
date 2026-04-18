@@ -37,9 +37,9 @@ if ($pin === '' || $code === '') {
 
 $stmt = $conn->prepare(
 
-    "SELECT event_id, event_team_pkid 
+    "SELECT event_id, event_team_pkid, event_playstatus
 
-     FROM tb_events 
+     FROM tb_events
 
      WHERE event_url_code=?"
 
@@ -68,6 +68,14 @@ $event = $res->fetch_assoc();
 $event_id = $event['event_id'];
 
 $teamid   = $event['event_team_pkid'];
+
+/* ---------- EVENT STATUS GATE ---------- */
+$eventStatus = (int)($event['event_playstatus'] ?? 1);
+if ($eventStatus < 2) {
+    echo json_encode(['status' => 'error', 'message' => 'This event is not yet available. Please check back later.']);
+    exit;
+}
+/* ---------------------------------------- */
 
 
 
