@@ -36,8 +36,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 18px 28px;
+    gap: 12px;
+    padding: 12px 24px;
     background: var(--card-bg);
     border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ body {
 }
 
 .ve-header-info h1 {
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 800;
     color: var(--text);
     margin: 0;
@@ -84,20 +84,24 @@ body {
 
 .ve-header-chips {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 6px;
+    margin-top: 3px;
 }
 
 .chip {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
 }
-.chip .material-symbols-rounded { font-size: 16px; color: #94a3b8; }
+.chip strong {
+    font-weight: 700;
+    color: var(--text);
+}
+.chip .material-symbols-rounded { font-size: 14px; color: #94a3b8; }
 
 /* ── STATUS BADGE ─────────────────────────────────────── */
 .ve-status-badge {
@@ -231,7 +235,7 @@ body {
 .ve-tabs-bar {
     display: flex;
     gap: 4px;
-    padding: 16px 28px 0;
+    padding: 12px 24px 0;
     background: var(--page-bg);
     border-bottom: 1px solid var(--border);
 }
@@ -240,7 +244,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 9px 18px;
+    padding: 8px 16px;
     border-radius: 10px 10px 0 0;
     font-size: 13px;
     font-weight: 600;
@@ -263,9 +267,9 @@ body {
 /* ── SECTIONS ─────────────────────────────────────────── */
 .ve-section {
     background: var(--card-bg);
-    padding: 24px 28px 20px; 
+    padding: 14px 24px 10px;
     border-bottom: 1px solid var(--border);
-    flex: 1; /* Take up remaining height */
+    flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -273,33 +277,37 @@ body {
 .ve-section.hidden { display: none; }
 
 /* ── STAT CARDS ───────────────────────────────────────── */
+/* Stats + search sit on the same single line */
 .ve-stat-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
 }
-
+/* Each card is flex-shrink so they compress if needed */
 .ve-stat-card {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
     background: var(--page-bg);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px 18px;
+    border-radius: 10px;
+    padding: 8px 14px;
+    flex: 1;
+    min-width: 0;
 }
 
 .stat-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
-.stat-icon .material-symbols-rounded { font-size: 20px; color: #fff; }
+.stat-icon .material-symbols-rounded { font-size: 17px; color: #fff; }
 .stat-icon.blue   { background: linear-gradient(135deg,#3b82f6,#2563eb); }
 .stat-icon.green  { background: linear-gradient(135deg,#22c55e,#16a34a); }
 .stat-icon.purple { background: linear-gradient(135deg,#a855f7,#7c3aed); }
@@ -307,68 +315,69 @@ body {
 .stat-icon.red    { background: linear-gradient(135deg,#ef4444,#dc2626); }
 
 .stat-value {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .stat-label {
-    font-size: 12px;
+    font-size: 10px;
     color: var(--muted);
-    margin-top: 3px;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* ── LEGEND ───────────────────────────────────────────── */
+/* ── LEGEND (search row – merged into stat bar) ──────── */
 .ve-legend {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-    font-size: 12px;
-    color: var(--muted);
+    display: contents; /* dissolves its box, children go into parent flex */
 }
 .ve-legend-status {
     display: flex;
     align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
+    gap: 12px;
 }
 .dot {
     display: inline-block;
-    width: 9px; height: 9px;
+    width: 8px; height: 8px;
     border-radius: 50%;
-    margin-right: 4px;
+    margin-right: 3px;
 }
 .dot-completed  { background: #22c55e; }
 .dot-inprogress { background: #3b82f6; }
 .dot-notstarted { background: #cbd5e1; }
 
+/* Search box now sits in the stat row, pushed to the right */
 .ve-search-box {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: var(--page-bg);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 6px 12px;
-    min-width: 240px;
+    padding: 4px 10px;
+    min-width: 180px;
+    flex-shrink: 0;
+    margin-left: auto; /* push to right edge of the stat row */
     transition: all 0.2s;
 }
 .ve-search-box:focus-within {
     border-color: var(--pri);
-    box-shadow: 0 0 0 3px var(--pri-glow);
+    box-shadow: 0 0 0 2px var(--pri-glow);
     background: var(--card-bg);
 }
 .ve-search-box .material-symbols-rounded {
-    font-size: 18px;
+    font-size: 15px;
     color: var(--muted);
 }
 .ve-search-box input {
     border: none;
     background: none;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text);
     width: 100%;
     font-family: inherit;
@@ -410,7 +419,7 @@ body {
 }
 .ve-table thead { background: #f8fafc; position: sticky; top: 0; z-index: 10; }
 .ve-table th {
-    padding: 11px 14px;
+    padding: 10px 14px;
     text-align: left;
     font-size: 11px;
     font-weight: 700;
@@ -429,7 +438,7 @@ body {
     color: #94a3b8;
 }
 .ve-table td {
-    padding: 11px 14px;
+    padding: 10px 14px;
     border-bottom: 1px solid #f1f5f9;
     vertical-align: middle;
 }
@@ -440,9 +449,9 @@ body {
 .participant-cell {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     cursor: pointer;
-    padding: 4px;
+    padding: 2px 4px;
     border-radius: 6px;
     transition: background .15s;
 }
@@ -450,7 +459,7 @@ body {
     background: #eef2ff;
 }
 .p-avatar {
-    width: 30px; height: 30px;
+    width: 22px; height: 22px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--pri), var(--acc));
     color: #fff;
@@ -508,11 +517,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 16px;
-    font-size: 13px;
+    margin-top: 8px;
+    padding-bottom: 4px;
+    font-size: 12px;
     color: var(--muted);
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    flex-shrink: 0;
 }
 .pager-btns { display: flex; gap: 5px; }
 .pager-btns button {
@@ -589,14 +600,70 @@ body {
 
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 900px) {
-    .ve-header       { padding: 14px 16px; }
-    .ve-tabs-bar     { padding: 12px 16px 0; }
-    .ve-section      { padding: 18px 16px 28px; }
+    .ve-header       { padding: 10px 14px; }
+    .ve-tabs-bar     { padding: 8px 14px 0; }
+    .ve-section      { padding: 12px 14px 20px; }
     .ve-stat-row     { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 560px) {
     .ve-stat-row     { grid-template-columns: 1fr 1fr; }
     .ve-header-actions .ve-btn span:not(.material-symbols-rounded) { display: none; }
     .up-stats-grid   { grid-template-columns: 1fr; }
-    .ve-copy-url     { max-width: 120px; }
+    .ve-copy-url     { max-width: 100px; }
+}
+
+/* ── EVENT LINK LABEL WRAPPER ─────────────────────────── */
+/* Label sits inline INSIDE the pill as a prefix, not stacked above */
+.ve-event-link-wrap {
+    display: contents; /* transparent wrapper */
+}
+/* The label is now hidden – the pill itself provides context */
+.ve-event-link-label {
+    display: none;
+}
+/* The pill gets a subtle left label via pseudo-element */
+.ve-copy-pill::before {
+    content: 'Link';
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--pri);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    white-space: nowrap;
+    padding-right: 2px;
+    border-right: 1px solid var(--border);
+    margin-right: 4px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* ── SETTINGS GEAR BUTTON ─────────────────────────────── */
+.ve-settings-btn {
+    position: relative;
+    padding: 8px 10px;
+}
+.ve-settings-btn .material-symbols-rounded {
+    font-size: 20px;
+    transition: transform .4s ease;
+}
+.ve-settings-btn:hover .material-symbols-rounded {
+    transform: rotate(60deg);
+}
+
+/* ── PIN HINT TEXT ────────────────────────────────────── */
+.ve-pin-hint {
+    font-style: italic;
+    font-size: 11px;
+    color: #94a3b8;
+}
+.th-pin-hint {
+    display: block;
+    font-size: 9px;
+    font-weight: 400;
+    font-style: italic;
+    color: #94a3b8;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+    margin-top: 1px;
 }

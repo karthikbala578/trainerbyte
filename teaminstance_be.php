@@ -581,12 +581,11 @@ a{
                         <?php elseif ($state == 'active'): ?>
                             <span class="label next" style="color: #3182ce;">NEXT UP</span>
                             
-                            <form action="<?php echo $startUrl; ?>" method="POST" style="display:inline;">
-                                <input type="hidden" name="post_game_id" value="<?php echo $current_mod_game_id; ?>">
-                                <button type="submit" class="btn-start" style="border: none; cursor: pointer;" onclick="sessionStorage.clear();">
-                                    START
-                                </button>
-                            </form>
+                            <a href="<?php echo $startUrl; ?>?game_id=<?php echo $current_mod_game_id; ?>" 
+                            class="btn-start" 
+                            onclick="sessionStorage.clear();">
+                                START
+                            </a>
     
                         <?php else: ?>
                             <span class="label locked" style="color: #a0aec0;"></span>

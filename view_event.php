@@ -48,17 +48,20 @@ require "layout/tb_header.php";
                 </div>
                 <div class="ve-header-chips">
                     <span class="chip"><span class="material-symbols-rounded">calendar_today</span><?= date("d M Y", strtotime($event['event_start_date'])) ?></span>
-                    <span class="chip"><span class="material-symbols-rounded">hourglass_bottom</span><?= $event['event_validity'] ?> days</span>
+                    <span class="chip"><strong>Validity: <?= $event['event_validity'] ?> days</strong></span>
                     <span class="chip"><span class="material-symbols-rounded">key</span><?= htmlspecialchars($event['event_passcode']) ?></span>
                 </div>
             </div>
         </div>
         <div class="ve-header-actions">
-            <div class="ve-copy-pill">
-                <span class="ve-copy-url" data-code="<?= htmlspecialchars($event['event_url_code'] ?? '') ?>">Loading...</span>
-                <button class="ve-copy-btn-small" onclick="copyEventLink('<?= htmlspecialchars($event['event_url_code'] ?? '') ?>')" title="Copy Link">
-                    <span class="material-symbols-rounded">content_copy</span>
-                </button>
+            <div class="ve-event-link-wrap">
+                <span class="ve-event-link-label">Event Link</span>
+                <div class="ve-copy-pill" title="Share this event access link with participants">
+                    <span class="ve-copy-url" data-code="<?= htmlspecialchars($event['event_url_code'] ?? '') ?>">Loading...</span>
+                    <button class="ve-copy-btn-small" onclick="copyEventLink('<?= htmlspecialchars($event['event_url_code'] ?? '') ?>')" title="Copy Link">
+                        <span class="material-symbols-rounded">content_copy</span>
+                    </button>
+                </div>
             </div>
             <!-- <a href="add_modules.php?event_id=<?= $event_id ?>" class="ve-btn primary">
                 <span class="material-symbols-rounded">add_circle</span> Manage Modules
@@ -67,8 +70,8 @@ require "layout/tb_header.php";
                 <input type="hidden" name="event_id" value="<?= $event_id ?>">
                 <button type="submit" class="ve-btn secondary"> <span class="material-symbols-rounded">edit</span> Edit Event </button>
             </form>
-            <button class="ve-btn ghost" id="exportBtn" onclick="doExport()">
-                <span class="material-symbols-rounded">download</span> Export CSV
+            <button class="ve-btn ghost ve-settings-btn" id="settingsBtn" title="Results &amp; Analysis Setting">
+                <span class="material-symbols-rounded">settings</span>
             </button>
         </div>
     </div>
@@ -100,18 +103,9 @@ require "layout/tb_header.php";
             </div>
             <div class="ve-stat-card">
                 <div class="stat-icon gold"><span class="material-symbols-rounded">star</span></div>
-                <div class="stat-body"><div class="stat-value" id="s-top" style="font-size:14px">—</div><div class="stat-label">Top Performer</div></div>
+                <div class="stat-body"><div class="stat-value" id="s-top">—</div><div class="stat-label">Top Performer</div></div>
             </div>
-        </div>
-
-        <div class="ve-legend">
-            <div class="ve-legend-status">
-                <span><span class="dot dot-completed"></span> Completed</span>
-                <span><span class="dot dot-inprogress"></span> In Progress</span>
-                <span><span class="dot dot-notstarted"></span> Not Started</span>
-                <small>Click a participant's name to reveal PIN</small>
-            </div>
-            <div class="ve-search-box">
+            <div class="ve-search-box" style="flex-shrink:0;margin-left:auto;">
                 <span class="material-symbols-rounded">search</span>
                 <input type="text" placeholder="Search participant..." onkeyup="doSearch('matrix', this.value)">
             </div>
@@ -146,15 +140,12 @@ require "layout/tb_header.php";
                 <div class="stat-icon red"><span class="material-symbols-rounded">warning</span></div>
                 <div class="stat-body"><div class="stat-value" id="sc-low">—</div><div class="stat-label">Lowest Score</div></div>
             </div>
-        </div>
-
-        <div class="ve-legend">
             <div class="ve-legend-status">
                 <span><span class="score-chip high">98</span> High ≥80</span>
                 <span><span class="score-chip mid">65</span> Mid 50–79</span>
                 <span><span class="score-chip low">42</span> Low &lt;50</span>
             </div>
-            <div class="ve-search-box">
+            <div class="ve-search-box" style="flex-shrink:0;margin-left:auto;">
                 <span class="material-symbols-rounded">search</span>
                 <input type="text" placeholder="Search participant..." onkeyup="doSearch('scores', this.value)">
             </div>
@@ -267,7 +258,7 @@ function loadMatrix(page) {
             document.getElementById('matrix-table').classList.remove('hidden');
             empty.classList.add('hidden');
 
-            thead.innerHTML = '<th>Participant</th>' +
+            thead.innerHTML = '<th><div>Participant</div><small class="th-pin-hint">Click name to reveal PIN</small></th>' +
                 data.modules.map(m => `<th>${m}</th>`).join('');
 
             tbody.innerHTML = data.rows.map((row, i) => {
