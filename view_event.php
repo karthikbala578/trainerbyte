@@ -7,7 +7,9 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id'] : 0;
+$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id']
+          : (isset($_GET['event_id'])  ? (int)$_GET['event_id']
+          : (isset($_SESSION['event_id']) ? (int)$_SESSION['event_id'] : 0));
 $_SESSION['event_id'] = $event_id;
 if ($event_id <= 0) die("Invalid Event");
 
@@ -126,9 +128,10 @@ require "layout/tb_header.php";
                 <input type="hidden" name="event_id" value="<?= $event_id ?>">
                 <button type="submit" class="ve-btn secondary"> <span class="material-symbols-rounded">edit</span> Edit Event </button>
             </form>
-            <button class="ve-btn ghost ve-settings-btn" id="settingsBtn" title="Results &amp; Analysis Setting">
+            <a href="moderator_settings.php?event_id=<?= $event_id ?>" class="ve-btn ghost ve-settings-btn" title="Moderator Settings">
                 <span class="material-symbols-rounded">settings</span>
-            </button>
+                <span>Settings</span>
+            </a>
         </div>
     </div>
 
@@ -416,107 +419,7 @@ require "layout/tb_header.php";
     </div>
 </div>
 
-<!-- ══════ MODERATOR SETTINGS MODAL ══════ -->
-<div class="ve-modal" id="modSettingsModal" onclick="closeModSettingsModal(event)">
-    <div class="ve-modal-card">
-        <h3><span class="material-symbols-rounded">settings</span> Moderator Settings</h3>
-        <p style="font-size:14px; color:#4b5563; margin-bottom: 20px;">Configure how game modules are released to participants.</p>
-        
-        <?php if ($isLive): ?>
-            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px; margin-bottom: 20px; border-radius: 6px;">
-                <p style="margin: 0; color: #991b1b; font-size: 13px; font-weight: 500;">
-                    <span class="material-symbols-rounded" style="font-size: 16px; vertical-align: -3px; margin-right: 4px;">warning</span>
-                    Event is currently LIVE! You cannot change Progression or Release modes. Please set to CLOSED first. Manual padlocks can still be toggled.
-                </p>
-            </div>
-        <?php endif; ?>
-        
-        <div id="modAlert" style="display:none; padding:10px; border-radius:6px; margin-bottom:15px; font-size:13px; font-weight:500;"></div>
 
-        <div class="mod-settings-group">
-            <label class="mod-label">Progression Mode</label>
-            <div class="mod-btn-group">
-                <button class="mod-btn <?= $eventProgression == 1 ? 'active' : '' ?>" id="btnSeq" onclick="setProgression(1)" <?= $isLive ? 'disabled' : '' ?>>Sequence</button>
-                <button class="mod-btn <?= $eventProgression == 2 ? 'active' : '' ?>" id="btnRand" onclick="setProgression(2)" <?= $isLive ? 'disabled' : '' ?>>Random</button>
-            </div>
-            <p class="mod-hint">Sequence means users must complete modules in order. Random allows access to any unlocked module.</p>
-        </div>
-
-        <div class="mod-settings-group">
-            <label class="mod-label">Release Mode</label>
-            <div class="mod-btn-group">
-                <button class="mod-btn <?= $eventRelease == 1 ? 'active' : '' ?>" id="btnAuto" onclick="setRelease(1)" <?= $isLive ? 'disabled' : '' ?>>Auto</button>
-                <button class="mod-btn <?= $eventRelease == 2 ? 'active' : '' ?>" id="btnMan" onclick="setRelease(2)" <?= $isLive ? 'disabled' : '' ?>>Manual</button>
-            </div>
-            <p class="mod-hint">Auto automatically unlocks modules based on progression. Manual requires Admin to unlock below.</p>
-        </div>
-
-        <div id="manualUnlockSection" style="display: <?= $eventRelease == 2 ? 'block' : 'none' ?>; margin-top: 25px;">
-            <label class="mod-label" style="display:flex; justify-content:space-between; align-items:center;">
-                Module Lock Manager
-                <button class="ve-btn ghost mod-unlock-all-btn" onclick="unlockAllModules()">Unlock All</button>
-            </label>
-            <div class="mod-list">
-                <?php foreach($dbModules as $idx => $mod): ?>
-                    <div class="mod-list-item">
-                        <div class="mod-list-info">
-                            <span class="mod-num"><?= $idx + 1 ?></span>
-                            <span class="mod-name" title="<?= htmlspecialchars($mod['module_name']) ?>"><?= htmlspecialchars($mod['module_name']) ?></span>
-                        </div>
-                        <label class="vw-switch">
-                            <input type="checkbox" data-modid="<?= $mod['mod_id'] ?>" onclick="return handleModuleLockClick(event, <?= $idx ?>, <?= $mod['mod_id'] ?>, this)" <?= $mod['mod_is_unlocked'] == 1 ? 'checked' : '' ?>>
-                            <span class="vw-slider" style="background:#e5e7eb;"></span>
-                        </label>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
-        <div class="modal-actions" style="margin-top:25px;">
-            <button type="button" class="ve-btn primary" onclick="document.getElementById('modSettingsModal').classList.remove('open')">Done</button>
-        </div>
-    </div>
-</div>
-
-<style>
-/* Mod settings styles */
-#modSettingsModal .ve-modal-card { 
-    max-width: 600px; /* Made larger */
-    padding: 32px; 
-    border-radius: 16px; 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
-}
-#modSettingsModal h3 {
-    margin-top: 0;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #111827;
-}
-.mod-settings-group { margin-bottom: 24px; }
-.mod-label { display: block; font-weight: 600; color: #1f2937; margin-bottom: 10px; font-size: 15px; }
-.mod-btn-group { display: flex; border: 1px solid #d1d5db; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.mod-btn { flex: 1; padding: 10px 16px; background: transparent; border: none; font-size: 15px; font-weight: 500; color: #4b5563; cursor: pointer; transition: all 0.2s ease; outline: none; }
-.mod-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.mod-btn.active { background: #eff6ff; color: #1d4ed8; font-weight: 600; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
-.mod-btn:not(:last-child) { border-right: 1px solid #e5e7eb; }
-.mod-hint { font-size: 13px; color: #6b7280; margin-top: 8px; line-height: 1.4; }
-
-.mod-unlock-all-btn { padding: 6px 12px; font-size: 13px; font-weight: 600; display:flex; align-items:center; gap:4px; }
-.mod-unlock-all-btn .material-symbols-rounded { font-size: 16px; }
-
-.mod-list { border: 1px solid #e5e7eb; border-radius: 12px; background: #f9fafb; padding: 12px; max-height: 300px; overflow-y: auto; }
-.mod-list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #fff; border-radius: 8px; border: 1px solid #f3f4f6; margin-bottom: 8px; transition: box-shadow 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }
-.mod-list-item:hover { box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-.mod-list-item:last-child { margin-bottom: 0; }
-.mod-list-info { display: flex; align-items: center; gap: 12px; overflow: hidden; white-space: nowrap; max-width: 350px;}
-.mod-num { background: #f3f4f6; color: #374151; font-size: 13px; font-weight: 700; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid #e5e7eb;}
-.mod-name { font-size: 15px; font-weight: 500; color: #1f2937; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-/* Overriding switch for padlock */
-.vw-switch input:checked + .vw-slider { background: #22c55e !important; }
-</style>
 
 <script>
 const EVENT_ID  = <?= $event_id ?>;
@@ -760,159 +663,7 @@ function openUserPanel(userId) {
     window.location.href = `user_performance.php?event_id=${EVENT_ID}&user_id=${userId}`;
 }
 
-/* ── MODERATOR SETTINGS MODAL ────────────────────────────────  */
-function openModSettingsModal() { document.getElementById('modSettingsModal').classList.add('open'); }
-function closeModSettingsModal(e) {
-    if (e.target.id === 'modSettingsModal') document.getElementById('modSettingsModal').classList.remove('open');
-}
 
-function showModAlert(msg, type = 'error') {
-    const box = document.getElementById('modAlert');
-    box.style.display = 'block';
-    box.style.backgroundColor = type === 'error' ? '#fef2f2' : '#f0fdf4';
-    box.style.color = type === 'error' ? '#991b1b' : '#166534';
-    box.style.border = type === 'error' ? '1px solid #f87171' : '1px solid #4ade80';
-    box.textContent = msg;
-    
-    // Auto-hide after 4 seconds
-    setTimeout(() => { box.style.display = 'none'; }, 4000);
-}
-
-function setProgression(val) {
-    saveModSettings('progression', val, function() {
-        document.getElementById('btnSeq').classList.remove('active');
-        document.getElementById('btnRand').classList.remove('active');
-        if (val === 1) {
-            document.getElementById('btnSeq').classList.add('active');
-            
-            // If switching to Sequence, lock all modules to ensure sequence compliance
-            if (document.getElementById('btnMan').classList.contains('active')) {
-                lockAllModules();
-            }
-        } else {
-            document.getElementById('btnRand').classList.add('active');
-        }
-    });
-}
-
-function setRelease(val) {
-    saveModSettings('release', val, function() {
-        document.getElementById('btnAuto').classList.remove('active');
-        document.getElementById('btnMan').classList.remove('active');
-        if (val === 1) document.getElementById('btnAuto').classList.add('active');
-        else document.getElementById('btnMan').classList.add('active');
-        
-        // Toggle manual section visibility
-        document.getElementById('manualUnlockSection').style.display = (val === 2) ? 'block' : 'none';
-        
-        // If switching to Manual and we are in Sequence mode, it's safer to lock out of sync padlocks
-        // but locking them all ensures a clean slate
-        if (val === 2 && document.getElementById('btnSeq').classList.contains('active')) {
-            lockAllModules();
-        }
-    });
-}
-
-function saveModSettings(type, val, onSuccess) {
-    fetch('ajax_moderator_settings.php', {
-        method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: `action=update_mode&type=${type}&value=${val}&event_id=${EVENT_ID}`
-    }).then(r=>r.json()).then(d=>{
-        if(!d.success) {
-            showModAlert(d.msg || 'Update failed', 'error');
-        } else {
-            onSuccess();
-            showModAlert('Settings updated successfully', 'success');
-        }
-    }).catch(()=>{
-        showModAlert('Network error', 'error');
-    });
-}
-
-function handleModuleLockClick(e, idx, modId, checkboxEl) {
-    // In an onclick handler for a checkbox, 'checkboxEl.checked' already reflects the requested NEW state
-    const isUnlocked = checkboxEl.checked;
-    
-    // Enforce Sequence Mode logic
-    if (document.getElementById('btnSeq').classList.contains('active')) {
-        const checkboxes = document.getElementById('manualUnlockSection').querySelectorAll('input[type="checkbox"]');
-        
-        if (isUnlocked) {
-            // Trying to unlock. Check if all previous modules are unlocked.
-            for (let i = 0; i < idx; i++) {
-                if (!checkboxes[i].checked) {
-                    showModAlert('You must unlock previous modules first in Sequence mode.', 'error');
-                    return false; // Block the click natively
-                }
-            }
-        } else {
-            // Trying to lock. Check if any subsequent modules are unlocked.
-            for (let i = idx + 1; i < checkboxes.length; i++) {
-                if (checkboxes[i].checked) {
-                    showModAlert('You must lock subsequent modules first in Sequence mode.', 'error');
-                    return false; // Block the click natively
-                }
-            }
-        }
-    }
-
-    // Sequence valid. Pre-emptively visually update. No icon logic needed anymore.
-    
-    fetch('ajax_moderator_settings.php', {
-        method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: `action=update_lock&mod_id=${modId}&value=${isUnlocked?1:0}`
-    }).then(r=>r.json()).then(d=>{
-        if (d.success) {
-            showModAlert('Module lock updated successfully', 'success');
-        } else {
-            showModAlert(d.msg || 'Lock update failed', 'error');
-            // Rollback visually because server failed
-            checkboxEl.checked = !isUnlocked; 
-        }
-    }).catch(()=>{
-        showModAlert('Network error', 'error');
-        // Rollback visually
-        checkboxEl.checked = !isUnlocked; 
-    });
-
-    return true; // Allow checkbox to toggle fully
-}
-
-function lockAllModules() {
-    const checkboxes = document.getElementById('manualUnlockSection').querySelectorAll('input[type="checkbox"]');
-    let locksProcessed = false;
-    checkboxes.forEach((cb) => {
-        if (cb.checked) {
-            cb.checked = false;
-            locksProcessed = true;
-            const modId = cb.getAttribute('data-modid');
-            // Fire async lock
-            fetch('ajax_moderator_settings.php', {
-                method: 'POST',
-                headers: {'Content-Type':'application/x-www-form-urlencoded'},
-                body: `action=update_lock&mod_id=${modId}&value=0`
-            });
-        }
-    });
-    
-    if (locksProcessed) {
-        showModAlert('All modules locked due to Sequence switch.', 'success');
-    }
-}
-
-function unlockAllModules() {
-    // If Sequence mode, we MUST unlock sequentially. But 'unlockAll' simply clicks them in order.
-    // Wait, since we now simulate clicks, doing them in order naturally works!
-    const checkboxes = document.getElementById('manualUnlockSection').querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((cb, i) => {
-        if (!cb.checked) {
-            // Manually simulate the click correctly passing the mock event 
-            cb.click();
-        }
-    });
-}
 
 /* ── EDIT MODAL ──────────────────────────────────────────── */
 function openEditModal() { document.getElementById('editModal').classList.add('open'); }
@@ -932,10 +683,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadMatrix(1);
     loadScores(1);
 
-    /* ── SETTINGS BUTTON (opens edit modal) ── */
-    // Bind Edit button (Edit Event next to Settings)
-    // Wait, the Edit Event is a <form> but let's wire up settingsBtn properly
-    document.getElementById('settingsBtn')?.addEventListener('click', openModSettingsModal);
+    /* Settings button is now a direct link — no JS needed */
 
     // Initialize Copy Link UI (FULL LINK)
     const linkEl = document.querySelector('.ve-copy-url');
