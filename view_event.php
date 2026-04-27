@@ -110,7 +110,7 @@ require "layout/tb_header.php";
                 <div class="ve-header-chips">
                     <span class="chip"><span class="material-symbols-rounded">calendar_today</span><?= date("d M Y", strtotime($event['event_start_date'])) ?></span>
                     <span class="chip"><strong>Validity: <?= $event['event_validity'] ?> days</strong></span>
-                    <span class="chip"><span class="material-symbols-rounded">key</span><?= htmlspecialchars($event['event_passcode']) ?></span>
+                    <!-- <span class="chip"><span class="material-symbols-rounded">key</span><?= htmlspecialchars($event['event_passcode']) ?></span> -->
                 </div>
             </div>
         </div>
@@ -141,6 +141,13 @@ require "layout/tb_header.php";
             <span class="material-symbols-rounded" style="font-size:15px;vertical-align:-3px">manage_accounts</span>
             EVENT ACCESS
         </span>
+
+        <?php if (!$isPublished): ?>
+        <div class="vw-publish-notice">
+            <span class="material-symbols-rounded" style="font-size:18px">info</span>
+            <span>This event is currently in <strong>Draft</strong>. To enable access controls and generate a live link, please go to the <a href="review_modules.php?event_id=<?= $event_id ?>">Review & Launch</a> page in Edit Event to publish it.</span>
+        </div>
+        <?php endif; ?>
 
         <!-- LIVE toggle -->
         <div class="vw-toggle-group <?= ($togglesDisabled || !$isPublished) ? 'vw-disabled' : '' ?>">
@@ -195,7 +202,27 @@ require "layout/tb_header.php";
         <div class="ve-stat-row">
             <div class="ve-stat-card">
                 <div class="stat-icon blue"><span class="material-symbols-rounded">group</span></div>
-                <div class="stat-body"><div class="stat-value" id="s-total">—</div><div class="stat-label">Total Participants</div></div>
+                <div class="stat-body">
+                    <div class="stat-value" id="s-total">—<?php
+                        $cap = (int)($event['event_max_participants'] ?? 0);
+                        if ($cap > 0) echo '<span class="stat-cap"> / ' . $cap . '</span>';
+                    ?></div>
+                    <div class="stat-label">Total Participants<?= $cap > 0 ? ' <span class="stat-cap-label">(cap: '.$cap.')</span>' : '' ?></div>
+                </div>
+            </div>
+            <div class="ve-stat-card">
+                <div class="stat-icon gray" style="background: #f1f5f9; border: 1px solid #e2e8f0;"><span class="material-symbols-rounded" style="color: #64748b;">person_search</span></div>
+                <div class="stat-body" style="display: flex; gap: 15px; align-items: center;">
+                    <div class="stat-group">
+                        <div class="stat-value text-green" id="s-active">—</div>
+                        <div class="stat-label">Active</div>
+                    </div>
+                    <div style="width: 1px; height: 20px; background: #e2e8f0;"></div>
+                    <div class="stat-group">
+                        <div class="stat-value text-red" id="s-inactive">—</div>
+                        <div class="stat-label">Inactive</div>
+                    </div>
+                </div>
             </div>
             <div class="ve-stat-card">
                 <div class="stat-icon green"><span class="material-symbols-rounded">percent</span></div>
@@ -229,25 +256,37 @@ require "layout/tb_header.php";
     <div class="ve-section hidden" id="tab-scores">
         <div class="ve-stat-row">
             <div class="ve-stat-card">
-                <div class="stat-icon blue"><span class="material-symbols-rounded">casino</span></div>
-                <div class="stat-body"><div class="stat-value" id="sc-total">—</div><div class="stat-label">Total Score</div></div>
+                <div class="stat-icon blue"><span class="material-symbols-rounded">group</span></div>
+                <div class="stat-body">
+                    <div class="stat-value" id="sc-s-total">—<?php if ($cap > 0) echo '<span class="stat-cap"> / ' . $cap . '</span>'; ?></div>
+                    <div class="stat-label">Total Participants<?= $cap > 0 ? ' <span class="stat-cap-label">(cap: '.$cap.')</span>' : '' ?></div>
+                </div>
             </div>
             <div class="ve-stat-card">
-                <div class="stat-icon green"><span class="material-symbols-rounded">group</span></div>
-                <div class="stat-body"><div class="stat-value" id="sc-avg">—</div><div class="stat-label">Class Average</div></div>
+                <div class="stat-icon gray" style="background: #f1f5f9; border: 1px solid #e2e8f0;"><span class="material-symbols-rounded" style="color: #64748b;">person_search</span></div>
+                <div class="stat-body" style="display: flex; gap: 15px; align-items: center;">
+                    <div class="stat-group">
+                        <div class="stat-value text-green" id="sc-s-active">—</div>
+                        <div class="stat-label">Active</div>
+                    </div>
+                    <div style="width: 1px; height: 20px; background: #e2e8f0;"></div>
+                    <div class="stat-group">
+                        <div class="stat-value text-red" id="sc-s-inactive">—</div>
+                        <div class="stat-label">Inactive</div>
+                    </div>
+                </div>
             </div>
             <div class="ve-stat-card">
-                <div class="stat-icon gold"><span class="material-symbols-rounded">emoji_events</span></div>
-                <div class="stat-body"><div class="stat-value" id="sc-high">—</div><div class="stat-label">Highest Score</div></div>
+                <div class="stat-icon green"><span class="material-symbols-rounded">percent</span></div>
+                <div class="stat-body"><div class="stat-value" id="sc-s-avg">—</div><div class="stat-label">Avg. Completion</div></div>
             </div>
             <div class="ve-stat-card">
-                <div class="stat-icon red"><span class="material-symbols-rounded">warning</span></div>
-                <div class="stat-body"><div class="stat-value" id="sc-low">—</div><div class="stat-label">Lowest Score</div></div>
+                <div class="stat-icon purple"><span class="material-symbols-rounded">inventory_2</span></div>
+                <div class="stat-body"><div class="stat-value" id="sc-s-mods">—</div><div class="stat-label">Modules Live</div></div>
             </div>
-            <div class="ve-legend-status">
-                <span><span class="score-chip high">98</span> High ≥80</span>
-                <span><span class="score-chip mid">65</span> Mid 50–79</span>
-                <span><span class="score-chip low">42</span> Low &lt;50</span>
+            <div class="ve-stat-card">
+                <div class="stat-icon gold"><span class="material-symbols-rounded">star</span></div>
+                <div class="stat-body"><div class="stat-value" id="sc-s-top">—</div><div class="stat-label">Top Performer</div></div>
             </div>
             <div class="ve-search-box" style="flex-shrink:0;margin-left:auto;">
                 <span class="material-symbols-rounded">search</span>
@@ -358,6 +397,38 @@ require "layout/tb_header.php";
 .vw-msg.success { background:#f0fdf4; color:#15803d; }
 .vw-msg.error   { background:#fef2f2; color:#b91c1c; }
 
+.vw-publish-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInSlide .3s ease;
+}
+.vw-publish-notice .material-symbols-rounded {
+    color: #0ea5e9;
+}
+.vw-publish-notice a {
+    color: #0284c7;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.vw-publish-notice a:hover {
+    color: #0369a1;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
 /* Closed popup */
 .ve-closed-popup {
     position:fixed; inset:0;
@@ -467,10 +538,21 @@ function loadMatrix(page) {
     matrixPage = page;
     fetch(`get_progress_matrix.php?event_id=${EVENT_ID}&page=${page}&per_page=10&search=${encodeURIComponent(matrixSearch)}`)
         .then(r => r.json()).then(data => {
+            // Update Matrix Tab cards
             document.getElementById('s-total').textContent = data.stats.total_participants;
+            document.getElementById('s-active').textContent   = data.stats.active_count;
+            document.getElementById('s-inactive').textContent = data.stats.inactive_count;
             document.getElementById('s-avg').textContent   = data.stats.avg_completion + '%';
             document.getElementById('s-mods').textContent  = data.stats.modules_count;
             document.getElementById('s-top').textContent   = data.stats.top_performer;
+
+            // Update Scores Tab cards (added for consistency)
+            if (document.getElementById('sc-s-total')) document.getElementById('sc-s-total').textContent = data.stats.total_participants;
+            if (document.getElementById('sc-s-active')) document.getElementById('sc-s-active').textContent   = data.stats.active_count;
+            if (document.getElementById('sc-s-inactive')) document.getElementById('sc-s-inactive').textContent = data.stats.inactive_count;
+            if (document.getElementById('sc-s-avg')) document.getElementById('sc-s-avg').textContent   = data.stats.avg_completion + '%';
+            if (document.getElementById('sc-s-mods')) document.getElementById('sc-s-mods').textContent  = data.stats.modules_count;
+            if (document.getElementById('sc-s-top')) document.getElementById('sc-s-top').textContent   = data.stats.top_performer;
 
             pinnedRows = data.rows;
             const thead = document.getElementById('matrix-thead-row');
@@ -498,10 +580,15 @@ function loadMatrix(page) {
                     const label = norm === 'completed' ? 'COMPLETED' : norm === 'in progress' ? 'IN PROGRESS' : 'NOT STARTED';
                     return `<td><span class="st-badge ${cls}">${label}</span></td>`;
                 }).join('');
-                return `<tr><td><div class="participant-cell" onclick="openUserPanel(${row.user_id})">
-                    <span class="p-avatar">${initials}</span>
-                    <span class="p-name">${row.user_name}</span>
-                </div></td>${cells}</tr>`;
+                const isActive = row.user_is_active !== 0;
+                const statusCls = isActive ? 'avatar-active' : 'avatar-inactive';
+                return `<tr id="urow-${row.user_id}">
+                    <td>
+                        <div class="participant-cell" onclick="openUserPanel(${row.user_id})">
+                            <span class="p-avatar ${statusCls}">${initials}</span>
+                            <span class="p-name">${row.user_name}</span>
+                        </div>
+                    </td>${cells}</tr>`;
             }).join('');
 
             renderPager(pager, data.pagination, loadMatrix);
@@ -516,35 +603,31 @@ let originalOrder = [];    // preserved original order for reset
 
 function resetSortArrows() {
     document.querySelectorAll('.sort-arrows').forEach(el => {
-        el.textContent = '\u2195';
-        el.classList.remove('arr-active');
+        el.textContent = 'unfold_more';
+        el.closest('th').classList.remove('active-sort');
     });
 }
 
 function sortScores(colIdx) {
     if (sortColIdx === colIdx) {
-        // Cycle: desc → asc → none (reset)
-        if (sortDir === 'desc') { sortDir = 'asc'; }
-        else if (sortDir === 'asc') { sortDir = 'none'; sortColIdx = null; }
-        else { sortDir = 'desc'; }
+        if (sortDir === 'asc') sortDir = 'desc';
+        else if (sortDir === 'desc') sortDir = 'none';
+        else sortDir = 'asc';
     } else {
         sortColIdx = colIdx;
-        sortDir    = 'desc'; // first click on new column → highest first
+        sortDir    = 'desc';
     }
 
-    // Update arrow UI
     resetSortArrows();
-    if (sortDir !== 'none') {
-        const arrowEl = document.getElementById(
-            colIdx === 'total' ? 'sort-arr-total' : `sort-arr-${colIdx}`
-        );
-        if (arrowEl) {
-            arrowEl.textContent = sortDir === 'desc' ? '\u2193' : '\u2191';
-            arrowEl.classList.add('arr-active');
+    const arrow = document.getElementById('sort-arr-' + colIdx);
+    if (arrow) {
+        const th = arrow.closest('th');
+        if (sortDir !== 'none') {
+            th.classList.add('active-sort');
+            arrow.textContent = (sortDir === 'asc') ? 'arrow_upward' : 'arrow_downward';
         }
     }
 
-    // Build sorted list
     const tbody = document.getElementById('scores-tbody');
     const rowsToRender = sortDir === 'none'
         ? [...originalOrder]
@@ -556,17 +639,17 @@ function sortScores(colIdx) {
 
     tbody.innerHTML = rowsToRender.map(row => {
         const initials = row.user_name.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase();
+        const isActive = row.user_is_active !== 0;
+        const statusCls = isActive ? 'avatar-active' : 'avatar-inactive';
         const cells = row.scores.map((s, ci) => {
             if (s === null) return `<td><span class="sc-chip na">—</span></td>`;
             const cls = s > 0 ? 'sc-high' : 'sc-na';
-            const active = (sortColIdx === ci && sortDir !== 'none') ? ' col-sorted' : '';
-            return `<td><span class="sc-chip ${cls}${active}">${s}</span></td>`;
+            return `<td><span class="sc-chip ${cls}">${s}</span></td>`;
         }).join('');
-        const totalActive = (sortColIdx === 'total' && sortDir !== 'none') ? ' col-sorted' : '';
         return `<tr><td><div class="participant-cell" onclick="openUserPanel(${row.user_id})">
-            <span class="p-avatar">${initials}</span>
+            <span class="p-avatar ${statusCls}">${initials}</span>
             <span class="p-name">${row.user_name}</span>
-        </div></td>${cells}<td><strong class="sc-total${totalActive}">${row.total}</strong></td></tr>`;
+        </div></td>${cells}<td><strong class="sc-total">${row.total}</strong></td></tr>`;
     }).join('');
 }
 
@@ -578,10 +661,10 @@ function loadScores(page) {
     resetSortArrows();
     fetch(`get_scores_by_round.php?event_id=${EVENT_ID}&page=${page}&per_page=10&search=${encodeURIComponent(scoresSearch)}`)
         .then(r => r.json()).then(data => {
-            document.getElementById('sc-total').textContent = data.stats.total_score;
-            document.getElementById('sc-avg').textContent   = data.stats.class_avg;
-            document.getElementById('sc-high').textContent  = data.stats.high_score;
-            document.getElementById('sc-low').textContent   = data.stats.low_score;
+            if (document.getElementById('sc-total')) document.getElementById('sc-total').textContent = data.stats.total_score;
+            if (document.getElementById('sc-avg')) document.getElementById('sc-avg').textContent   = data.stats.class_avg;
+            if (document.getElementById('sc-high')) document.getElementById('sc-high').textContent  = data.stats.high_score;
+            if (document.getElementById('sc-low')) document.getElementById('sc-low').textContent   = data.stats.low_score;
 
             const thead = document.getElementById('scores-thead-row');
             const tbody = document.getElementById('scores-tbody');
@@ -597,9 +680,9 @@ function loadScores(page) {
             document.getElementById('scores-table').classList.remove('hidden');
             empty.classList.add('hidden');
 
-            thead.innerHTML = '<th>Participant</th>' +
-                data.modules.map((m, i) => `<th class="sortable-col" onclick="sortScores(${i})">Round ${i+1} <span class="sort-arrows" id="sort-arr-${i}">\u2195</span><br><small>${m}</small></th>`).join('') +
-                `<th class="sortable-col" onclick="sortScores('total')">Total <span class="sort-arrows" id="sort-arr-total">\u2195</span></th>`;
+            thead.innerHTML = '<th><div>Participant</div><small class="th-pin-hint">Click name to reveal PIN</small></th>' +
+                data.modules.map((m, i) => `<th class="sortable-col" onclick="sortScores(${i})">${m} <span class="sort-arrows" id="sort-arr-${i}">unfold_more</span></th>`).join('') +
+                `<th class="sortable-col" onclick="sortScores('total')">Total <span class="sort-arrows" id="sort-arr-total">unfold_more</span></th>`;
 
             // Cache & preserve original order for reset
             scoresCache   = data.rows;
@@ -607,13 +690,15 @@ function loadScores(page) {
 
             tbody.innerHTML = data.rows.map(row => {
                 const initials = row.user_name.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase();
+                const isActive = row.user_is_active !== 0;
+                const statusCls = isActive ? 'avatar-active' : 'avatar-inactive';
                 const cells = row.scores.map(s => {
                     if (s === null) return `<td><span class="sc-chip na">—</span></td>`;
                     const cls = s > 0 ? 'sc-high' : 'sc-na';
                     return `<td><span class="sc-chip ${cls}">${s}</span></td>`;
                 }).join('');
                 return `<tr><td><div class="participant-cell" onclick="openUserPanel(${row.user_id})">
-                    <span class="p-avatar">${initials}</span>
+                    <span class="p-avatar ${statusCls}">${initials}</span>
                     <span class="p-name">${row.user_name}</span>
                 </div></td>${cells}<td><strong class="sc-total">${row.total}</strong></td></tr>`;
             }).join('');
@@ -657,6 +742,8 @@ function copyEventLink(code) {
         console.log("Copied: " + link);
     }).catch(() => alert("Failed to copy link."));
 }
+
+
 
 /* ── USER PROFILE REDIRECT ───────────────────────────────── */
 function openUserPanel(userId) {

@@ -23,7 +23,7 @@ body {
 
 /* ── PAGE WRAPPER ──────────────────────────────────────── */
 .ve-page {
-    height: calc(100vh - 70px); /* Adjust based on global header */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -267,7 +267,7 @@ body {
 /* ── SECTIONS ─────────────────────────────────────────── */
 .ve-section {
     background: var(--card-bg);
-    padding: 14px 24px 10px;
+    padding: 14px 24px 0;
     border-bottom: 1px solid var(--border);
     flex: 1;
     display: flex;
@@ -323,6 +323,8 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.text-green { color: #16a34a !important; }
+.text-red   { color: #dc2626 !important; }
 .stat-label {
     font-size: 10px;
     color: var(--muted);
@@ -330,6 +332,23 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+/* Participant cap display */
+.stat-cap {
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+.stat-cap-label {
+    font-size: 9px;
+    color: #2563eb;
+    font-weight: 600;
+    background: #dbeafe;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: 2px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
 }
 
 /* ── LEGEND (search row – merged into stat bar) ──────── */
@@ -419,15 +438,23 @@ body {
 }
 .ve-table thead { background: #f8fafc; position: sticky; top: 0; z-index: 10; }
 .ve-table th {
-    padding: 10px 14px;
+    padding: 12px 14px;
     text-align: left;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: .5px;
     border-bottom: 1px solid var(--border);
-    white-space: nowrap;
+    white-space: normal;
+    vertical-align: top;
+    line-height: 1.4;
+    width: 160px;
+    min-width: 160px;
+}
+.ve-table th:first-child {
+    width: 220px;
+    min-width: 220px;
 }
 .ve-table th small {
     display: block;
@@ -437,6 +464,36 @@ body {
     font-weight: 500;
     color: #94a3b8;
 }
+/* ── SORTABLE COLUMNS ─────────────────────────────────── */
+.sortable-col {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 28px !important;
+    transition: all 0.2s;
+}
+.sortable-col:hover {
+    background: #f1f5f9;
+    color: var(--pri);
+}
+.sort-arrows {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Material Symbols Rounded' !important;
+    font-size: 16px;
+    color: #cbd5e1;
+    transition: all 0.2s;
+}
+.sortable-col.active-sort {
+    background: #eef2ff !important;
+    color: var(--pri);
+}
+.sortable-col.active-sort .sort-arrows {
+    color: var(--pri);
+}
+
 .ve-table td {
     padding: 10px 14px;
     border-bottom: 1px solid #f1f5f9;
@@ -459,9 +516,8 @@ body {
     background: #eef2ff;
 }
 .p-avatar {
-    width: 22px; height: 22px;
+    width: 24px; height: 24px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--pri), var(--acc));
     color: #fff;
     font-size: 11px;
     font-weight: 700;
@@ -469,8 +525,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: all 0.2s;
 }
-.p-name { font-weight: 500; color: var(--text); }
+.p-avatar.avatar-active {
+    background: #2563eb;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+.p-avatar.avatar-inactive {
+    background: #ef4444;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+.p-name { font-weight: 600; color: var(--text); }
 
 /* ── STATUS BADGES ────────────────────────────────────── */
 .st-badge {
@@ -667,3 +732,9 @@ body {
     white-space: normal;
     margin-top: 1px;
 }
+
+/* Dim name when user is inactive */
+.name-inactive {
+    color: #9ca3af;
+}
+

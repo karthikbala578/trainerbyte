@@ -110,14 +110,8 @@ $iconMap = [
         <div id="sequenceList"></div>
 
         <div class="actions">
-            <form action="create_event.php" method="POST">
-                <input type="hidden" name="event_id" value="<?= $event_id ?>">
-                <button type="submit" class="btn secondary">  ← Previous </button>
-            </form>
-            <form action="review_modules.php" method="POST">
-                <input type="hidden" name="event_id" value="<?= $event_id ?>">
-                <button type="submit" class="btn primary"> Next → </button>
-            </form>
+            <a href="create_event.php?event_id=<?= $event_id ?>" class="btn secondary">← Previous</a>
+            <a href="review_modules.php?event_id=<?= $event_id ?>" class="btn primary">Next →</a>
         </div>
     </div>
 </div>

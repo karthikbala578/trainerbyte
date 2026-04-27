@@ -77,9 +77,30 @@ if ($search !== '') {
 $countStmt->execute();
 $total = $countStmt->get_result()->fetch_assoc()['total'] ?? 0;
 
+/* ── ACTIVE / INACTIVE COUNTS ── */
+$activeCountStmt = $conn->prepare("
+    SELECT
+        SUM(CASE WHEN COALESCE(eu.user_is_active, 1) = 1 THEN 1 ELSE 0 END) AS active_count,
+        SUM(CASE WHEN COALESCE(eu.user_is_active, 1) = 0 THEN 1 ELSE 0 END) AS inactive_count
+    FROM (
+        SELECT DISTINCT eu.id, eu.user_is_active
+        FROM tb_event_user eu
+        JOIN tb_event_user_score s ON s.user_id = eu.id
+        WHERE s.event_id = ?
+    ) eu
+");
+$activeCountStmt->bind_param("i", $event_id);
+$activeCountStmt->execute();
+$activeCounts  = $activeCountStmt->get_result()->fetch_assoc();
+$activeCount   = (int)($activeCounts['active_count']   ?? 0);
+$inactiveCount = (int)($activeCounts['inactive_count'] ?? 0);
+
+
+
 /* ── PARTICIPANTS (paginated & filtered) ───────────────────────────── */
 $partQuery = "
-    SELECT eu.id AS user_id, eu.user_name, eu.user_pin
+    SELECT eu.id AS user_id, eu.user_name, eu.user_pin,
+           COALESCE(eu.user_is_active, 1) AS user_is_active
     FROM tb_event_user eu
     JOIN tb_event_user_score s ON s.user_id = eu.id
     WHERE s.event_id = ?
@@ -87,7 +108,7 @@ $partQuery = "
 if ($search !== '') {
     $partQuery .= " AND (eu.user_name LIKE ? OR eu.user_pin LIKE ?)";
 }
-$partQuery .= " GROUP BY eu.id, eu.user_name, eu.user_pin ORDER BY eu.user_name ASC LIMIT ? OFFSET ?";
+$partQuery .= " GROUP BY eu.id, eu.user_name, eu.user_pin, eu.user_is_active ORDER BY eu.user_name ASC LIMIT ? OFFSET ?";
 
 $partStmt = $conn->prepare($partQuery);
 if ($search !== '') {
@@ -162,10 +183,11 @@ foreach ($participants as $p) {
         $rowStatuses[] = str_replace('_', ' ', $status);
     }
     $rows[] = [
-        'user_id'   => $p['user_id'],
-        'user_name' => $p['user_name'],
-        'user_pin'  => $p['user_pin'],
-        'statuses'  => $rowStatuses
+        'user_id'      => $p['user_id'],
+        'user_name'    => $p['user_name'],
+        'user_pin'     => $p['user_pin'],
+        'user_is_active' => (int)($p['user_is_active'] ?? 1),
+        'statuses'     => $rowStatuses
     ];
 }
 
@@ -174,6 +196,8 @@ echo json_encode([
     'rows'       => $rows,
     'stats'      => [
         'total_participants' => $total,
+        'active_count'       => $activeCount,
+        'inactive_count'     => $inactiveCount,
         'avg_completion'     => $avgCompletion,
         'modules_count'      => count($modules),
         'top_performer'      => $topPerformer['user_name'] ?? '—',

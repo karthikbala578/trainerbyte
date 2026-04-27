@@ -44,6 +44,14 @@ if (!$currentUser) {
     $user_id = $currentUser['id'];
 }
 
+// Fetch current user's active status
+$activeStmt = $conn->prepare(
+    "SELECT COALESCE(user_is_active, 1) AS user_is_active FROM tb_event_user WHERE id = ? LIMIT 1"
+);
+$activeStmt->bind_param("i", $user_id);
+$activeStmt->execute();
+$userIsActive = (int)($activeStmt->get_result()->fetch_assoc()['user_is_active'] ?? 1);
+
 // 2. Get All Modules for the Event
 $modStmt = $conn->prepare("
     SELECT mod_game_id, mod_type, mod_order
@@ -235,7 +243,7 @@ if ($totalUsers === 0) {
 }
 
 $pageTitle = "User Performance View";
-$pageCSS   = "/css_event/user_performance.css";
+$pageCSS   = "css_event/user_performance.css";
 require "layout/tb_header.php";
 ?>
 
@@ -268,6 +276,19 @@ require "layout/tb_header.php";
                     </select>
                 </div>
             </form>
+
+            <!-- Premium Status Toggle -->
+            <div class="up-status-container">
+                <div class="up-status-info">
+                    <span class="up-status-dot <?= $userIsActive ? 'active' : 'inactive' ?>" id="upStatusDot"></span>
+                    <span class="up-status-text" id="upStatusText"><?= $userIsActive ? 'Active' : 'Inactive' ?></span>
+                </div>
+                <label class="up-toggle-switch">
+                    <input type="checkbox" id="upStatusToggle" <?= $userIsActive ? 'checked' : '' ?> onchange="upToggleStatus(this.checked ? 1 : 0)">
+                    <span class="up-toggle-slider"></span>
+                </label>
+            </div>
+
             <button class="up-btn up-btn-outline" onclick="window.print()" title="Export Report">
                 <span class="material-symbols-rounded">download</span> Export
             </button>
@@ -424,6 +445,43 @@ require "layout/tb_header.php";
         </div>
     </div>
 </div>
+
+<script>
+const UP_USER_ID  = <?= $user_id ?>;
+const UP_EVENT_ID = <?= $event_id ?>;
+
+function upToggleStatus(newValue) {
+    const toggle = document.getElementById('upStatusToggle');
+    const dot    = document.getElementById('upStatusDot');
+    const text   = document.getElementById('upStatusText');
+    
+    if (!toggle) return;
+    toggle.disabled = true;
+
+    fetch('ajax_user_status.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `user_id=${UP_USER_ID}&event_id=${UP_EVENT_ID}&value=${newValue}`
+    }).then(r => r.json()).then(d => {
+        toggle.disabled = false;
+        if (d.success) {
+            const isActive = (d.is_active === 1);
+            toggle.checked = isActive;
+            
+            // Update UI
+            dot.className = 'up-status-dot ' + (isActive ? 'active' : 'inactive');
+            text.innerText = isActive ? 'Active' : 'Inactive';
+        } else {
+            toggle.checked = !newValue;
+            alert(d.msg || 'Failed to update status.');
+        }
+    }).catch(() => {
+        toggle.disabled = false;
+        toggle.checked = !newValue;
+        alert('Network error. Please try again.');
+    });
+}
+</script>
 
 <script>
 function openDetailsModal(btn) {

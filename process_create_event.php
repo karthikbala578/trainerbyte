@@ -65,13 +65,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     /* ================= CREATE / UPDATE ================= */
 
-    $event_id  = intval($_POST['event_id'] ?? 0);
-    $name       = trim($_POST['event_name'] ?? '');
-    $desc       = trim($_POST['event_description'] ?? '');
-    $start_date = $_POST['event_start_date'] ?? '';
-    $validity   = intval($_POST['event_validity'] ?? 0);
-    $passcode   = trim($_POST['event_passcode'] ?? '');
-    $status     = intval($_POST['event_playstatus'] ?? 1);
+    $event_id     = intval($_POST['event_id'] ?? 0);
+    $name         = trim($_POST['event_name'] ?? '');
+    $desc         = trim($_POST['event_description'] ?? '');
+    $start_date   = $_POST['event_start_date'] ?? '';
+    $validity     = intval($_POST['event_validity'] ?? 0);
+    $passcode     = trim($_POST['event_passcode'] ?? '');
+    $status       = intval($_POST['event_playstatus'] ?? 1);
+    $max_p        = max(0, intval($_POST['event_max_participants'] ?? 0)); // 0 = unlimited
 
     if ($name === '' || $start_date === '' || $validity <= 0) {
         $errors[] = "Please fill all required fields";
@@ -125,12 +126,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     event_start_date = ?,
                     event_validity = ?,
                     event_passcode = ?,
-                    event_playstatus = ?
+                    event_playstatus = ?,
+                    event_max_participants = ?
                 WHERE event_id = ?
             ");
 
             $stmt->bind_param(
-                "ssssisii",
+                "ssssisiii",
                 $name,
                 $desc,
                 $image,
@@ -138,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $validity,
                 $passcode,
                 $status,
+                $max_p,
                 $event_id
             );
 
@@ -149,12 +152,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 INSERT INTO tb_events
                 (event_team_pkid, event_name, event_description,
                  event_coverimage, event_start_date,
-                 event_validity, event_passcode, event_playstatus, event_url_code)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                 event_validity, event_passcode, event_playstatus, event_url_code, event_max_participants)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ");
 
             $stmt->bind_param(
-                "issssisis",
+                "issssisisi",
                 $_SESSION['team_id'],
                 $name,
                 $desc,
@@ -163,7 +166,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $validity,
                 $passcode,
                 $status,
-                $code
+                $code,
+                $max_p
             );
 
             $stmt->execute();

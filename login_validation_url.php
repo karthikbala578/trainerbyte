@@ -37,7 +37,7 @@ if ($pin === '' || $code === '') {
 
 $stmt = $conn->prepare(
 
-    "SELECT event_id, event_team_pkid, event_playstatus
+    "SELECT event_id, event_team_pkid, event_playstatus, event_max_participants
 
      FROM tb_events
 
@@ -69,11 +69,25 @@ $event_id = $event['event_id'];
 
 $teamid   = $event['event_team_pkid'];
 
+$maxParticipants = (int)($event['event_max_participants'] ?? 0);
+
 /* ---------- EVENT STATUS GATE ---------- */
 $eventStatus = (int)($event['event_playstatus'] ?? 1);
 if ($eventStatus < 2) {
     echo json_encode(['status' => 'error', 'message' => 'This event is not yet available. Please check back later.']);
     exit;
+}
+/* ---------------------------------------- */
+
+/* ---------- PARTICIPANT CAP HELPER ---------- */
+// Returns true if the event is full (cap > 0 and current count >= cap)
+function isEventFull($conn, $event_id, $maxParticipants) {
+    if ($maxParticipants <= 0) return false; // 0 = unlimited
+    $c = $conn->prepare("SELECT COUNT(*) AS cnt FROM tb_event_user WHERE event_code = ?");
+    $c->bind_param("i", $event_id);
+    $c->execute();
+    $row = $c->get_result()->fetch_assoc();
+    return ((int)$row['cnt']) >= $maxParticipants;
 }
 /* ---------------------------------------- */
 
@@ -84,11 +98,11 @@ if ($eventStatus < 2) {
 // 1. Search for the PIN globally first
 $stmt = $conn->prepare(
 
-    "SELECT id, user_name 
+    "SELECT id, user_name, COALESCE(user_is_active, 1) AS user_is_active
 
-     FROM tb_event_user 
+     FROM tb_event_user
 
-     WHERE event_code = ? 
+     WHERE event_code = ?
 
        AND user_pin = ?"
 
@@ -111,17 +125,37 @@ if ($mode === 'check') {
 
         $user = $res->fetch_assoc();
 
+        // Block inactive users even at the PIN-check stage
+        if ((int)($user['user_is_active'] ?? 1) === 0) {
+            echo json_encode([
+                'exists'  => true,
+                'blocked' => true,
+                'message' => 'Your access to this event has been restricted by the moderator. Please contact your trainer.'
+            ]);
+            exit;
+        }
+
         echo json_encode([
 
             'exists'   => true,
 
-            'message'  => 'Welcome back '.$user['user_name'].' â€” great to see you again!',
+            'message'  => 'Welcome back '.$user['user_name'].' – great to see you again!',
 
             'redirect' => 'teaminstance_be.php?user_id='.$user['id'].'&code='.$code
 
         ]);
 
     } else {
+
+        // New PIN — check participant cap BEFORE asking for their name
+        if (isEventFull($conn, $event_id, $maxParticipants)) {
+            echo json_encode([
+                'exists'   => false,
+                'full'     => true,
+                'message'  => 'This event has reached its maximum number of participants. Please contact your trainer.'
+            ]);
+            exit;
+        }
 
         echo json_encode([
 
@@ -142,6 +176,15 @@ if ($mode === 'check') {
 if ($res->num_rows > 0) {
 
     $row = $res->fetch_assoc();
+
+    // Block inactive users from logging in
+    if ((int)($row['user_is_active'] ?? 1) === 0) {
+        echo json_encode([
+            'status'  => 'error',
+            'message' => 'Your access to this event has been restricted by the moderator. Please contact your trainer.'
+        ]);
+        exit;
+    }
 
 
 
@@ -176,7 +219,14 @@ if ($uname === '') {
 
 }
 
-
+// Hard cap check — double-check at insert time
+if (isEventFull($conn, $event_id, $maxParticipants)) {
+    echo json_encode([
+        'status'  => 'error',
+        'message' => 'This event has reached its maximum number of participants. Please contact your trainer.'
+    ]);
+    exit;
+}
 
 $ins = $conn->prepare(
 

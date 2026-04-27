@@ -85,7 +85,7 @@ $event_id = (int)$event['event_id'];
 
 /* ---- ACCESS GATE: check playstatus ---- */
 $ps = (int)($event['event_playstatus'] ?? 1);
-$isClosed = ($ps === 4); // allow page but intercept START
+$isClosed = ($ps !== 3); // allow page but intercept START if not Live
 if ($ps < 2) {
     // NOT YET PUBLISHED — block entirely
     http_response_code(403);
@@ -119,6 +119,57 @@ if ($ps < 2) {
     exit;
 }
 /* ---- END ACCESS GATE ---- */
+
+/* ---- USER ACTIVE GATE ---- */
+if (!empty($userid)) {
+    $activeCheck = $conn->prepare(
+        "SELECT COALESCE(user_is_active, 1) AS user_is_active
+         FROM tb_event_user
+         WHERE id = ? AND event_code = ?
+         LIMIT 1"
+    );
+    $activeCheck->bind_param("ii", $userid, $event_id);
+    $activeCheck->execute();
+    $activeRow = $activeCheck->get_result()->fetch_assoc();
+
+    if ($activeRow && (int)$activeRow['user_is_active'] === 0) {
+        http_response_code(403);
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0">
+          <title>Access Restricted</title>
+          <style>
+            body { display:flex; align-items:center; justify-content:center; min-height:100vh;
+                   background:#f3f6fb; margin:0; font-family:'Inter',sans-serif; }
+            .gate-box { text-align:center; background:#fff; padding:48px 40px;
+                        border-radius:20px; box-shadow:0 10px 32px rgba(0,0,0,.08);
+                        max-width:420px; width:90%; }
+            .gate-icon { font-size:56px; margin-bottom:16px; }
+            .gate-box h2 { font-size:22px; font-weight:700; color:#111827; margin:0 0 10px; }
+            .gate-box p  { font-size:15px; color:#6b7280; line-height:1.6; margin:0 0 20px; }
+            .gate-badge  { display:inline-block; background:#fef2f2; color:#b91c1c;
+                           font-size:12px; font-weight:700; padding:5px 14px;
+                           border-radius:20px; letter-spacing:.5px; }
+          </style>
+        </head>
+        <body>
+          <div class="gate-box">
+            <div class="gate-icon">🚫</div>
+            <h2>Access Restricted</h2>
+            <p>Your access to this event has been restricted by the moderator. Please contact your trainer for assistance.</p>
+            <span class="gate-badge">ACCOUNT INACTIVE</span>
+          </div>
+        </body>
+        </html>
+        <?php
+        exit;
+    }
+}
+/* ---- END USER ACTIVE GATE ---- */
+
 
 // 1. Get all modules for this event
 $mod_status = 1;
@@ -490,7 +541,7 @@ a{
 
                 <?php if ($isClosed): ?>
                 <div class="closed-notice">
-                    🔒 This event is <strong>Closed</strong>. You can review your completed results but cannot start new modules.
+                    🔒 This event is <strong>Not Live</strong>. You can review your completed results but cannot start new modules.
                 </div>
                 <?php endif; ?>
 
@@ -773,8 +824,8 @@ function closemsg(){
 <div id="closedPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99999;display:none;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
     <div style="background:#fff;border-radius:18px;padding:36px 32px;max-width:340px;width:90%;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.2);animation:popIn .2s ease;">
         <div style="font-size:48px;margin-bottom:12px">🔒</div>
-        <h2 style="font-size:20px;font-weight:700;color:#111827;margin:0 0 10px">Event is Closed</h2>
-        <p style="font-size:14px;color:#6b7280;line-height:1.6;margin:0 0 20px">This event has been closed by the organizer. You can still review your completed results.</p>
+        <h2 style="font-size:20px;font-weight:700;color:#111827;margin:0 0 10px">Event Not Live</h2>
+        <p style="font-size:14px;color:#6b7280;line-height:1.6;margin:0 0 20px">This event is not currently active. You can still review your completed results but cannot start new activities.</p>
         <button onclick="document.getElementById('closedPopup').style.display='none'"
             style="background:#2563eb;color:#fff;border:none;border-radius:10px;padding:10px 28px;font-size:14px;font-weight:600;cursor:pointer;">
             OK

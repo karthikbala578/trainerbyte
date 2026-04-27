@@ -17,8 +17,18 @@ if (!isset($_SESSION['team_id'])) {
 
 /* Fetch existing event if editing */
 
-$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id'] : 0;
-$_SESSION['event_id'] = $event_id;
+// IMPORTANT: Only accept event_id from GET or POST — never from session.
+// Using session as fallback caused "Create New Event" to redirect to the
+// last visited event's edit form.
+$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id']
+           : (isset($_GET['event_id'])  ? (int)$_GET['event_id']  : 0);
+
+// Only persist to session when editing an actual event
+if ($event_id > 0) {
+    $_SESSION['event_id'] = $event_id;
+} else {
+    unset($_SESSION['event_id']); // clear so there's no stale carry-over
+}
 
 $event = null;
 
@@ -167,26 +177,24 @@ unset($_SESSION['event_errors']);
                                 : '' ?>"
                     required>
             </div>
-    </div><div class="date-row">
-            <div class="input-icon">
-                <label>Validity (End Date)</label>
-                <!-- <span class="material-symbols-outlined">schedule</span> -->
-                <input type="number"
-                    name="event_validity"
-                    placeholder="Days"
-                    value="<?php echo $event['event_validity'] ?? '' ?>"
-                    required>
+        </div>
+
+        <div class="date-row">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <label>Validity <small>(Days)</small></label>
+                    <input type="number" name="event_validity" placeholder="Days" value="<?php echo $event['event_validity'] ?? '' ?>" required style="padding-left:14px">
+                </div>
+                <div style="flex: 1;">
+                    <label>Max Participants <small>(0=unlimited)</small></label>
+                    <input type="number" name="event_max_participants" placeholder="e.g. 50" min="0" value="<?php echo (int)($event['event_max_participants'] ?? 0) ?>" style="padding-left:14px">
+                </div>
             </div>
 
-            <div class="input-icon">
+            <div class="form-group">
                 <label>Passcode</label>
-                <!-- <span class="material-symbols-outlined">lock</span> -->
-                <input type="text"
-                    name="event_passcode"
-                    placeholder="Optional access code"
-                    value="<?php echo htmlspecialchars($event['event_passcode'] ?? '') ?>">
+                <input type="text" name="event_passcode" placeholder="Optional access code" value="<?php echo htmlspecialchars($event['event_passcode'] ?? '') ?>">
             </div>
-
         </div>
 
         <!-- FOOTER -->

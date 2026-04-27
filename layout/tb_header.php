@@ -5,7 +5,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('BASE_PATH', 'https://trainerbyte.com/');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$domainName = $_SERVER['HTTP_HOST'];
+$base_dir = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']);
+define('BASE_PATH', $protocol . $domainName . $base_dir);
 
 $currentPage = basename($_SERVER['PHP_SELF']);
 

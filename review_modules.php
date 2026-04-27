@@ -9,9 +9,9 @@ if (!isset($_SESSION['team_id'])) {
     exit;
 }
 
-$event_id = isset($_POST['event_id'])
-    ? (int)$_POST['event_id']
-    : (isset($_SESSION['event_id']) ? (int)$_SESSION['event_id'] : 0);
+$event_id = isset($_POST['event_id']) ? (int)$_POST['event_id']
+           : (isset($_GET['event_id']) ? (int)$_GET['event_id']
+           : (isset($_SESSION['event_id']) ? (int)$_SESSION['event_id'] : 0));
 $_SESSION['event_id'] = $event_id;
 if (!$event_id) die("Invalid event");
 
@@ -112,31 +112,60 @@ $step = 3;
   #copyBtn:active { transform: scale(0.96); }
   #copyBtn.copied { background-color: var(--success-color); }
 
+  /* ── RIGID LAYOUT ── */
+  html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--bg-color);
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .stepper-div {
+    flex-shrink: 0;
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf2f7;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  }
+
   /* ── NEW LAYOUT ── */
   .review-outer {
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 32px 20px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 340px;
-    gap: 24px;
-    align-items: start;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Left column */
-  .review-left {}
+  .review-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
 
   /* ── Top card: poster + overview side by side ── */
   .top-card {
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(0,0,0,.06);
-    padding: 24px;
+    padding: 18px 22px;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 160px 1fr;
     gap: 24px;
     align-items: start;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    flex-shrink: 0;
   }
   .top-card .poster-col img {
     width: 100%;
@@ -176,13 +205,38 @@ $step = 3;
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 8px 24px rgba(0,0,0,.06);
-    padding: 24px;
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
   .module-card h3 {
     font-size: 17px;
     font-weight: 700;
     margin: 0 0 16px;
     color: #111827;
+    flex-shrink: 0;
+  }
+  .module-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+    /* Custom Scrollbar */
+  }
+  .module-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  .module-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  .module-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+  .module-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
   .module-item {
     display: flex;
@@ -208,8 +262,9 @@ $step = 3;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     gap: 16px;
+    flex-shrink: 0;
   }
   .review-header-row h1 {
     font-size: 28px;
@@ -257,7 +312,18 @@ $step = 3;
   }
 
   /* ── RIGHT SIDEBAR ── */
-  .review-right {}
+  .review-right {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .review-right::-webkit-scrollbar {
+    width: 5px;
+  }
+  .review-right::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
 
   /* Back to Edit & sidebar actions */
   .sidebar-actions {
@@ -597,13 +663,12 @@ $step = 3;
           Back to Edit
         </button>
       </form>
-      <form method="POST" action="view_event.php">
-        <input type="hidden" name="event_id" value="<?= $event_id ?>">
-        <button class="btn-manage" type="submit">
+      <div class="sidebar-actions-row" style="margin-bottom:10px">
+        <a href="view_event.php?event_id=<?= $event_id ?>" class="btn-manage">
           <span class="material-symbols-outlined" style="font-size:18px">dashboard</span>
           Manage Event
-        </button>
-      </form>
+        </a>
+      </div>
     </div>
 
     <!-- WORKFLOW CARD -->
@@ -630,7 +695,7 @@ $step = 3;
       <p class="publish-hint">Publish to generate a URL for users. Participants can access but cannot start until the event is Live.</p>
 
       <!-- URL display row -->
-      <div class="publish-url-row <?= $hasUrl ? 'show' : '' ?>" id="publishUrlRow">
+      <div class="publish-url-row <?= ($isPublished && $hasUrl) ? 'show' : '' ?>" id="publishUrlRow">
         <span class="pub-url" id="pubUrlText">
           <?= $hasUrl ? htmlspecialchars('http://localhost/trainerbyte/' . $event['event_url_code']) : '' ?>
         </span>
@@ -712,10 +777,7 @@ $step = 3;
       <input type="text" value="http://localhost/trainerbyte/<?= htmlspecialchars($event['event_url_code']); ?>" id="urlInput" readonly>
       <button onclick="copyUrl()" id="copyBtn">Copy</button>
     </div>
-    <form method="POST" action="view_event.php">
-      <input type="hidden" name="event_id" value="<?= $event_id ?>">
-      <button class="launch-btn" style="margin-top:16px;width:100%">OK</button>
-    </form>
+    <a href="view_event.php?event_id=<?= $event_id ?>" class="launch-btn" style="margin-top:16px;width:100%;display:flex;align-items:center;justify-content:center;text-decoration:none;">OK</a>
   </div>
 </div>
 

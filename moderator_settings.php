@@ -16,7 +16,33 @@ if (!$event) die("Event not found");
 $statusMap   = [1 => 'Draft', 2 => 'Published', 3 => 'In Progress', 4 => 'Closed'];
 $statusClass = [1 => 'not-started', 2 => 'open', 3 => 'in-progress', 4 => 'completed'];
 $ps      = (int)$event['event_playstatus'];
-$isLive  = $ps === 3;
+
+/* Workflow state — identical logic to view_event.php */
+$isPublished = $ps >= 2;
+$isLive      = $ps === 3;
+$isClosed    = $ps !== 3; // closed when NOT live (matches view_event.php)
+
+$validityDays = intval($event['event_validity']);
+$startDate    = new DateTime($event['event_start_date']);
+$endDate      = clone $startDate;
+$endDate->modify("+{$validityDays} days");
+$isExpired    = (new DateTime()) > $endDate;
+
+/* AUTO-CLOSE: if expired and not already closed, force status=4 */
+if ($isExpired && $ps !== 4 && $ps >= 2) {
+    $autoClose = $conn->prepare("UPDATE tb_events SET event_playstatus = 4 WHERE event_id = ? AND event_team_pkid = ?");
+    $autoClose->bind_param("ii", $event_id, $_SESSION['team_id']);
+    $autoClose->execute();
+    $ps       = 4;
+    $isLive   = false;
+    $isClosed = true;
+}
+
+$togglesDisabled = $isExpired;
+
+/* Recompute label/class after possible auto-close (matches view_event.php) */
+$statusLabel = $statusMap[$ps] ?? 'Unknown';
+$statusCls   = $statusClass[$ps] ?? '';
 
 $eventProgression = max(1, (int)($event['event_progression']));
 $eventRelease     = max(1, (int)($event['event_release']));
@@ -94,38 +120,109 @@ require "layout/tb_header.php";
     </div>
 </div>
 
-<div class="ms-root">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FULL PAGE — same structure as view_event.php              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="ve-page">
+
+    <!-- ══════ PAGE HEADER — identical to view_event.php ══════ -->
+    <div class="ve-header">
+        <div class="ve-header-left">
+            <div class="ve-header-info">
+                <div class="ve-header-title-row">
+                    <h1><?= htmlspecialchars($event['event_name']) ?></h1>
+                    <span class="ve-status-badge <?= $statusCls ?>"><?= $statusLabel ?></span>
+                </div>
+                <div class="ve-header-chips">
+                    <span class="chip"><span class="material-symbols-rounded">calendar_today</span><?= date("d M Y", strtotime($event['event_start_date'])) ?></span>
+                    <span class="chip"><strong>Validity: <?= $event['event_validity'] ?> days</strong></span>
+                    <!-- <span class="chip"><span class="material-symbols-rounded">key</span><?= htmlspecialchars($event['event_passcode']) ?></span> -->
+                </div>
+            </div>
+        </div>
+        <div class="ve-header-actions">
+            <div class="ve-event-link-wrap">
+                <span class="ve-event-link-label">Event Link</span>
+                <div class="ve-copy-pill" title="Share this event access link with participants">
+                    <span class="ve-copy-url" data-code="<?= htmlspecialchars($event['event_url_code'] ?? '') ?>">Loading...</span>
+                    <button class="ve-copy-btn-small" onclick="copyEventLink('<?= htmlspecialchars($event['event_url_code'] ?? '') ?>')" title="Copy Link">
+                        <span class="material-symbols-rounded">content_copy</span>
+                    </button>
+                </div>
+            </div>
+            <form action="create_event.php" method="POST">
+                <input type="hidden" name="event_id" value="<?= $event_id ?>">
+                <button type="submit" class="ve-btn secondary"> <span class="material-symbols-rounded">edit</span> Edit Event </button>
+            </form>
+            <a href="view_event.php?event_id=<?= $event_id ?>" class="ve-btn ghost" title="Back to Dashboard">
+                <span class="material-symbols-rounded">arrow_back</span>
+                <span>Back</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ══════ ACCESS WORKFLOW STRIP — identical to view_event.php ══════ -->
+    <div class="ve-workflow-strip">
+        <span class="vw-label">
+            <span class="material-symbols-rounded" style="font-size:15px;vertical-align:-3px">manage_accounts</span>
+            EVENT ACCESS
+        </span>
+
+        <!-- LIVE toggle -->
+        <div class="vw-toggle-group <?= ($togglesDisabled || !$isPublished) ? 'vw-disabled' : '' ?>">
+            <span class="vw-toggle-label">
+                LIVE
+                <?php if ($isLive): ?><span class="vw-badge live">ACTIVE</span><?php endif; ?>
+            </span>
+            <label class="vw-switch live-toggle">
+                <input type="checkbox" id="vw-toggleLive"
+                    <?= $isLive ? 'checked' : '' ?>
+                    <?= ($togglesDisabled || !$isPublished) ? 'disabled' : '' ?>
+                    onchange="vwSetLive(this.checked)">
+                <span class="vw-slider"></span>
+            </label>
+            <span class="vw-hint">Ready for participants to start. In LIVE, no module edits.</span>
+        </div>
+
+        <div class="vw-sep"></div>
+
+        <!-- CLOSED toggle -->
+        <div class="vw-toggle-group <?= ($togglesDisabled || !$isPublished) ? 'vw-disabled' : '' ?>">
+            <span class="vw-toggle-label">
+                CLOSED
+                <?php if ($isClosed): ?><span class="vw-badge closed">CLOSED</span><?php endif; ?>
+            </span>
+            <label class="vw-switch closed-toggle">
+                <input type="checkbox" id="vw-toggleClosed"
+                    <?= $isClosed ? 'checked' : '' ?>
+                    <?= ($togglesDisabled || !$isPublished) ? 'disabled' : '' ?>
+                    onchange="vwSetClosed(this.checked)">
+                <span class="vw-slider"></span>
+            </label>
+            <span class="vw-hint">No access required. Off only if validity > today<?= $isExpired ? ' <strong style="color:#b91c1c">(Expired)</strong>' : '' ?>.</span>
+        </div>
+
+        <!-- inline status message -->
+        <div class="vw-msg" id="vwMsg"></div>
+    </div>
+
+    <!-- ══════ MS-ROOT (sidebar + main) ══════ -->
+    <div class="ms-root">
 
     <!-- ══ LEFT PANEL ══ -->
     <aside class="ms-sidebar">
 
-        <!-- Sidebar top: event identity -->
-        <div class="ms-sidebar-top">
-            <a href="view_event.php?event_id=<?= $event_id ?>" class="ms-back-top">
-                <span class="material-symbols-rounded">arrow_back_ios_new</span>
-                Back to Dashboard
-            </a>
-            <div class="ms-event-identity">
-                <div>
-                    <div class="ms-event-label">MODERATOR SETTINGS</div>
-                    <div class="ms-event-name"><?= htmlspecialchars($event['event_name']) ?></div>
-                </div>
-            </div>
-            <span class="ms-status-pill <?= $statusClass[$ps] ?? '' ?>">
-                <span class="ms-status-dot"></span>
-                <?= $statusMap[$ps] ?? 'Unknown' ?>
-            </span>
-        </div>
 
         <!-- Alert -->
         <div class="ms-alert" id="msAlert" style="display:none;"></div>
 
-        <?php if ($isLive): ?>
+        <?php if ($isLive || $isExpired): ?>
         <div class="ms-live-banner">
             <span class="material-symbols-rounded">warning_amber</span>
             <div>
-                <strong>Event is LIVE</strong>
-                <span>Progression & Release modes are locked while event is Live. Module locks can still be toggled.</span>
+                <strong>Event is <?= $isExpired ? 'EXPIRED' : 'LIVE' ?></strong>
+                <span>Progression & Release modes are locked while event is <?= $isExpired ? 'expired' : 'Live' ?>. If needed change the validity in edit event </span>
             </div>
         </div>
         <?php endif; ?>
@@ -134,8 +231,8 @@ require "layout/tb_header.php";
         <div class="ms-divider-label">PROGRESSION MODE</div>
 
         <div class="ms-option-list">
-            <div class="ms-option-item <?= $eventProgression == 1 ? 'active' : '' ?> <?= $isLive ? 'locked' : '' ?>"
-                 id="opt-seq" onclick="<?= $isLive ? '' : 'setProgression(1)' ?>">
+            <div class="ms-option-item <?= $eventProgression == 1 ? 'active' : '' ?> <?= ($isLive || $isExpired) ? 'locked' : '' ?>"
+                 id="opt-seq" onclick="<?= ($isLive || $isExpired) ? '' : 'setProgression(1)' ?>">
                 <div class="ms-opt-icon blue">
                     <span class="material-symbols-rounded">linear_scale</span>
                 </div>
@@ -148,8 +245,8 @@ require "layout/tb_header.php";
                 </div>
             </div>
 
-            <div class="ms-option-item <?= $eventProgression == 2 ? 'active' : '' ?> <?= $isLive ? 'locked' : '' ?>"
-                 id="opt-rand" onclick="<?= $isLive ? '' : 'setProgression(2)' ?>">
+            <div class="ms-option-item <?= $eventProgression == 2 ? 'active' : '' ?> <?= ($isLive || $isExpired) ? 'locked' : '' ?>"
+                 id="opt-rand" onclick="<?= ($isLive || $isExpired) ? '' : 'setProgression(2)' ?>">
                 <div class="ms-opt-icon indigo">
                     <span class="material-symbols-rounded">shuffle</span>
                 </div>
@@ -167,8 +264,8 @@ require "layout/tb_header.php";
         <div class="ms-divider-label">RELEASE MODE</div>
 
         <div class="ms-option-list">
-            <div class="ms-option-item <?= $eventRelease == 1 ? 'active' : '' ?> <?= $isLive ? 'locked' : '' ?>"
-                 id="opt-auto" onclick="<?= $isLive ? '' : 'setRelease(1)' ?>">
+            <div class="ms-option-item <?= $eventRelease == 1 ? 'active' : '' ?> <?= ($isLive || $isExpired) ? 'locked' : '' ?>"
+                 id="opt-auto" onclick="<?= ($isLive || $isExpired) ? '' : 'setRelease(1)' ?>">
                 <div class="ms-opt-icon teal">
                     <span class="material-symbols-rounded">auto_mode</span>
                 </div>
@@ -181,8 +278,8 @@ require "layout/tb_header.php";
                 </div>
             </div>
 
-            <div class="ms-option-item <?= $eventRelease == 2 ? 'active' : '' ?> <?= $isLive ? 'locked' : '' ?>"
-                 id="opt-manual" onclick="<?= $isLive ? '' : 'setRelease(2)' ?>">
+            <div class="ms-option-item <?= $eventRelease == 2 ? 'active' : '' ?> <?= ($isLive || $isExpired) ? 'locked' : '' ?>"
+                 id="opt-manual" onclick="<?= ($isLive || $isExpired) ? '' : 'setRelease(2)' ?>">
                 <div class="ms-opt-icon purple">
                     <span class="material-symbols-rounded">admin_panel_settings</span>
                 </div>
@@ -238,7 +335,7 @@ require "layout/tb_header.php";
                 </div>
                 <h3>Auto Release Active</h3>
                 <p>Modules are automatically unlocked as participants progress. Switch to <strong>Manual</strong> release mode to control individual module access.</p>
-                <button class="ms-btn primary" onclick="setRelease(2)" <?= $isLive ? 'disabled' : '' ?>>
+                <button class="ms-btn primary" onclick="setRelease(2)" <?= ($isLive || $isExpired) ? 'disabled' : '' ?>>
                     <span class="material-symbols-rounded">admin_panel_settings</span>
                     Switch to Manual
                 </button>
@@ -321,14 +418,20 @@ require "layout/tb_header.php";
 
     </main>
 
-</div><!-- /ms-root -->
+    </div><!-- /ms-root -->
+
+</div><!-- /ve-page -->
 
 <script>
-const EVENT_ID = <?= $event_id ?>;
-const IS_LIVE  = <?= $isLive ? 'true' : 'false' ?>;
-const HAS_PLAYERS = <?= $hasPlayers ? 'true' : 'false' ?>;
-let currentProgression = <?= $eventProgression ?>;
-let currentRelease     = <?= $eventRelease ?>;
+/* ── ALL CONSTANTS (single declaration block) ── */
+const EVENT_ID        = <?= $event_id ?>;
+const IS_LIVE         = <?= $isLive ? 'true' : 'false' ?>;
+const IS_EXPIRED      = <?= $isExpired ? 'true' : 'false' ?>;
+const HAS_PLAYERS     = <?= $hasPlayers ? 'true' : 'false' ?>;
+let   currentProgression = <?= $eventProgression ?>;
+let   currentRelease     = <?= $eventRelease ?>;
+let   unlockedCount      = <?= $unlockedCount ?>;
+const totalCount         = <?= $modCount ?>;
 
 /* ── WARNING MODAL ── */
 let _warnPendingFn = null; // stores the action to run after confirmation
@@ -427,8 +530,137 @@ function saveModSettings(type, val, onSuccess) {
 }
 
 /* ── MODULE LOCK ── */
-let unlockedCount = <?= $unlockedCount ?>;
-const totalCount  = <?= $modCount ?>;
+
+function vwMsg(txt, type) {
+    const el = document.getElementById('vwMsg');
+    if (!el) return;
+    el.textContent = txt;
+    el.className   = 'vw-msg show ' + type;
+    setTimeout(() => { el.classList.remove('show'); }, 3000);
+}
+
+function vwSetLive(on) {
+    const liveToggle   = document.getElementById('vw-toggleLive');
+    const closedToggle = document.getElementById('vw-toggleClosed');
+    liveToggle.disabled   = true;
+    closedToggle.disabled = true;
+    fetch('ajax_event_status.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: `action=set_live&event_id=${EVENT_ID}&value=${on?1:0}`
+    })
+    .then(r=>r.json()).then(d=>{
+        liveToggle.disabled   = false;
+        closedToggle.disabled = IS_EXPIRED && (d.status === 4);
+        if (d.success) {
+            liveToggle.checked   = (d.status === 3);
+            closedToggle.checked = (d.status !== 3);
+            updateStatusBadge(d.status);
+            syncSidebarLiveState(d.status === 3);  // ← real-time sidebar update
+            vwMsg(d.msg, 'success');
+        } else {
+            liveToggle.checked = !on;
+            vwMsg(d.msg, 'error');
+        }
+    }).catch(() => {
+        liveToggle.disabled = false; closedToggle.disabled = false;
+        liveToggle.checked  = !on;
+        vwMsg('Network error.','error');
+    });
+}
+
+function vwSetClosed(on) {
+    const liveToggle   = document.getElementById('vw-toggleLive');
+    const closedToggle = document.getElementById('vw-toggleClosed');
+    liveToggle.disabled   = true;
+    closedToggle.disabled = true;
+    fetch('ajax_event_status.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: `action=set_closed&event_id=${EVENT_ID}&value=${on?1:0}`
+    })
+    .then(r=>r.json()).then(d=>{
+        liveToggle.disabled   = false;
+        closedToggle.disabled = IS_EXPIRED && (d.status === 4);
+        if (d.success) {
+            closedToggle.checked = (d.status !== 3);
+            liveToggle.checked   = (d.status === 3);
+            updateStatusBadge(d.status);
+            syncSidebarLiveState(d.status === 3);  // ← real-time sidebar update
+            vwMsg(d.msg, 'success');
+        } else {
+            closedToggle.checked = !on;
+            liveToggle.disabled  = false;
+            vwMsg(d.msg, 'error');
+        }
+    }).catch(() => {
+        liveToggle.disabled = false; closedToggle.disabled = false;
+        closedToggle.checked = !on;
+        vwMsg('Network error.','error');
+    });
+}
+
+function updateStatusBadge(ps) {
+    const map   = {1:'Draft', 2:'Published', 3:'In Progress', 4:'Closed'};
+    const cls   = {1:'not-started', 2:'open', 3:'in-progress', 4:'completed'};
+    const badge = document.querySelector('.ve-status-badge');
+    if (badge) {
+        badge.textContent = map[ps] ?? '';
+        badge.className   = 've-status-badge ' + (cls[ps] ?? '');
+    }
+}
+
+/**
+ * syncSidebarLiveState(isLive)
+ * Called after a successful LIVE/CLOSED toggle — instantly locks or unlocks
+ * the Progression Mode and Release Mode option cards in the sidebar,
+ * and shows/hides the LIVE warning banner. No page refresh needed.
+ */
+function syncSidebarLiveState(isLive) {
+    const progressionIds = ['opt-seq', 'opt-rand'];
+    const releaseIds     = ['opt-auto', 'opt-manual'];
+    const allOptionIds   = [...progressionIds, ...releaseIds];
+
+    allOptionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (isLive) {
+            el.classList.add('locked');
+            el.onclick = null;  // disable clicks
+        } else {
+            el.classList.remove('locked');
+            // Restore click handlers based on which option it is
+            if (id === 'opt-seq')    el.onclick = () => setProgression(1);
+            if (id === 'opt-rand')   el.onclick = () => setProgression(2);
+            if (id === 'opt-auto')   el.onclick = () => setRelease(1);
+            if (id === 'opt-manual') el.onclick = () => setRelease(2);
+        }
+    });
+
+    // Show/hide the live warning banner
+    const banner = document.querySelector('.ms-live-banner');
+    if (banner) {
+        banner.style.display = isLive ? '' : 'none';
+    } else if (isLive) {
+        // Banner didn't exist (event was not live at page load) — inject it
+        const sidebar = document.querySelector('.ms-sidebar');
+        const alert   = document.getElementById('msAlert');
+        if (sidebar && alert) {
+            const div = document.createElement('div');
+            div.className = 'ms-live-banner';
+            div.id        = 'ms-live-banner-dynamic';
+            div.innerHTML = `<span class="material-symbols-rounded">warning_amber</span>
+                <div><strong>Event is LIVE</strong>
+                <span>Progression &amp; Release modes are locked while event is Live. Module locks can still be toggled.</span></div>`;
+            alert.after(div);
+        }
+    }
+
+    // Also disable/enable the "Switch to Manual" button inside Auto mode placeholder
+    const switchBtn = document.querySelector('#autoPlaceholder button');
+    if (switchBtn) switchBtn.disabled = isLive;
+}
+
 
 function handleModuleLockChange(e, idx, modId, checkboxEl) {
     const isUnlocked = checkboxEl.checked;
@@ -522,6 +754,36 @@ function unlockAllModules() {
         if (!cb.checked) cb.click();
     });
 }
+
+/* ── COPY LINK ── */
+function copyEventLink(code) {
+    if (!code) return alert("No link available for this event.");
+    const link = window.location.origin + '/trainerbyte/' + code;
+    navigator.clipboard.writeText(link).then(() => {
+        const btn = document.querySelector('.ve-copy-btn-small');
+        const icon = btn.querySelector('.material-symbols-rounded');
+        const oldIcon = icon.textContent;
+        icon.textContent = 'check';
+        btn.style.color = '#15803d';
+        setTimeout(() => {
+            icon.textContent = oldIcon;
+            btn.style.color = '';
+        }, 2000);
+    }).catch(() => alert("Failed to copy link."));
+}
+
+/* ── INIT ── */
+window.addEventListener('DOMContentLoaded', () => {
+    // Initialize Copy Link UI — identical to view_event.php
+    const linkEl = document.querySelector('.ve-copy-url');
+    if (linkEl) {
+        const code = linkEl.getAttribute('data-code');
+        const baseUrl = window.location.origin + '/trainerbyte/';
+        const fullLink = baseUrl + code;
+        linkEl.textContent = fullLink;
+        linkEl.title = fullLink;
+    }
+});
 </script>
 
 <?php // require "layout/footer.php"; ?>

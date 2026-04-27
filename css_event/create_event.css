@@ -302,6 +302,15 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
+.date-row.three-col {
+    grid-template-columns: 140px 180px 1fr; /* Exact widths for small fields, flexible for passcode */
+    gap: 20px;
+}
+
+/* Helper to remove icon padding for fields without icons */
+.form-group input {
+    padding-left: 14px !important;
+}
 
 /* ===== INPUT ICON ===== */
 .input-icon {

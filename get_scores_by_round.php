@@ -78,7 +78,7 @@ $total = $countStmt->get_result()->fetch_assoc()['total'] ?? 0;
 
 /* ── PARTICIPANTS (paginated & filtered) ─────────────────────────────────── */
 $partQuery = "
-    SELECT eu.id AS user_id, eu.user_name
+    SELECT eu.id AS user_id, eu.user_name, eu.user_is_active
     FROM tb_event_user eu
     JOIN tb_event_user_score s ON s.user_id = eu.id
     WHERE s.event_id = ?
@@ -86,7 +86,7 @@ $partQuery = "
 if ($search !== '') {
     $partQuery .= " AND (eu.user_name LIKE ? OR eu.user_pin LIKE ?)";
 }
-$partQuery .= " GROUP BY eu.id, eu.user_name ORDER BY eu.user_name ASC LIMIT ? OFFSET ?";
+$partQuery .= " GROUP BY eu.id, eu.user_name, eu.user_is_active ORDER BY eu.user_name ASC LIMIT ? OFFSET ?";
 
 $partStmt = $conn->prepare($partQuery);
 if ($search !== '') {
@@ -118,7 +118,17 @@ if (!empty($user_ids)) {
     foreach ($scores as $s) {
         $key     = $s['mod_game_id'] . '_' . $s['mod_game_type'];
         $nsCheck = strtolower(trim($s['game_status'] ?? ''));
-        $val     = 0; // default — never use mod_game_status blindly
+
+        // Not started → skip (leave null in scoreMap so UI shows "—")
+        if ($nsCheck === '' || $nsCheck === 'not started' || $nsCheck === 'not_started') {
+            // Only set null if no entry exists yet (don't overwrite a real score)
+            if (!isset($scoreMap[$s['user_id']][$key])) {
+                $scoreMap[$s['user_id']][$key] = null;
+            }
+            continue;
+        }
+
+        $val = 0; // default for in-progress / completed
 
         if (!empty($s['game_summary'])) {
             $summary = json_decode($s['game_summary'], true);
@@ -144,12 +154,8 @@ if (!empty($user_ids)) {
             }
         }
 
-        // Hard-zero for any not-started state (safety net)
-        if ($nsCheck === '' || $nsCheck === 'not started' || $nsCheck === 'not_started') {
-            $val = 0;
-        }
-
-        if (!isset($scoreMap[$s['user_id']][$key]) || $val > $scoreMap[$s['user_id']][$key]) {
+        // Keep the highest real score seen (null treated as -∞)
+        if (!isset($scoreMap[$s['user_id']][$key]) || $scoreMap[$s['user_id']][$key] === null || $val > $scoreMap[$s['user_id']][$key]) {
             $scoreMap[$s['user_id']][$key] = $val;
         }
     }
@@ -158,7 +164,9 @@ if (!empty($user_ids)) {
 /* ── GRAND STATS ──────────────────────────────────────────────────────── */
 $allScores = [];
 foreach ($scoreMap as $mods) {
-    foreach ($mods as $score) $allScores[] = $score;
+    foreach ($mods as $score) {
+        if ($score !== null) $allScores[] = $score; // exclude not-started (null)
+    }
 }
 $totalScore = array_sum($allScores);
 $classAvg   = count($allScores) > 0 ? round(array_sum($allScores) / count($allScores), 1) : 0;
@@ -177,10 +185,11 @@ foreach ($participants as $p) {
         if ($score !== null) $rowTotal += $score;
     }
     $rows[] = [
-        'user_id'   => $p['user_id'],
-        'user_name' => $p['user_name'],
-        'scores'    => $rowScores,
-        'total'     => $rowTotal
+        'user_id'        => $p['user_id'],
+        'user_name'      => $p['user_name'],
+        'user_is_active' => (int)$p['user_is_active'],
+        'scores'         => $rowScores,
+        'total'          => $rowTotal
     ];
 }
 

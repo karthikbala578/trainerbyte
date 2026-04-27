@@ -108,10 +108,9 @@ while ($row = $events->fetch_assoc()) {
                     </p>
 
                     <div class="card-actions">
-                        <form action="view_event.php" method="POST">
-                            <input type="hidden" name="event_id" value="<?= $e['event_id']  ?>">
-                            <button type="submit"  class="btn primary">  Manage </button>
-                        </form>
+                        <a href="view_event.php?event_id=<?= $e['event_id'] ?>" class="btn primary">
+                            Manage
+                        </a>
                     </div>
 
                 </div>
